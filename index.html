@@ -4,9 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Hesaplama Araçları | MaaşKanka</title>
+  <title>Maaş, Kredi ve Kira Hesaplama | Ücretsiz Hesaplama Araçları - MaaşKanka</title>
 
-  <meta name="description" content="Maaş ve kredi hesaplama araçları. Maaşını günlük, haftalık, saatlik ve yıllık olarak hesapla; kredi taksitini ve toplam geri ödemeni öğren.">
+  <meta name="description" content="Ücretsiz maaş hesaplama, kredi hesaplama ve kira artış hesaplama araçları. Günlük, haftalık ve saatlik maaşını; kredi taksitini ve yeni kira tutarını kolayca hesapla.">
+
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://xelta019.github.io/Maaskanka/">
 
   <style>
     * {
@@ -40,8 +44,8 @@
 
     .menu {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
       margin-bottom: 18px;
     }
 
@@ -57,6 +61,27 @@
       background: #5267ff;
       color: white;
       border-color: #5267ff;
+    }
+
+    button {
+      border: 0;
+      border-radius: 12px;
+      padding: 14px;
+      font-size: 15px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .main-button {
+      width: 100%;
+      margin-top: 20px;
+      background: #5267ff;
+      color: white;
+      font-size: 17px;
+    }
+
+    button:hover {
+      opacity: .92;
     }
 
     .card {
@@ -95,23 +120,6 @@
 
     input:focus {
       border-color: #5267ff;
-    }
-
-    .main-button {
-      width: 100%;
-      border: 0;
-      border-radius: 12px;
-      padding: 15px;
-      margin-top: 20px;
-      background: #5267ff;
-      color: white;
-      font-size: 17px;
-      font-weight: 800;
-      cursor: pointer;
-    }
-
-    .main-button:hover {
-      opacity: .92;
     }
 
     .results {
@@ -155,12 +163,12 @@
       margin-top: 25px;
     }
 
-    @media (max-width: 520px) {
-      .results {
+    @media (max-width: 600px) {
+      .menu {
         grid-template-columns: 1fr;
       }
 
-      .menu {
+      .results {
         grid-template-columns: 1fr;
       }
 
@@ -173,8 +181,6 @@
       }
     }
   </style>
-  <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://xelta019.github.io/Maaskanka/">
 </head>
 
 <body>
@@ -184,11 +190,11 @@
   <div class="brand">💸 MaaşKanka</div>
 
   <div class="sub">
-    Günlük hayatındaki hesapları hızlı ve kolay şekilde yap.
+    Maaş, kredi ve kira hesaplamalarını hızlı ve kolay şekilde yap.
   </div>
 
 
-  <!-- ARAÇ MENÜSÜ -->
+  <!-- MENÜ -->
 
   <div class="menu">
 
@@ -196,28 +202,34 @@
       id="salaryMenu"
       class="active"
       onclick="showTool('salary')">
-      💸 Maaş Hesaplama
+      💸 Maaş
     </button>
 
     <button
       id="loanMenu"
       onclick="showTool('loan')">
-      🏦 Kredi Hesaplama
+      🏦 Kredi
+    </button>
+
+    <button
+      id="rentMenu"
+      onclick="showTool('rent')">
+      🏠 Kira Artışı
     </button>
 
   </div>
 
 
-  <!-- ========================= -->
+  <!-- ===================== -->
   <!-- MAAŞ HESAPLAMA -->
-  <!-- ========================= -->
+  <!-- ===================== -->
 
   <section id="salaryTool" class="card">
 
     <h2>💸 Maaş Hesaplama</h2>
 
     <div class="card-description">
-      Maaşını günlük, haftalık, saatlik ve yıllık kazanca çevir.
+      Aylık maaşını günlük, haftalık, saatlik ve yıllık kazanca çevir.
     </div>
 
     <label for="salary">
@@ -291,31 +303,26 @@
 
     </div>
 
-
     <div class="note">
       Bu araç basit bir maaş dönüştürme hesabıdır.
-      Vergi, prim, fazla mesai, izin ve diğer kesintileri ayrıca hesaba katmaz.
+      Vergi, prim, fazla mesai ve diğer kesintileri hesaba katmaz.
     </div>
 
   </section>
 
 
-
-  <!-- ========================= -->
+  <!-- ===================== -->
   <!-- KREDİ HESAPLAMA -->
-  <!-- ========================= -->
+  <!-- ===================== -->
 
-  <section
-    id="loanTool"
-    class="card hidden">
+  <section id="loanTool" class="card hidden">
 
     <h2>🏦 Kredi Hesaplama</h2>
 
     <div class="card-description">
       Kredi tutarı, vade ve aylık faiz oranını girerek
-      tahmini aylık taksitini hesapla.
+      tahmini aylık taksitini ve toplam geri ödemeyi hesapla.
     </div>
-
 
     <label for="loanAmount">
       Kredi tutarı (TL)
@@ -387,12 +394,90 @@
 
     </div>
 
+    <div class="note">
+      Bu hesaplama matematiksel bir tahmindir.
+      Vergi, sigorta, tahsis ücreti ve diğer banka masrafları dahil değildir.
+    </div>
+
+  </section>
+
+
+  <!-- ===================== -->
+  <!-- KİRA ARTIŞ HESAPLAMA -->
+  <!-- ===================== -->
+
+  <section id="rentTool" class="card hidden">
+
+    <h2>🏠 Kira Artış Hesaplama</h2>
+
+    <div class="card-description">
+      Mevcut kira tutarını ve uygulamak istediğin artış oranını
+      girerek yeni kira tutarını hesapla.
+    </div>
+
+
+    <label for="oldRent">
+      Mevcut kira (TL)
+    </label>
+
+    <input
+      id="oldRent"
+      type="number"
+      min="0"
+      step="0.01"
+      placeholder="Örn. 15000">
+
+
+    <label for="rentRate">
+      Artış oranı (%)
+    </label>
+
+    <input
+      id="rentRate"
+      type="number"
+      min="0"
+      step="0.01"
+      placeholder="Örn. 25">
+
+
+    <button
+      class="main-button"
+      onclick="calculateRent()">
+      Kira Artışını Hesapla 🚀
+    </button>
+
+
+    <div
+      id="rentResults"
+      class="results"
+      style="display:none;">
+
+      <div class="result">
+        <small>Eski kira</small>
+        <strong id="oldRentResult">-</strong>
+      </div>
+
+      <div class="result">
+        <small>Artış miktarı</small>
+        <strong id="rentIncrease">-</strong>
+      </div>
+
+      <div class="result">
+        <small>Yeni kira</small>
+        <strong id="newRent">-</strong>
+      </div>
+
+      <div class="result">
+        <small>Yıllık yeni kira</small>
+        <strong id="yearlyRent">-</strong>
+      </div>
+
+    </div>
+
 
     <div class="note">
-      Bu sonuç matematiksel bir tahmindir.
-      Banka tahsis ücreti, sigorta, vergi ve diğer masraflar
-      dahil değildir. Gerçek ödeme planı bankaya ve kredi
-      türüne göre değişebilir.
+      Bu araç girilen artış oranına göre matematiksel hesaplama yapar.
+      Güncel yasal kira artış sınırları ayrıca kontrol edilmelidir.
     </div>
 
   </section>
@@ -405,12 +490,9 @@
 </main>
 
 
-
 <script>
 
-  /* ========================= */
   /* PARA FORMATLAMA */
-  /* ========================= */
 
   function tl(value) {
 
@@ -426,10 +508,7 @@
   }
 
 
-
-  /* ========================= */
   /* ARAÇ DEĞİŞTİRME */
-  /* ========================= */
 
   function showTool(tool) {
 
@@ -439,41 +518,55 @@
     const loanTool =
       document.getElementById('loanTool');
 
+    const rentTool =
+      document.getElementById('rentTool');
+
     const salaryMenu =
       document.getElementById('salaryMenu');
 
     const loanMenu =
       document.getElementById('loanMenu');
 
+    const rentMenu =
+      document.getElementById('rentMenu');
+
+
+    salaryTool.classList.add('hidden');
+    loanTool.classList.add('hidden');
+    rentTool.classList.add('hidden');
+
+    salaryMenu.classList.remove('active');
+    loanMenu.classList.remove('active');
+    rentMenu.classList.remove('active');
+
 
     if (tool === 'salary') {
 
       salaryTool.classList.remove('hidden');
-      loanTool.classList.add('hidden');
-
       salaryMenu.classList.add('active');
-      loanMenu.classList.remove('active');
 
     }
 
 
     if (tool === 'loan') {
 
-      salaryTool.classList.add('hidden');
       loanTool.classList.remove('hidden');
-
-      salaryMenu.classList.remove('active');
       loanMenu.classList.add('active');
+
+    }
+
+
+    if (tool === 'rent') {
+
+      rentTool.classList.remove('hidden');
+      rentMenu.classList.add('active');
 
     }
 
   }
 
 
-
-  /* ========================= */
   /* MAAŞ HESAPLAMA */
-  /* ========================= */
 
   function calculateSalary() {
 
@@ -497,7 +590,7 @@
     ) {
 
       alert(
-        'Kanka, maaş / çalışma günü / çalışma saati bilgilerini düzgün gir 😄'
+        'Kanka maaş, çalışma günü ve çalışma saatini düzgün gir 😄'
       );
 
       return;
@@ -530,17 +623,13 @@
     document.getElementById('yearly').textContent =
       tl(yearly);
 
-
     document.getElementById('salaryResults').style.display =
       'grid';
 
   }
 
 
-
-  /* ========================= */
   /* KREDİ HESAPLAMA */
-  /* ========================= */
 
   function calculateLoan() {
 
@@ -564,7 +653,7 @@
     ) {
 
       alert(
-        'Kanka, kredi tutarı / vade / faiz oranını düzgün gir 😄'
+        'Kanka kredi tutarı, vade ve faiz oranını düzgün gir 😄'
       );
 
       return;
@@ -572,38 +661,18 @@
     }
 
 
-    /*
-      Aylık faiz oranını ondalık değere çeviriyoruz.
-
-      Örneğin:
-      %3 = 0.03
-    */
-
     const monthlyRate =
       rate / 100;
 
-
     let monthlyPayment;
 
-
-    /*
-      Faiz 0 ise:
-      kredi / ay
-    */
 
     if (monthlyRate === 0) {
 
       monthlyPayment =
         amount / months;
 
-    }
-
-
-    /*
-      Faiz varsa eşit taksit formülü.
-    */
-
-    else {
+    } else {
 
       monthlyPayment =
         amount *
@@ -626,47 +695,84 @@
     const totalPayment =
       monthlyPayment * months;
 
-
     const totalInterest =
       totalPayment - amount;
 
 
-    document.getElementById(
-      'monthlyPayment'
-    ).textContent =
+    document.getElementById('monthlyPayment').textContent =
       tl(monthlyPayment);
 
-
-    document.getElementById(
-      'totalPayment'
-    ).textContent =
+    document.getElementById('totalPayment').textContent =
       tl(totalPayment);
 
-
-    document.getElementById(
-      'totalInterest'
-    ).textContent =
+    document.getElementById('totalInterest').textContent =
       tl(totalInterest);
 
-
-    document.getElementById(
-      'loanTerm'
-    ).textContent =
+    document.getElementById('loanTerm').textContent =
       months + ' ay';
 
-
-    document.getElementById(
-      'loanResults'
-    ).style.display =
+    document.getElementById('loanResults').style.display =
       'grid';
 
   }
 
 
+  /* KİRA ARTIŞ HESAPLAMA */
 
-  /* ========================= */
-  /* ENTER İLE HESAPLAMA */
-  /* ========================= */
+  function calculateRent() {
+
+    const oldRent =
+      Number(document.getElementById('oldRent').value);
+
+    const rate =
+      Number(document.getElementById('rentRate').value);
+
+
+    if (
+      oldRent <= 0 ||
+      rate < 0 ||
+      !Number.isFinite(oldRent) ||
+      !Number.isFinite(rate)
+    ) {
+
+      alert(
+        'Kanka mevcut kirayı ve artış oranını düzgün gir 😄'
+      );
+
+      return;
+
+    }
+
+
+    const increase =
+      oldRent * (rate / 100);
+
+    const newRent =
+      oldRent + increase;
+
+    const yearlyRent =
+      newRent * 12;
+
+
+    document.getElementById('oldRentResult').textContent =
+      tl(oldRent);
+
+    document.getElementById('rentIncrease').textContent =
+      tl(increase);
+
+    document.getElementById('newRent').textContent =
+      tl(newRent);
+
+    document.getElementById('yearlyRent').textContent =
+      tl(yearlyRent);
+
+    document.getElementById('rentResults').style.display =
+      'grid';
+
+  }
+
+
+  /* ENTER TUŞU */
 
   document.querySelectorAll('input').forEach(
     function(input) {
@@ -675,28 +781,39 @@
         'keydown',
         function(event) {
 
-          if (event.key === 'Enter') {
-
-            if (
-              input.id === 'salary' ||
-              input.id === 'days' ||
-              input.id === 'hours'
-            ) {
-
-              calculateSalary();
-
-            }
+          if (event.key !== 'Enter') {
+            return;
+          }
 
 
-            if (
-              input.id === 'loanAmount' ||
-              input.id === 'loanMonths' ||
-              input.id === 'loanRate'
-            ) {
+          if (
+            input.id === 'salary' ||
+            input.id === 'days' ||
+            input.id === 'hours'
+          ) {
 
-              calculateLoan();
+            calculateSalary();
 
-            }
+          }
+
+
+          if (
+            input.id === 'loanAmount' ||
+            input.id === 'loanMonths' ||
+            input.id === 'loanRate'
+          ) {
+
+            calculateLoan();
+
+          }
+
+
+          if (
+            input.id === 'oldRent' ||
+            input.id === 'rentRate'
+          ) {
+
+            calculateRent();
 
           }
 
