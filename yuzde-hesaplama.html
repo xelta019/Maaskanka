@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    Yüzde Hesaplama | MaaşKanka
+  </title>
+
+  <meta
+    name="description"
+    content="Yüzde hesaplama aracı ile bir sayının yüzdesini, yüzde artışını ve yüzde azalışını hızlı ve ücretsiz hesapla."
+  >
+
+  <meta
+    name="robots"
+    content="index, follow, max-image-preview:large"
+  >
+
+  <meta
+    name="keywords"
+    content="yüzde hesaplama, yüzde hesaplama aracı, yüzde hesaplama nasıl yapılır, zam hesaplama, indirim hesaplama"
+  >
+
+  <meta
+    name="author"
+    content="MaaşKanka"
+  >
+
+  <link
+    rel="canonical"
+    href="https://xelta019.github.io/Maaskanka/yuzde-hesaplama.html"
+  >
+
+  <meta
+    property="og:title"
+    content="Yüzde Hesaplama | MaaşKanka"
+  >
+
+  <meta
+    property="og:description"
+    content="Bir sayının yüzdesini, yüzde artışını ve yüzde azalışını kolayca hesapla."
+  >
+
+  <meta
+    property="og:type"
+    content="website"
+  >
+
+  <meta
+    property="og:url"
+    content="https://xelta019.github.io/Maaskanka/yuzde-hesaplama.html"
+  >
+
+  <meta
+    property="og:site_name"
+    content="MaaşKanka"
+  >
+
+  <meta
+    property="og:locale"
+    content="tr_TR"
+  >
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+
+      {
+        "@type": "WebSite",
+        "@id": "https://xelta019.github.io/Maaskanka/#website",
+        "url": "https://xelta019.github.io/Maaskanka/",
+        "name": "MaaşKanka",
+        "inLanguage": "tr-TR"
+      },
+
+      {
+        "@type": "WebPage",
+        "@id": "https://xelta019.github.io/Maaskanka/yuzde-hesaplama.html#webpage",
+        "url": "https://xelta019.github.io/Maaskanka/yuzde-hesaplama.html",
+        "name": "Yüzde Hesaplama",
+        "description": "Ücretsiz yüzde hesaplama aracı.",
+        "isPartOf": {
+          "@id": "https://xelta019.github.io/Maaskanka/#website"
+        },
+        "inLanguage": "tr-TR"
+      },
+
+      {
+        "@type": "WebApplication",
+        "name": "Yüzde Hesaplama Aracı",
+        "url": "https://xelta019.github.io/Maaskanka/yuzde-hesaplama.html",
+        "applicationCategory": "Calculator",
+        "operatingSystem": "All",
+        "isAccessibleForFree": true,
+        "inLanguage": "tr-TR"
+      },
+
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+
+          {
+            "@type": "Question",
+            "name": "Yüzde nasıl hesaplanır?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Bir sayının belirli bir yüzdesini bulmak için sayı yüzde oranıyla çarpılır ve 100'e bölünür."
+            }
+          },
+
+          {
+            "@type": "Question",
+            "name": "1000'in yüzde 20'si kaçtır?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "1000'in yüzde 20'si 200'dür."
+            }
+          },
+
+          {
+            "@type": "Question",
+            "name": "Yüzde artış nasıl hesaplanır?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Önce başlangıç değerinin yüzde artış miktarı bulunur ve başlangıç değerine eklenir."
+            }
+          },
+
+          {
+            "@type": "Question",
+            "name": "Yüzde indirim nasıl hesaplanır?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Başlangıç değerinin indirim yüzdesi bulunur ve başlangıç değerinden çıkarılır."
+            }
+          }
+
+        ]
+      }
+
+    ]
+  }
+  </script>
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f7fb;
+      color: #172033;
+      line-height: 1.6;
+    }
+
+    .wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 30px 18px 60px;
+    }
+
+    .brand {
+      font-size: 30px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .sub {
+      color: #697386;
+      margin-bottom: 24px;
+    }
+
+    .intro,
+    .card,
+    .seo-section {
+      background: white;
+      border-radius: 20px;
+      padding: 24px;
+      margin-bottom: 18px;
+      box-shadow: 0 8px 30px rgba(20, 30, 50, .07);
+    }
+
+    .intro h1 {
+      margin-top: 0;
+      font-size: 27px;
+      line-height: 1.3;
+    }
+
+    .intro p,
+    .seo-section p {
+      color: #596477;
+    }
+
+    .card h2,
+    .seo-section h2 {
+      margin-top: 0;
+      line-height: 1.3;
+    }
+
+    .card-description {
+      color: #697386;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: 700;
+      margin: 15px 0 8px;
+    }
+
+    input {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #d9deea;
+      border-radius: 12px;
+      font-size: 16px;
+      outline: none;
+    }
+
+    input:focus {
+      border-color: #5267ff;
+    }
+
+    .main-button {
+      width: 100%;
+      border: 0;
+      border-radius: 12px;
+      padding: 15px;
+      margin-top: 20px;
+      background: #5267ff;
+      color: white;
+      font-size: 17px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .main-button:hover {
+      opacity: .92;
+    }
+
+    .results {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .result {
+      background: #f5f7ff;
+      border-radius: 14px;
+      padding: 16px;
+    }
+
+    .result small {
+      display: block;
+      color: #697386;
+      margin-bottom: 5px;
+    }
+
+    .result strong {
+      font-size: 20px;
+    }
+
+    .example {
+      background: #f5f7ff;
+      border-radius: 14px;
+      padding: 16px;
+      margin-top: 18px;
+    }
+
+    .seo-section h3 {
+      font-size: 18px;
+      margin-top: 24px;
+      margin-bottom: 8px;
+    }
+
+    .faq-item {
+      border-top: 1px solid #e7eaf1;
+      padding: 18px 0;
+    }
+
+    .faq-item:first-child {
+      border-top: 0;
+    }
+
+    .faq-item h3 {
+      margin: 0 0 8px;
+      font-size: 17px;
+    }
+
+    .faq-item p {
+      margin: 0;
+    }
+
+    .back {
+      display: inline-block;
+      text-decoration: none;
+      color: #5267ff;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .footer {
+      text-align: center;
+      color: #8a93a5;
+      font-size: 13px;
+      margin-top: 25px;
+    }
+
+    .footer a {
+      color: #5267ff;
+      text-decoration: none;
+      margin: 0 7px;
+    }
+
+    @media (max-width: 520px) {
+
+      .results {
+        grid-template-columns: 1fr;
+      }
+
+      .intro,
+      .card,
+      .seo-section {
+        padding: 18px;
+      }
+
+      .brand {
+        font-size: 26px;
+      }
+
+      .intro h1 {
+        font-size: 23px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<main class="wrap">
+
+  <header>
+
+    <div class="brand">
+      📊 MaaşKanka
+    </div>
+
+    <div class="sub">
+      Günlük hayattaki hesaplamaları kolaylaştıran ücretsiz araçlar.
+    </div>
+
+  </header>
+
+
+  <a
+    class="back"
+    href="index.html"
+  >
+    ← Ana sayfaya dön
+  </a>
+
+
+  <section class="intro">
+
+    <h1>
+      Yüzde Hesaplama
+    </h1>
+
+    <p>
+      Bir sayının belirli bir yüzdesini hızlıca hesapla.
+      Aynı zamanda yüzde artış ve yüzde azalış sonucunu
+      tek seferde görebilirsin.
+    </p>
+
+    <p>
+      Zam, indirim, fiyat değişimi, maaş artışı ve günlük
+      hesaplamalarda yüzde aracını ücretsiz kullanabilirsin.
+    </p>
+
+  </section>
+
+
+  <section class="card">
+
+    <h2>
+      📊 Yüzde Hesaplama Aracı
+    </h2>
+
+    <div class="card-description">
+      Sayıyı ve yüzde oranını gir, sonucu hemen hesaplayalım.
+    </div>
+
+    <label for="number">
+      Sayı
+    </label>
+
+    <input
+      id="number"
+      type="number"
+      step="0.01"
+      placeholder="Örn. 1000"
+    >
+
+    <label for="rate">
+      Yüzde (%)
+    </label>
+
+    <input
+      id="rate"
+      type="number"
+      step="0.01"
+      placeholder="Örn. 20"
+    >
+
+    <button
+      class="main-button"
+      onclick="calculatePercent()"
+    >
+      Yüzdeyi Hesapla 🚀
+    </button>
+
+
+    <div
+      id="results"
+      class="results"
+      style="display:none;"
+    >
+
+      <div class="result">
+
+        <small>
+          Yüzde miktarı
+        </small>
+
+        <strong id="percentValue">
+          -
+        </strong>
+
+      </div>
+
+
+      <div class="result">
+
+        <small>
+          Yüzde eklenmiş
+        </small>
+
+        <strong id="percentAdded">
+          -
+        </strong>
+
+      </div>
+
+
+      <div class="result">
+
+        <small>
+          Yüzde çıkarılmış
+        </small>
+
+        <strong id="percentSubtracted">
+          -
+        </strong>
+
+      </div>
+
+
+      <div class="result">
+
+        <small>
+          Yüzde oranı
+        </small>
+
+        <strong id="percentRate">
+          -
+        </strong>
+
+      </div>
+
+    </div>
+
+
+    <div class="example">
+
+      <strong>Örnek:</strong>
+
+      1000'in %20'si 200'dür.
+      %20 eklenmiş hali 1200,
+      %20 çıkarılmış hali ise 800 olur.
+
+    </div>
+
+  </section>
+
+
+  <section class="seo-section">
+
+    <h2>
+      Yüzde Hesaplama Nasıl Yapılır?
+    </h2>
+
+    <p>
+      Bir sayının belirli bir yüzdesini bulmak için sayı,
+      yüzde oranıyla çarpılır ve 100'e bölünür.
+    </p>
+
+    <h3>
+      Bir sayının yüzdesini bulma
+    </h3>
+
+    <p>
+      Örneğin 500 sayısının %20'sini bulmak için
+      500 × 20 ÷ 100 işlemi yapılır.
+      Sonuç 100 olur.
+    </p>
+
+    <h3>
+      Yüzde artış hesaplama
+    </h3>
+
+    <p>
+      Bir fiyatın veya maaşın belirli bir yüzde oranında
+      artması durumunda önce artış miktarı bulunur.
+      Daha sonra bu miktar başlangıç değerine eklenir.
+    </p>
+
+    <h3>
+      Yüzde indirim hesaplama
+    </h3>
+
+    <p>
+      İndirim hesabında başlangıç değerinin indirim oranındaki
+      miktarı bulunur ve başlangıç fiyatından çıkarılır.
+    </p>
+
+  </section>
+
+
+  <section class="seo-section">
+
+    <h2>
+      Yüzde Hesaplama Nerelerde Kullanılır?
+    </h2>
+
+    <p>
+      Yüzde hesaplama günlük hayatta oldukça sık kullanılır.
+      Alışveriş indirimleri, maaş zamları, kira artışları,
+      fiyat değişimleri ve finansal hesaplamalar bunlardan
+      bazılarıdır.
+    </p>
+
+    <ul>
+
+      <li>
+        İndirim hesaplama
+      </li>
+
+      <li>
+        Zam oranı hesaplama
+      </li>
+
+      <li>
+        Maaş artışı hesaplama
+      </li>
+
+      <li>
+        Fiyat artışı hesaplama
+      </li>
+
+      <li>
+        Yüzde azalış hesaplama
+      </li>
+
+      <li>
+        Yüzde miktarı hesaplama
+      </li>
+
+    </ul>
+
+  </section>
+
+
+  <section class="seo-section">
+
+    <h2>
+      Sık Sorulan Sorular
+    </h2>
+
+
+    <div class="faq-item">
+
+      <h3>
+        1000'in %20'si kaçtır?
+      </h3>
+
+      <p>
+        1000'in %20'si 200'dür.
+      </p>
+
+    </div>
+
+
+    <div class="faq-item">
+
+      <h3>
+        Yüzde nasıl hesaplanır?
+      </h3>
+
+      <p>
+        Sayı, yüzde oranıyla çarpılır ve 100'e bölünür.
+      </p>
+
+    </div>
+
+
+    <div class="faq-item">
+
+      <h3>
+        Yüzde artış nasıl hesaplanır?
+      </h3>
+
+      <p>
+        Başlangıç değerinin artış yüzdesi bulunur ve
+        başlangıç değerine eklenir.
+      </p>
+
+    </div>
+
+
+    <div class="faq-item">
+
+      <h3>
+        Yüzde indirim nasıl hesaplanır?
+      </h3>
+
+      <p>
+        Başlangıç değerinin indirim miktarı bulunur ve
+        başlangıç değerinden çıkarılır.
+      </p>
+
+    </div>
+
+
+    <div class="faq-item">
+
+      <h3>
+        MaaşKanka yüzde hesaplama ücretsiz mi?
+      </h3>
+
+      <p>
+        Evet. MaaşKanka yüzde hesaplama aracı ücretsiz
+        olarak kullanılabilir.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <footer class="footer">
+
+    <div style="margin-bottom:10px;">
+
+      <a href="hakkimizda.html">
+        Hakkımızda
+      </a>
+
+      <a href="gizlilik-politikasi.html">
+        Gizlilik Politikası
+      </a>
+
+      <a href="iletisim.html">
+        İletişim
+      </a>
+
+    </div>
+
+    © 2026 MaaşKanka — Ücretsiz hesaplama araçları
+
+  </footer>
+
+</main>
+
+
+<script>
+
+function formatNumber(value) {
+
+  return value.toLocaleString(
+    'tr-TR',
+    {
+      maximumFractionDigits: 2
+    }
+  );
+
+}
+
+
+function calculatePercent() {
+
+  const number =
+    Number(
+      document.getElementById('number').value
+    );
+
+  const rate =
+    Number(
+      document.getElementById('rate').value
+    );
+
+
+  if (
+    !Number.isFinite(number) ||
+    !Number.isFinite(rate)
+  ) {
+
+    alert(
+      'Kanka sayı ve yüzde oranını düzgün gir 😄'
+    );
+
+    return;
+
+  }
+
+
+  const percentValue =
+    number * (rate / 100);
+
+  const added =
+    number + percentValue;
+
+  const subtracted =
+    number - percentValue;
+
+
+  document.getElementById(
+    'percentValue'
+  ).textContent =
+    formatNumber(percentValue);
+
+
+  document.getElementById(
+    'percentAdded'
+  ).textContent =
+    formatNumber(added);
+
+
+  document.getElementById(
+    'percentSubtracted'
+  ).textContent =
+    formatNumber(subtracted);
+
+
+  document.getElementById(
+    'percentRate'
+  ).textContent =
+    '%' + formatNumber(rate);
+
+
+  document.getElementById(
+    'results'
+  ).style.display =
+    'grid';
+
+}
+
+
+document
+  .querySelectorAll('input')
+  .forEach(function(input) {
+
+    input.addEventListener(
+      'keydown',
+      function(event) {
+
+        if (event.key === 'Enter') {
+
+          calculatePercent();
+
+        }
+
+      }
+    );
+
+  });
+
+</script>
+
+</body>
+</html>
