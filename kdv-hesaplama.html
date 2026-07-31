@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>KDV Hesaplama | KDV Dahil ve Hariç Fiyat Hesaplama</title>
+
+  <meta
+    name="description"
+    content="KDV hesaplama aracı ile KDV dahil ve KDV hariç fiyatı, KDV tutarını ve toplam fiyatı kolayca hesapla."
+  >
+
+  <meta
+    name="robots"
+    content="index, follow"
+  >
+
+  <link
+    rel="canonical"
+    href="https://xelta019.github.io/Maaskanka/kdv-hesaplama.html"
+  >
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f7fb;
+      color: #172033;
+      line-height: 1.6;
+    }
+
+    .wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 30px 18px 60px;
+    }
+
+    .brand {
+      font-size: 30px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .sub {
+      color: #697386;
+      margin-bottom: 24px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 8px 30px rgba(20, 30, 50, .08);
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: 27px;
+      line-height: 1.3;
+      margin-top: 0;
+    }
+
+    h2 {
+      margin-top: 0;
+      line-height: 1.3;
+    }
+
+    .description {
+      color: #697386;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: 700;
+      margin: 14px 0 8px;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #d9deea;
+      border-radius: 12px;
+      font-size: 16px;
+      outline: none;
+      background: white;
+    }
+
+    input:focus,
+    select:focus {
+      border-color: #5267ff;
+    }
+
+    button {
+      width: 100%;
+      border: 0;
+      border-radius: 12px;
+      padding: 15px;
+      margin-top: 20px;
+      background: #5267ff;
+      color: white;
+      font-size: 17px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: .92;
+    }
+
+    .results {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .result {
+      background: #f5f7ff;
+      border-radius: 14px;
+      padding: 16px;
+    }
+
+    .result small {
+      display: block;
+      color: #697386;
+      margin-bottom: 6px;
+    }
+
+    .result strong {
+      font-size: 20px;
+    }
+
+    .note {
+      color: #697386;
+      font-size: 13px;
+      margin-top: 18px;
+    }
+
+    .info {
+      background: white;
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 8px 30px rgba(20, 30, 50, .06);
+      margin-bottom: 18px;
+    }
+
+    .info p {
+      color: #4f596b;
+    }
+
+    .back {
+      display: inline-block;
+      color: #5267ff;
+      text-decoration: none;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .footer {
+      text-align: center;
+      color: #8a93a5;
+      font-size: 13px;
+      margin-top: 25px;
+    }
+
+    @media (max-width: 520px) {
+
+      .wrap {
+        padding: 22px 14px 50px;
+      }
+
+      .card,
+      .info {
+        padding: 18px;
+      }
+
+      .brand {
+        font-size: 26px;
+      }
+
+      h1 {
+        font-size: 23px;
+      }
+
+      .results {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<main class="wrap">
+
+  <header>
+
+    <div class="brand">
+      🧾 MaaşKanka
+    </div>
+
+    <div class="sub">
+      KDV hesaplamanı hızlı ve kolay şekilde yap.
+    </div>
+
+  </header>
+
+
+  <a
+    class="back"
+    href="index.html"
+  >
+    ← Ana sayfaya dön
+  </a>
+
+
+  <section class="card">
+
+    <h1>
+      🧾 KDV Hesaplama
+    </h1>
+
+    <div class="description">
+      KDV dahil veya KDV hariç fiyatı girerek KDV tutarını
+      ve toplam fiyatı kolayca hesapla.
+    </div>
+
+
+    <label for="vatType">
+      Hesaplama türü
+    </label>
+
+    <select id="vatType">
+
+      <option value="add">
+        KDV Hariç → KDV Dahil
+      </option>
+
+      <option value="remove">
+        KDV Dahil → KDV Hariç
+      </option>
+
+    </select>
+
+
+    <label for="vatAmount">
+      Tutar (TL)
+    </label>
+
+    <input
+      id="vatAmount"
+      type="number"
+      min="0"
+      step="0.01"
+      placeholder="Örn. 1000"
+    >
+
+
+    <label for="vatRate">
+      KDV oranı (%)
+    </label>
+
+    <select id="vatRate">
+
+      <option value="1">
+        %1
+      </option>
+
+      <option value="10">
+        %10
+      </option>
+
+      <option value="20" selected>
+        %20
+      </option>
+
+    </select>
+
+
+    <button onclick="calculateVAT()">
+      KDV'yi Hesapla 🚀
+    </button>
+
+
+    <div
+      id="results"
+      class="results"
+      style="display:none;"
+    >
+
+      <div class="result">
+
+        <small>
+          KDV hariç tutar
+        </small>
+
+        <strong id="excluded">
+          -
+        </strong>
+
+      </div>
+
+
+      <div class="result">
+
+        <small>
+          KDV tutarı
+        </small>
+
+        <strong id="vat">
+          -
+        </strong>
+
+      </div>
+
+
+      <div class="result">
+
+        <small>
+          KDV dahil tutar
+        </small>
+
+        <strong id="included">
+          -
+        </strong>
+
+      </div>
+
+
+      <div class="result">
+
+        <small>
+          KDV oranı
+        </small>
+
+        <strong id="rateResult">
+          -
+        </strong>
+
+      </div>
+
+    </div>
+
+
+    <div class="note">
+      Bu araç matematiksel KDV hesabı yapar. Gerçek ticari
+      işlemlerde uygulanacak oran ve istisnalar için güncel
+      resmi bilgiler kontrol edilmelidir.
+    </div>
+
+  </section>
+
+
+  <section class="info">
+
+    <h2>
+      KDV Hesaplama Nasıl Yapılır?
+    </h2>
+
+    <p>
+      KDV hariç bir tutarın üzerine KDV eklemek için tutar,
+      KDV oranıyla çarpılır ve elde edilen KDV tutarı ana
+      fiyata eklenir.
+    </p>
+
+    <p>
+      Örneğin 1.000 TL KDV hariç bir ürünün KDV oranı %20 ise
+      KDV tutarı 200 TL, KDV dahil fiyatı ise 1.200 TL olur.
+    </p>
+
+    <p>
+      KDV dahil bir fiyatın içindeki KDV'yi bulmak için toplam
+      fiyat, 1 + KDV oranına bölünür.
+    </p>
+
+  </section>
+
+
+  <section class="info">
+
+    <h2>
+      KDV Hesaplama Örneği
+    </h2>
+
+    <p>
+      5.000 TL tutarındaki bir ürün için KDV oranı %20 seçilirse:
+    </p>
+
+    <p>
+      KDV tutarı: <strong>1.000 TL</strong>
+    </p>
+
+    <p>
+      KDV dahil toplam fiyat: <strong>6.000 TL</strong>
+    </p>
+
+  </section>
+
+
+  <footer class="footer">
+
+    © 2026 MaaşKanka — Ücretsiz hesaplama araçları
+
+  </footer>
+
+</main>
+
+
+<script>
+
+function tl(value) {
+
+  return new Intl.NumberFormat(
+    'tr-TR',
+    {
+      style: 'currency',
+      currency: 'TRY',
+      maximumFractionDigits: 2
+    }
+  ).format(value);
+
+}
+
+
+function calculateVAT() {
+
+  const amount =
+    Number(
+      document.getElementById('vatAmount').value
+    );
+
+  const rate =
+    Number(
+      document.getElementById('vatRate').value
+    );
+
+  const type =
+    document.getElementById('vatType').value;
+
+
+  if (
+    amount <= 0 ||
+    !Number.isFinite(amount) ||
+    !Number.isFinite(rate)
+  ) {
+
+    alert(
+      'Kanka tutar bilgisini düzgün gir 😄'
+    );
+
+    return;
+
+  }
+
+
+  const decimalRate =
+    rate / 100;
+
+
+  let excluded;
+  let vat;
+  let included;
+
+
+  if (type === 'add') {
+
+    excluded = amount;
+
+    vat =
+      amount * decimalRate;
+
+    included =
+      amount + vat;
+
+  } else {
+
+    included = amount;
+
+    excluded =
+      amount / (1 + decimalRate);
+
+    vat =
+      included - excluded;
+
+  }
+
+
+  document.getElementById('excluded').textContent =
+    tl(excluded);
+
+
+  document.getElementById('vat').textContent =
+    tl(vat);
+
+
+  document.getElementById('included').textContent =
+    tl(included);
+
+
+  document.getElementById('rateResult').textContent =
+    '%' + rate;
+
+
+  document.getElementById('results').style.display =
+    'grid';
+
+}
+
+
+document
+  .querySelectorAll('input, select')
+  .forEach(function(element) {
+
+    element.addEventListener(
+      'keydown',
+      function(event) {
+
+        if (event.key === 'Enter') {
+
+          calculateVAT();
+
+        }
+
+      }
+    );
+
+  });
+
+</script>
+
+</body>
+</html>
