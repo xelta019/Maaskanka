@@ -1,37 +1,40 @@
 <!DOCTYPE html>
+
 <html lang="tr">
 <head>
-
   <meta charset="UTF-8">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
 
-  <title>
-    Yakıt Hesaplama | Yakıt Maliyeti Hesaplama - MaaşKanka
-  </title>
+>
 
-  <meta
-    name="description"
-    content="Yakıt hesaplama aracı ile mesafe, araç tüketimi ve yakıt fiyatına göre toplam yakıt maliyetini, harcanacak yakıtı ve 100 km maliyetini kolayca hesapla."
-  >
+  <title>Yakıt Hesaplama | 100 km Yakıt ve Yol Maliyeti Hesapla | MaaşKanka</title>
 
-  <meta
-    name="robots"
-    content="index, follow, max-image-preview:large"
-  >
+<meta
+name="description"
+content="Aracının 100 km yakıt tüketimini, yakıt fiyatını ve mesafeyi girerek toplam yakıt miktarını, yol maliyetini ve kilometre başı yakıt giderini kolayca hesapla."
 
-  <meta
-    name="keywords"
-    content="yakıt hesaplama, yakıt maliyeti hesaplama, benzin hesaplama, mazot hesaplama, araç yakıt hesaplama, km yakıt hesaplama, 100 km yakıt maliyeti"
-  >
+>
 
-  <meta
-    name="author"
-    content="MaaşKanka"
-  >
+<meta
+name="robots"
+content="index, follow, max-image-preview:large"
+
+>
+
+<meta
+name="keywords"
+content="yakıt hesaplama, yakıt hesaplama aracı, araç yakıt hesaplama, 100 km yakıt hesaplama, yol masrafı hesaplama, yakıt maliyeti hesaplama, km başı yakıt maliyeti"
+
+>
+
+<meta
+name="author"
+content="MaaşKanka"
+
+>
 
   <link
     rel="canonical"
@@ -40,52 +43,41 @@
 
   <!-- OPEN GRAPH -->
 
-  <meta
-    property="og:title"
-    content="Yakıt Hesaplama | Yakıt Maliyeti Hesaplama - MaaşKanka"
-  >
+<meta
+property="og:title"
+content="Yakıt Hesaplama | Yol ve Yakıt Maliyeti Hesapla - MaaşKanka"
 
-  <meta
-    property="og:description"
-    content="Mesafe, araç tüketimi ve yakıt fiyatını girerek yolculuk yakıt maliyetini hesapla."
-  >
+>
 
-  <meta
-    property="og:type"
-    content="website"
-  >
+<meta
+property="og:description"
+content="Mesafe, yakıt tüketimi ve yakıt fiyatını girerek toplam yol ve yakıt maliyetini hesapla."
 
-  <meta
-    property="og:url"
-    content="https://xelta019.github.io/Maaskanka/yakit-hesaplama.html"
-  >
+>
 
-  <meta
-    property="og:site_name"
-    content="MaaşKanka"
-  >
+<meta
+property="og:type"
+content="website"
 
-  <meta
-    property="og:locale"
-    content="tr_TR"
-  >
+>
 
-  <!-- TWITTER / X -->
+<meta
+property="og:url"
+content="https://xelta019.github.io/Maaskanka/yakit-hesaplama.html"
 
-  <meta
-    name="twitter:card"
-    content="summary"
-  >
+>
 
-  <meta
-    name="twitter:title"
-    content="Yakıt Hesaplama - MaaşKanka"
-  >
+<meta
+property="og:site_name"
+content="MaaşKanka"
 
-  <meta
-    name="twitter:description"
-    content="Araç yakıt tüketimi ve yolculuk maliyetini kolayca hesapla."
-  >
+>
+
+<meta
+property="og:locale"
+content="tr_TR"
+
+>
 
   <!-- SCHEMA -->
 
@@ -99,6 +91,7 @@
         "@id": "https://xelta019.github.io/Maaskanka/#website",
         "url": "https://xelta019.github.io/Maaskanka/",
         "name": "MaaşKanka",
+        "description": "Ücretsiz online hesaplama araçları.",
         "inLanguage": "tr-TR"
       },
 
@@ -107,7 +100,7 @@
         "@id": "https://xelta019.github.io/Maaskanka/yakit-hesaplama.html#webpage",
         "url": "https://xelta019.github.io/Maaskanka/yakit-hesaplama.html",
         "name": "Yakıt Hesaplama",
-        "description": "Araç yakıt tüketimi ve yolculuk maliyeti hesaplama aracı.",
+        "description": "Araç yakıt tüketimi ve yol maliyeti hesaplama aracı.",
         "isPartOf": {
           "@id": "https://xelta019.github.io/Maaskanka/#website"
         },
@@ -119,8 +112,8 @@
         "@id": "https://xelta019.github.io/Maaskanka/yakit-hesaplama.html#application",
         "name": "MaaşKanka Yakıt Hesaplama",
         "url": "https://xelta019.github.io/Maaskanka/yakit-hesaplama.html",
-        "description": "Mesafe, yakıt tüketimi ve yakıt fiyatına göre tahmini yakıt maliyeti hesaplama aracı.",
-        "applicationCategory": "UtilityApplication",
+        "description": "Mesafe, yakıt tüketimi ve yakıt fiyatına göre yakıt miktarı ve yol maliyeti hesaplama aracı.",
+        "applicationCategory": "UtilitiesApplication",
         "operatingSystem": "All",
         "browserRequirements": "JavaScript destekleyen modern web tarayıcısı",
         "inLanguage": "tr-TR",
@@ -143,6 +136,50 @@
             "name": "Yakıt Hesaplama",
             "item": "https://xelta019.github.io/Maaskanka/yakit-hesaplama.html"
           }
+        ]
+      },
+
+      {
+        "@type": "FAQPage",
+        "@id": "https://xelta019.github.io/Maaskanka/yakit-hesaplama.html#faq",
+        "mainEntity": [
+
+          {
+            "@type": "Question",
+            "name": "Yakıt tüketimi nasıl hesaplanır?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "100 km yakıt tüketimi, gidilecek mesafe ve yakıt litre fiyatı kullanılarak toplam yakıt miktarı ve tahmini yol maliyeti hesaplanabilir."
+            }
+          },
+
+          {
+            "@type": "Question",
+            "name": "100 km yakıt maliyeti nasıl hesaplanır?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "100 km yakıt maliyetini bulmak için aracın 100 km'de tükettiği litre miktarı yakıtın litre fiyatıyla çarpılır."
+            }
+          },
+
+          {
+            "@type": "Question",
+            "name": "Kilometre başı yakıt maliyeti nasıl hesaplanır?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Kilometre başı yakıt maliyeti, 100 km yakıt maliyetinin 100'e bölünmesiyle yaklaşık olarak hesaplanabilir."
+            }
+          },
+
+          {
+            "@type": "Question",
+            "name": "Yakıt hesaplama sonucu kesin midir?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Hayır. Sonuç matematiksel bir tahmindir. Trafik, hız, hava koşulları, araç yükü ve sürüş tarzı gerçek tüketimi değiştirebilir."
+            }
+          }
+
         ]
       }
 
@@ -180,33 +217,9 @@
       margin-bottom: 8px;
     }
 
-    .brand a {
-      color: inherit;
-      text-decoration: none;
-    }
-
     .sub {
       color: #697386;
       margin-bottom: 24px;
-    }
-
-    .intro {
-      background: white;
-      border-radius: 18px;
-      padding: 22px;
-      margin-bottom: 20px;
-      box-shadow: 0 8px 30px rgba(20, 30, 50, .06);
-    }
-
-    .intro h1 {
-      font-size: 26px;
-      line-height: 1.3;
-      margin: 0 0 12px;
-    }
-
-    .intro p {
-      color: #697386;
-      margin: 0 0 10px;
     }
 
     .back {
@@ -217,17 +230,30 @@
       font-weight: 700;
     }
 
-    .card {
+    .intro,
+    .card,
+    .seo-section {
       background: white;
       border-radius: 20px;
       padding: 24px;
-      box-shadow: 0 8px 30px rgba(20, 30, 50, .08);
       margin-bottom: 18px;
+      box-shadow: 0 8px 30px rgba(20, 30, 50, .07);
     }
 
-    .card h2 {
+    .intro h1 {
+      font-size: 28px;
+      line-height: 1.3;
+      margin: 0 0 12px;
+    }
+
+    .intro p,
+    .seo-section p {
+      color: #4f596b;
+    }
+
+    .card h2,
+    .seo-section h2 {
       margin-top: 0;
-      margin-bottom: 8px;
       line-height: 1.3;
     }
 
@@ -242,30 +268,27 @@
       margin: 14px 0 8px;
     }
 
-    input,
-    select {
+    input {
       width: 100%;
       padding: 14px;
       border: 1px solid #d9deea;
       border-radius: 12px;
       font-size: 16px;
       outline: none;
-      background: white;
     }
 
-    input:focus,
-    select:focus {
+    input:focus {
       border-color: #5267ff;
     }
 
     .main-button {
       width: 100%;
       margin-top: 20px;
-      background: #5267ff;
-      color: white;
+      padding: 15px;
       border: 0;
       border-radius: 12px;
-      padding: 15px;
+      background: #5267ff;
+      color: white;
       font-size: 17px;
       font-weight: 800;
       cursor: pointer;
@@ -289,8 +312,8 @@
     }
 
     .result small {
-      color: #697386;
       display: block;
+      color: #697386;
       margin-bottom: 6px;
     }
 
@@ -301,81 +324,19 @@
     .note {
       color: #697386;
       font-size: 13px;
-      line-height: 1.5;
       margin-top: 18px;
     }
 
-    .seo-section {
-      background: white;
-      border-radius: 20px;
-      padding: 24px;
-      margin-bottom: 18px;
-      box-shadow: 0 8px 30px rgba(20, 30, 50, .06);
-    }
-
-    .seo-section h2 {
-      margin-top: 0;
-      font-size: 23px;
-      line-height: 1.3;
+    .example {
+      background: #f5f7ff;
+      border-radius: 14px;
+      padding: 16px;
+      margin-top: 16px;
     }
 
     .seo-section h3 {
       font-size: 18px;
       margin-top: 24px;
-      margin-bottom: 8px;
-    }
-
-    .seo-section p {
-      color: #4f596b;
-      margin: 8px 0;
-    }
-
-    .formula {
-      background: #f5f7ff;
-      padding: 15px;
-      border-radius: 12px;
-      margin: 15px 0;
-      font-weight: 700;
-      color: #172033;
-    }
-
-    .tool-links {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-      margin-top: 16px;
-    }
-
-    .tool-link {
-      display: block;
-      padding: 14px;
-      background: #f5f7ff;
-      border-radius: 12px;
-      color: #5267ff;
-      text-decoration: none;
-      font-weight: 700;
-    }
-
-    .tool-link:hover {
-      background: #edf0ff;
-    }
-
-    .faq-item {
-      border-top: 1px solid #e7eaf1;
-      padding: 18px 0;
-    }
-
-    .faq-item:first-child {
-      border-top: 0;
-    }
-
-    .faq-item h3 {
-      margin: 0 0 8px;
-      font-size: 17px;
-    }
-
-    .faq-item p {
-      margin: 0;
     }
 
     .footer {
@@ -393,18 +354,8 @@
 
     @media (max-width: 520px) {
 
-      .results {
-        grid-template-columns: 1fr;
-      }
-
-      .tool-links {
-        grid-template-columns: 1fr;
-      }
-
-      .card,
-      .seo-section,
-      .intro {
-        padding: 18px;
+      .wrap {
+        padding: 22px 14px 50px;
       }
 
       .brand {
@@ -412,7 +363,17 @@
       }
 
       .intro h1 {
-        font-size: 23px;
+        font-size: 24px;
+      }
+
+      .intro,
+      .card,
+      .seo-section {
+        padding: 18px;
+      }
+
+      .results {
+        grid-template-columns: 1fr;
       }
 
     }
@@ -427,362 +388,400 @@
 
   <header>
 
-    <div class="brand">
-      <a href="index.html">
-        ⛽ MaaşKanka
-      </a>
-    </div>
+```
+<div class="brand">
+  💸 MaaşKanka
+</div>
 
-    <div class="sub">
-      Yakıt tüketimini ve yolculuk maliyetini hızlıca hesapla.
-    </div>
+<div class="sub">
+  Günlük hayatta işine yarayan ücretsiz hesaplama araçları.
+</div>
+
+<a
+  class="back"
+  href="index.html"
+>
+  ← Tüm hesaplama araçlarına dön
+</a>
+```
 
   </header>
 
-
-  <a
-    class="back"
-    href="index.html"
-  >
-    ← MaaşKanka Ana Sayfa
-  </a>
-
-
   <section class="intro">
 
-    <h1>
-      ⛽ Yakıt Hesaplama
-    </h1>
+```
+<h1>
+  ⛽ Yakıt Hesaplama
+</h1>
 
-    <p>
-      Gidilecek mesafeyi, aracının 100 kilometredeki
-      ortalama yakıt tüketimini ve güncel yakıt fiyatını
-      girerek tahmini yolculuk maliyetini hesapla.
-    </p>
+<p>
+  Aracının 100 kilometrede ne kadar yakıt tükettiğini,
+  yakıtın litre fiyatını ve gideceğin mesafeyi girerek
+  tahmini yol maliyetini kolayca hesapla.
+</p>
 
-    <p>
-      Sonuç olarak ne kadar yakıt harcayacağını,
-      toplam yolculuk maliyetini ve 100 kilometrelik
-      yakıt maliyetini görebilirsin.
-    </p>
+<p>
+  Toplam yakıt miktarını, toplam yol maliyetini,
+  100 km maliyetini ve kilometre başı maliyeti
+  birlikte görebilirsin.
+</p>
+```
 
   </section>
-
 
   <section class="card">
 
-    <h2>
-      Yakıt Maliyeti Hesaplama
-    </h2>
+```
+<h2>
+  ⛽ Yakıt ve Yol Maliyeti Hesapla
+</h2>
 
-    <div class="card-description">
-      Bilgileri gir, hesapla butonuna bas; sonucu saniyeler
-      içinde gör.
-    </div>
-
-
-    <label for="distance">
-      Gidilecek mesafe (km)
-    </label>
-
-    <input
-      id="distance"
-      type="number"
-      min="0"
-      step="0.1"
-      placeholder="Örn. 500"
-    >
+<div class="card-description">
+  Aşağıdaki bilgileri girerek yolculuğunun tahmini
+  yakıt maliyetini hesapla.
+</div>
 
 
-    <label for="consumption">
-      Araç tüketimi (L / 100 km)
-    </label>
+<label for="distance">
+  Gidilecek mesafe (km)
+</label>
 
-    <input
-      id="consumption"
-      type="number"
-      min="0"
-      step="0.1"
-      placeholder="Örn. 6.5"
-    >
-
-
-    <label for="fuelPrice">
-      Yakıt fiyatı (TL / litre)
-    </label>
-
-    <input
-      id="fuelPrice"
-      type="number"
-      min="0"
-      step="0.01"
-      placeholder="Örn. 55"
-    >
+<input
+  id="distance"
+  type="number"
+  min="0"
+  step="0.1"
+  placeholder="Örn. 350"
+>
 
 
-    <button
-      class="main-button"
-      onclick="calculateFuel()"
-    >
-      Yakıt Maliyetini Hesapla 🚗
-    </button>
+<label for="consumption">
+  100 km'de yakıt tüketimi (litre)
+</label>
+
+<input
+  id="consumption"
+  type="number"
+  min="0"
+  step="0.1"
+  placeholder="Örn. 7.5"
+>
 
 
-    <div
-      id="fuelResults"
-      class="results"
-      style="display:none;"
-    >
+<label for="fuelPrice">
+  Yakıt litre fiyatı (TL)
+</label>
 
-      <div class="result">
-        <small>Harcanacak yakıt</small>
-        <strong id="fuelUsed">-</strong>
-      </div>
-
-      <div class="result">
-        <small>Toplam maliyet</small>
-        <strong id="fuelCost">-</strong>
-      </div>
-
-      <div class="result">
-        <small>100 km maliyeti</small>
-        <strong id="fuelCost100">-</strong>
-      </div>
-
-      <div class="result">
-        <small>Mesafe</small>
-        <strong id="fuelDistance">-</strong>
-      </div>
-
-    </div>
+<input
+  id="fuelPrice"
+  type="number"
+  min="0"
+  step="0.01"
+  placeholder="Örn. 50"
+>
 
 
-    <div class="note">
-      Bu araç tahmini yakıt maliyeti hesaplar.
-      Trafik, hız, hava koşulları, araç yükü ve sürüş
-      tarzı gerçek yakıt tüketimini değiştirebilir.
-    </div>
+<button
+  class="main-button"
+  onclick="calculateFuel()"
+>
+  Yakıt Maliyetini Hesapla 🚀
+</button>
+
+
+<div
+  id="fuelResults"
+  class="results"
+  style="display:none;"
+>
+
+  <div class="result">
+
+    <small>
+      Toplam yakıt
+    </small>
+
+    <strong id="totalFuel">
+      -
+    </strong>
+
+  </div>
+
+
+  <div class="result">
+
+    <small>
+      Toplam yol maliyeti
+    </small>
+
+    <strong id="totalCost">
+      -
+    </strong>
+
+  </div>
+
+
+  <div class="result">
+
+    <small>
+      100 km maliyeti
+    </small>
+
+    <strong id="costPer100">
+      -
+    </strong>
+
+  </div>
+
+
+  <div class="result">
+
+    <small>
+      Km başı maliyet
+    </small>
+
+    <strong id="costPerKm">
+      -
+    </strong>
+
+  </div>
+
+</div>
+
+
+<div class="note">
+  Bu hesaplama matematiksel bir tahmindir.
+  Gerçek yakıt tüketimi trafik, hız, hava koşulları,
+  araç yükü ve sürüş tarzına göre değişebilir.
+</div>
+```
 
   </section>
-
 
   <section class="seo-section">
 
-    <h2>
-      Yakıt Maliyeti Nasıl Hesaplanır?
-    </h2>
+```
+<h2>
+  Yakıt Hesaplama Nasıl Yapılır?
+</h2>
 
-    <p>
-      Araç yakıt maliyetini hesaplamak için üç temel bilgi
-      gerekir: gidilecek mesafe, aracın 100 kilometrede
-      tükettiği yakıt miktarı ve litre başına yakıt fiyatı.
-    </p>
+<p>
+  Yakıt hesaplama işleminde aracın 100 kilometrede
+  tükettiği yakıt miktarı, gidilecek mesafe ve yakıtın
+  litre fiyatı kullanılır.
+</p>
 
-    <div class="formula">
-      Harcanan yakıt = Mesafe × Tüketim ÷ 100
-    </div>
+<h3>
+  Toplam yakıt miktarı nasıl hesaplanır?
+</h3>
 
-    <div class="formula">
-      Yakıt maliyeti = Harcanan yakıt × Litre fiyatı
-    </div>
+<p>
+  Gidilecek mesafe, aracın 100 kilometrede tükettiği
+  yakıt miktarıyla çarpılır ve 100'e bölünür.
+</p>
 
-    <p>
-      Örneğin bir araç 100 kilometrede 6 litre yakıt
-      tüketiyorsa, 500 kilometrelik bir yolculukta
-      yaklaşık 30 litre yakıt tüketir.
-    </p>
+<div class="example">
+  <strong>Formül:</strong>
+  <p>
+    Toplam yakıt = Mesafe × 100 km tüketimi ÷ 100
+  </p>
+</div>
 
-    <h3>
-      100 km yakıt maliyeti
-    </h3>
 
-    <p>
-      Aracın 100 kilometrede tükettiği litre miktarı,
-      yakıtın litre fiyatıyla çarpılarak 100 kilometrelik
-      tahmini yakıt maliyeti bulunabilir.
-    </p>
+<h3>
+  Yakıt maliyeti nasıl hesaplanır?
+</h3>
 
-    <h3>
-      Gerçek yakıt tüketimi neden değişir?
-    </h3>
+<p>
+  Bulunan toplam yakıt miktarı, yakıtın litre fiyatıyla
+  çarpılarak tahmini toplam yol maliyeti bulunur.
+</p>
 
-    <p>
-      Hesaplama sonucunun tahmini olduğunu unutmamak gerekir.
-      Şehir içi trafik, uzun yol kullanımı, yüksek hız,
-      klima kullanımı, hava sıcaklığı, yol eğimi, araç yükü
-      ve lastik basıncı gibi faktörler gerçek tüketimi
-      değiştirebilir.
-    </p>
+<div class="example">
+  <strong>Formül:</strong>
+  <p>
+    Toplam maliyet = Toplam yakıt × Litre fiyatı
+  </p>
+</div>
+```
 
   </section>
-
 
   <section class="seo-section">
 
-    <h2>
-      MaaşKanka Diğer Hesaplama Araçları
-    </h2>
+```
+<h2>
+  100 Km Yakıt Maliyeti Nasıl Hesaplanır?
+</h2>
 
-    <p>
-      MaaşKanka üzerinde günlük hayatta kullanabileceğin
-      farklı ücretsiz hesaplama araçlarına da ulaşabilirsin.
-    </p>
+<p>
+  Aracın 100 kilometrede tükettiği yakıt miktarı ile
+  yakıtın litre fiyatı çarpılarak 100 kilometrelik
+  yaklaşık yakıt maliyeti bulunabilir.
+</p>
 
-    <div class="tool-links">
+<div class="example">
+  <strong>Örnek:</strong>
 
-      <a
-        class="tool-link"
-        href="maas-hesaplama.html"
-      >
-        💸 Maaş Hesaplama
-      </a>
+  <p>
+    Aracın 100 km'de 7,5 litre yakıt tüketiyor ve
+    yakıtın litre fiyatı 50 TL ise:
+  </p>
 
-      <a
-        class="tool-link"
-        href="kredi-hesaplama.html"
-      >
-        🏦 Kredi Hesaplama
-      </a>
+  <p>
+    7,5 × 50 = 375 TL
+  </p>
 
-      <a
-        class="tool-link"
-        href="kira-hesaplama.html"
-      >
-        🏠 Kira Artış Hesaplama
-      </a>
+  <p>
+    Bu durumda 100 km için yaklaşık yakıt maliyeti
+    375 TL olur.
+  </p>
 
-      <a
-        class="tool-link"
-        href="yakit-hesaplama.html"
-      >
-        ⛽ Yakıt Hesaplama
-      </a>
-
-      <a
-        class="tool-link"
-        href="yuzde-hesaplama.html"
-      >
-        📊 Yüzde Hesaplama
-      </a>
-
-      <a
-        class="tool-link"
-        href="kdv-hesaplama.html"
-      >
-        🧾 KDV Hesaplama
-      </a>
-
-    </div>
+</div>
+```
 
   </section>
-
 
   <section class="seo-section">
 
-    <h2>
-      Sık Sorulan Sorular
-    </h2>
+```
+<h2>
+  Km Başına Yakıt Maliyeti
+</h2>
 
+<p>
+  Kilometre başına yakıt maliyetini bulmak için
+  100 kilometrelik yakıt maliyeti 100'e bölünebilir.
+</p>
 
-    <div class="faq-item">
+<div class="example">
 
-      <h3>
-        Yakıt hesaplama nasıl yapılır?
-      </h3>
+  <strong>Formül:</strong>
 
-      <p>
-        Gidilecek mesafe, aracın 100 kilometredeki yakıt
-        tüketimi ve litre yakıt fiyatı kullanılarak
-        tahmini yakıt maliyeti hesaplanır.
-      </p>
+  <p>
+    Km başı maliyet = 100 km maliyeti ÷ 100
+  </p>
 
-    </div>
+</div>
 
-
-    <div class="faq-item">
-
-      <h3>
-        100 km'de yakıt maliyeti nasıl hesaplanır?
-      </h3>
-
-      <p>
-        Aracın 100 kilometrede tükettiği yakıt miktarı,
-        litre başına yakıt fiyatıyla çarpılır.
-      </p>
-
-    </div>
-
-
-    <div class="faq-item">
-
-      <h3>
-        Yakıt hesaplama sonucu kesin midir?
-      </h3>
-
-      <p>
-        Hayır. Sonuç, girilen değerlere göre yapılan
-        matematiksel bir tahmindir. Gerçek tüketim kullanım
-        koşullarına göre değişebilir.
-      </p>
-
-    </div>
-
-
-    <div class="faq-item">
-
-      <h3>
-        Şehir içi ve şehir dışı yakıt tüketimi aynı mıdır?
-      </h3>
-
-      <p>
-        Genellikle aynı değildir. Trafik, dur-kalk, hız,
-        yol eğimi ve sürüş koşulları yakıt tüketimini
-        etkileyebilir.
-      </p>
-
-    </div>
-
-
-    <div class="faq-item">
-
-      <h3>
-        Gidiş dönüş yakıt maliyeti nasıl hesaplanır?
-      </h3>
-
-      <p>
-        Gidiş-dönüş toplam mesafesini kilometre alanına
-        girerek toplam yolculuk maliyetini hesaplayabilirsin.
-      </p>
-
-    </div>
+<p>
+  Örneğin 100 km maliyeti 375 TL ise kilometre başına
+  yaklaşık yakıt maliyeti 3,75 TL olur.
+</p>
+```
 
   </section>
 
+  <section class="seo-section">
+
+```
+<h2>
+  Yakıt Tüketimini Etkileyen Faktörler
+</h2>
+
+<p>
+  Araçların gerçek yakıt tüketimi yalnızca fabrika
+  verilerine veya ortalama değerlere göre belirlenmez.
+  Trafik yoğunluğu, sürüş hızı, ani hızlanmalar,
+  frenleme, araç yükü ve yol koşulları tüketimi
+  değiştirebilir.
+</p>
+
+<p>
+  Bu nedenle MaaşKanka yakıt hesaplama sonucu,
+  girilen değerlere göre oluşturulan yaklaşık bir
+  matematiksel sonuçtur.
+</p>
+```
+
+  </section>
+
+  <section class="seo-section">
+
+```
+<h2>
+  Sık Sorulan Sorular
+</h2>
+
+
+<h3>
+  Yakıt hesaplama ücretsiz mi?
+</h3>
+
+<p>
+  Evet. MaaşKanka yakıt hesaplama aracı ücretsiz
+  olarak kullanılabilir.
+</p>
+
+
+<h3>
+  100 km yakıt maliyeti nasıl hesaplanır?
+</h3>
+
+<p>
+  Aracın 100 km'de tükettiği litre miktarı,
+  yakıtın litre fiyatıyla çarpılır.
+</p>
+
+
+<h3>
+  Km başına yakıt maliyeti nasıl hesaplanır?
+</h3>
+
+<p>
+  100 km yakıt maliyeti 100'e bölünerek yaklaşık
+  kilometre başı maliyet bulunabilir.
+</p>
+
+
+<h3>
+  Yakıt hesaplama sonucu kesin midir?
+</h3>
+
+<p>
+  Hayır. Gerçek tüketim trafik, hız, hava koşulları,
+  araç yükü ve sürüş tarzına göre değişebilir.
+</p>
+
+
+<h3>
+  Uzun yolda yakıt maliyeti nasıl hesaplanır?
+</h3>
+
+<p>
+  Gidilecek mesafe, aracın 100 km tüketim değeri ve
+  yakıtın litre fiyatı kullanılarak tahmini toplam
+  yakıt maliyeti hesaplanabilir.
+</p>
+```
+
+  </section>
 
   <footer class="footer">
 
-    <div style="margin-bottom:10px;">
+```
+<div style="margin-bottom:10px;">
 
-      <a href="hakkimizda.html">
-        Hakkımızda
-      </a>
+  <a href="hakkimizda.html">
+    Hakkımızda
+  </a>
 
-      <a href="gizlilik-politikasi.html">
-        Gizlilik Politikası
-      </a>
+  <a href="gizlilik-politikasi.html">
+    Gizlilik Politikası
+  </a>
 
-      <a href="iletisim.html">
-        İletişim
-      </a>
+  <a href="iletisim.html">
+    İletişim
+  </a>
 
-    </div>
+</div>
 
-    © 2026 MaaşKanka — Ücretsiz hesaplama araçları
+© 2026 MaaşKanka — Ücretsiz hesaplama araçları
+```
 
   </footer>
 
 </main>
-
 
 <script>
 
@@ -836,51 +835,44 @@ function calculateFuel() {
   }
 
 
-  const fuelUsed =
-    (distance * consumption) / 100;
+  const totalFuel =
+    distance * consumption / 100;
 
 
-  const totalCost =
-    fuelUsed * fuelPrice;
-
-
-  const cost100 =
+  const costPer100 =
     consumption * fuelPrice;
 
 
+  const totalCost =
+    totalFuel * fuelPrice;
+
+
+  const costPerKm =
+    totalCost / distance;
+
+
   document.getElementById(
-    'fuelUsed'
+    'totalFuel'
   ).textContent =
-    fuelUsed.toLocaleString(
-      'tr-TR',
-      {
-        minimumFractionDigits: 2,
-        maximumFractionDigits: 2
-      }
-    ) + ' L';
+    totalFuel.toFixed(2) + ' litre';
 
 
   document.getElementById(
-    'fuelCost'
+    'totalCost'
   ).textContent =
     tl(totalCost);
 
 
   document.getElementById(
-    'fuelCost100'
+    'costPer100'
   ).textContent =
-    tl(cost100);
+    tl(costPer100);
 
 
   document.getElementById(
-    'fuelDistance'
+    'costPerKm'
   ).textContent =
-    distance.toLocaleString(
-      'tr-TR',
-      {
-        maximumFractionDigits: 1
-      }
-    ) + ' km';
+    tl(costPerKm);
 
 
   document.getElementById(
@@ -893,175 +885,22 @@ function calculateFuel() {
 
 document
   .querySelectorAll('input')
-  .forEach(
-    function(input) {
+  .forEach(function(input) {
 
-      input.addEventListener(
-        'keydown',
-        function(event) {
+    input.addEventListener(
+      'keydown',
+      function(event) {
 
-          if (event.key === 'Enter') {
-
-            calculateFuel();
-
-          }
-
+        if (event.key === 'Enter') {
+          calculateFuel();
         }
-      );
 
-    }
-  );
+      }
+    );
+
+  });
 
 </script>
-<section class="seo-content">
 
-  <h2>Yakıt Maliyeti Hesaplama</h2>
-
-  <p>
-    Yakıt maliyeti hesaplama aracı ile gideceğiniz mesafeyi,
-    aracınızın ortalama yakıt tüketimini ve güncel litre fiyatını
-    girerek yolculuğunuz için tahmini yakıt maliyetini
-    hesaplayabilirsiniz.
-  </p>
-
-  <h2>Yakıt Maliyeti Nasıl Hesaplanır?</h2>
-
-  <p>
-    Yakıt maliyetini hesaplamak için öncelikle aracın 100
-    kilometrede tükettiği yakıt miktarı belirlenir. Daha sonra
-    gidilecek mesafeye göre gerekli yakıt miktarı hesaplanır.
-    Son olarak kullanılan yakıt litre fiyatıyla çarpılarak
-    tahmini toplam maliyet bulunur.
-  </p>
-
-  <p>
-    Örneğin aracınız 100 kilometrede 6 litre yakıt tüketiyor
-    ve 500 kilometrelik bir yolculuk yapacaksanız yaklaşık
-    30 litre yakıt gerekir. Litre fiyatı 50 TL olduğunda
-    tahmini yakıt maliyeti 1.500 TL olur.
-  </p>
-
-  <h2>100 KM Yakıt Maliyeti Hesaplama</h2>
-
-  <p>
-    100 kilometrelik yakıt maliyetini hesaplamak için aracın
-    100 kilometrede tükettiği litre miktarı ile litre yakıt
-    fiyatı çarpılır. Örneğin 6 L/100 km tüketen ve litre fiyatı
-    50 TL olan bir araç için 100 km yakıt maliyeti yaklaşık
-    300 TL'dir.
-  </p>
-
-  <h2>Uzun Yol Yakıt Hesaplama</h2>
-
-  <p>
-    Uzun yolculuklarda toplam yakıt maliyetini tahmin etmek
-    için gidilecek toplam kilometre, aracın ortalama tüketimi
-    ve litre yakıt fiyatı kullanılabilir. Böylece yolculuk
-    öncesinde yaklaşık yakıt bütçesi oluşturabilirsiniz.
-  </p>
-
-  <h2>Yakıt Tüketimi Nasıl Hesaplanır?</h2>
-
-  <p>
-    Aracın yakıt tüketimi genellikle 100 kilometrede tüketilen
-    litre miktarı olarak ifade edilir. Örneğin aracınızın
-    tüketimi 7 L/100 km ise araç 100 kilometrelik mesafede
-    yaklaşık 7 litre yakıt tüketir.
-  </p>
-
-  <h2>Yakıt Hesaplama Sonucu Kesin midir?</h2>
-
-  <p>
-    Hayır. MaaşKanka yakıt hesaplama aracı, girdiğiniz tüketim
-    ve yakıt fiyatına göre tahmini bir sonuç verir. Gerçek
-    yakıt tüketimi trafik yoğunluğu, hız, yol koşulları,
-    hava sıcaklığı, araç yükü ve sürüş tarzına göre değişebilir.
-  </p>
-
-  <h2>Gidiş Dönüş Yakıt Maliyeti</h2>
-
-  <p>
-    Gidiş ve dönüş mesafesi aynıysa toplam mesafeyi iki katına
-    çıkararak tahmini gidiş dönüş yakıt maliyetini
-    hesaplayabilirsiniz. Örneğin tek yön 250 km ise toplam
-    mesafe 500 km olarak hesaplanabilir.
-  </p>
-
-  <h2>Sık Sorulan Sorular</h2>
-
-  <h3>Yakıt hesaplama ücretsiz mi?</h3>
-
-  <p>
-    Evet. MaaşKanka yakıt maliyeti hesaplama aracı ücretsiz
-    olarak kullanılabilir.
-  </p>
-
-  <h3>Yakıt maliyeti nasıl hesaplanır?</h3>
-
-  <p>
-    Gidilecek mesafe, aracın 100 kilometredeki yakıt tüketimi
-    ve litre fiyatı kullanılarak tahmini yakıt maliyeti
-    hesaplanabilir.
-  </p>
-
-  <h3>100 km'de 6 litre yakan araç ne kadar yakar?</h3>
-
-  <p>
-    100 kilometrelik mesafede yaklaşık 6 litre yakıt tüketir.
-    Toplam maliyet ise yakıtın litre fiyatına göre değişir.
-  </p>
-
-  <h3>Gidiş dönüş yakıt maliyeti nasıl hesaplanır?</h3>
-
-  <p>
-    Tek yön mesafesi iki ile çarpılarak toplam yol bulunur.
-    Daha sonra toplam mesafe üzerinden yakıt tüketimi ve
-    tahmini maliyet hesaplanabilir.
-  </p>
-
-</section>
-
-<style>
-  .seo-content {
-    background: #ffffff;
-    border-radius: 20px;
-    padding: 26px;
-    margin: 20px 0;
-    box-shadow: 0 8px 30px rgba(20, 30, 50, .06);
-  }
-
-  .seo-content h2 {
-    margin-top: 0;
-    margin-bottom: 12px;
-    font-size: 23px;
-    line-height: 1.35;
-  }
-
-  .seo-content h2:not(:first-child) {
-    margin-top: 30px;
-  }
-
-  .seo-content h3 {
-    margin-top: 22px;
-    margin-bottom: 8px;
-    font-size: 18px;
-  }
-
-  .seo-content p {
-    color: #4f596b;
-    line-height: 1.7;
-    margin: 8px 0;
-  }
-
-  @media (max-width: 520px) {
-    .seo-content {
-      padding: 18px;
-    }
-
-    .seo-content h2 {
-      font-size: 21px;
-    }
-  }
-</style>
 </body>
 </html>
