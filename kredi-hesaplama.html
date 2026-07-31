@@ -9,11 +9,11 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>Kredi Hesaplama | MaaşKanka</title>
+  <title>Kira Artış Hesaplama | MaaşKanka</title>
 
   <meta
     name="description"
-    content="Kredi tutarı, vade ve aylık faiz oranını girerek tahmini aylık kredi taksitini, toplam geri ödemeyi ve toplam faiz tutarını hesapla."
+    content="Mevcut kira ve artış oranını girerek yeni kira tutarını, artış miktarını ve yıllık kira bedelini kolayca hesapla."
   >
 
   <meta
@@ -23,7 +23,7 @@
 
   <meta
     name="keywords"
-    content="kredi hesaplama, kredi taksit hesaplama, kredi faiz hesaplama, aylık kredi taksiti, toplam geri ödeme hesaplama"
+    content="kira artış hesaplama, kira zam hesaplama, kira hesaplama, yeni kira hesaplama, kira zammı hesaplama"
   >
 
   <meta
@@ -33,17 +33,17 @@
 
   <link
     rel="canonical"
-    href="https://xelta019.github.io/Maaskanka/kredi-hesaplama.html"
+    href="https://xelta019.github.io/Maaskanka/kira-hesaplama.html"
   >
 
   <meta
     property="og:title"
-    content="Kredi Hesaplama | MaaşKanka"
+    content="Kira Artış Hesaplama | MaaşKanka"
   >
 
   <meta
     property="og:description"
-    content="Kredi tutarı, vade ve aylık faiz oranını girerek tahmini kredi taksitini ve toplam geri ödemeyi hesapla."
+    content="Mevcut kira ve artış oranını girerek yeni kira tutarını kolayca hesapla."
   >
 
   <meta
@@ -53,7 +53,7 @@
 
   <meta
     property="og:url"
-    content="https://xelta019.github.io/Maaskanka/kredi-hesaplama.html"
+    content="https://xelta019.github.io/Maaskanka/kira-hesaplama.html"
   >
 
   <meta
@@ -81,10 +81,10 @@
 
       {
         "@type": "WebPage",
-        "@id": "https://xelta019.github.io/Maaskanka/kredi-hesaplama.html#webpage",
-        "url": "https://xelta019.github.io/Maaskanka/kredi-hesaplama.html",
-        "name": "Kredi Hesaplama",
-        "description": "Kredi tutarı, vade ve aylık faiz oranıyla tahmini kredi taksiti hesaplama.",
+        "@id": "https://xelta019.github.io/Maaskanka/kira-hesaplama.html#webpage",
+        "url": "https://xelta019.github.io/Maaskanka/kira-hesaplama.html",
+        "name": "Kira Artış Hesaplama",
+        "description": "Mevcut kira ve artış oranına göre yeni kira hesaplama aracı.",
         "isPartOf": {
           "@id": "https://xelta019.github.io/Maaskanka/#website"
         },
@@ -93,8 +93,8 @@
 
       {
         "@type": "WebApplication",
-        "name": "MaaşKanka Kredi Hesaplama",
-        "url": "https://xelta019.github.io/Maaskanka/kredi-hesaplama.html",
+        "name": "MaaşKanka Kira Artış Hesaplama",
+        "url": "https://xelta019.github.io/Maaskanka/kira-hesaplama.html",
         "applicationCategory": "FinanceApplication",
         "operatingSystem": "All",
         "browserRequirements": "JavaScript destekleyen modern web tarayıcısı",
@@ -114,8 +114,8 @@
           {
             "@type": "ListItem",
             "position": 2,
-            "name": "Kredi Hesaplama",
-            "item": "https://xelta019.github.io/Maaskanka/kredi-hesaplama.html"
+            "name": "Kira Artış Hesaplama",
+            "item": "https://xelta019.github.io/Maaskanka/kira-hesaplama.html"
           }
         ]
       }
@@ -264,16 +264,16 @@
       margin-top: 18px;
     }
 
-    .seo-section h3 {
-      font-size: 18px;
-      margin-top: 24px;
-    }
-
     .example {
       background: #f5f7ff;
       border-radius: 14px;
       padding: 16px;
       margin-top: 16px;
+    }
+
+    .seo-section h3 {
+      font-size: 18px;
+      margin-top: 24px;
     }
 
     .footer {
@@ -346,18 +346,17 @@
   <section class="intro">
 
     <h1>
-      🏦 Kredi Hesaplama
+      🏠 Kira Artış Hesaplama
     </h1>
 
     <p>
-      Kredi tutarını, vade süresini ve aylık faiz oranını
-      girerek tahmini aylık taksitini ve toplam geri ödeme
-      tutarını kolayca hesapla.
+      Mevcut kira tutarını ve artış oranını girerek
+      yeni kira bedelini birkaç saniyede hesapla.
     </p>
 
     <p>
-      Sonuçlar matematiksel bir hesaplamadır ve banka
-      tarafından sunulan kesin kredi teklifi değildir.
+      Artış miktarını, yeni aylık kirayı ve yıllık toplam
+      kira tutarını birlikte görebilirsin.
     </p>
 
   </section>
@@ -366,97 +365,112 @@
   <section class="card">
 
     <h2>
-      Kredi Taksiti Hesapla
+      Yeni Kira Tutarını Hesapla
     </h2>
 
     <div class="card-description">
-      Bilgileri gir, hesapla butonuna bas. Sonuçları
-      saniyeler içinde gösterelim.
+      Mevcut kira ve uygulanacak artış oranını gir.
     </div>
 
 
-    <label for="loanAmount">
-      Kredi tutarı (TL)
+    <label for="oldRent">
+      Mevcut kira (TL)
     </label>
 
     <input
-      id="loanAmount"
-      type="number"
-      min="0"
-      step="100"
-      placeholder="Örn. 100000"
-    >
-
-
-    <label for="loanMonths">
-      Vade (ay)
-    </label>
-
-    <input
-      id="loanMonths"
-      type="number"
-      min="1"
-      max="600"
-      step="1"
-      value="24"
-      placeholder="Örn. 24"
-    >
-
-
-    <label for="loanRate">
-      Aylık faiz oranı (%)
-    </label>
-
-    <input
-      id="loanRate"
+      id="oldRent"
       type="number"
       min="0"
       step="0.01"
-      placeholder="Örn. 3.50"
+      placeholder="Örn. 15000"
+    >
+
+
+    <label for="rentRate">
+      Artış oranı (%)
+    </label>
+
+    <input
+      id="rentRate"
+      type="number"
+      min="0"
+      step="0.01"
+      placeholder="Örn. 25"
     >
 
 
     <button
       class="main-button"
-      onclick="calculateLoan()"
+      onclick="calculateRent()"
     >
-      Krediyi Hesapla 🚀
+      Kira Artışını Hesapla 🚀
     </button>
 
 
     <div
-      id="loanResults"
+      id="rentResults"
       class="results"
       style="display:none;"
     >
 
       <div class="result">
-        <small>Aylık taksit</small>
-        <strong id="monthlyPayment">-</strong>
+
+        <small>
+          Eski kira
+        </small>
+
+        <strong id="oldRentResult">
+          -
+        </strong>
+
       </div>
 
-      <div class="result">
-        <small>Toplam geri ödeme</small>
-        <strong id="totalPayment">-</strong>
-      </div>
 
       <div class="result">
-        <small>Toplam faiz</small>
-        <strong id="totalInterest">-</strong>
+
+        <small>
+          Artış miktarı
+        </small>
+
+        <strong id="rentIncrease">
+          -
+        </strong>
+
       </div>
 
+
       <div class="result">
-        <small>Vade</small>
-        <strong id="loanTerm">-</strong>
+
+        <small>
+          Yeni aylık kira
+        </small>
+
+        <strong id="newRent">
+          -
+        </strong>
+
+      </div>
+
+
+      <div class="result">
+
+        <small>
+          Yıllık yeni kira
+        </small>
+
+        <strong id="yearlyRent">
+          -
+        </strong>
+
       </div>
 
     </div>
 
 
     <div class="note">
-      Bu hesaplama tahmini bir matematiksel sonuç verir.
-      Banka masrafları, sigorta, vergi, tahsis ücreti ve
-      diğer ek maliyetler hesaba dahil değildir.
+      Bu araç yalnızca girdiğin yüzdeye göre matematiksel
+      hesaplama yapar. Güncel yasal kira artış kuralları
+      ayrıca kontrol edilmelidir.
     </div>
 
   </section>
@@ -465,42 +479,34 @@
   <section class="seo-section">
 
     <h2>
-      Kredi Hesaplama Nasıl Yapılır?
+      Kira Artış Hesaplama Nasıl Yapılır?
     </h2>
 
     <p>
-      Kredi taksiti hesaplanırken kredi tutarı, aylık faiz
-      oranı ve kredi vadesi kullanılır. Bu bilgiler sayesinde
-      aylık taksit ve toplam geri ödeme tutarı tahmini olarak
-      hesaplanabilir.
+      Kira artış hesaplamasında mevcut kira bedeli ile
+      uygulanacak artış oranı kullanılır. Önce artış miktarı
+      bulunur, ardından bu miktar mevcut kiraya eklenerek
+      yeni kira tutarı hesaplanır.
     </p>
 
+
     <h3>
-      Aylık kredi taksiti
+      Kira artış miktarı nasıl bulunur?
     </h3>
 
     <p>
-      Aylık taksit tutarı kredi tutarı ve faiz oranına göre
-      belirlenir. Vade süresi arttıkça aylık taksit düşebilir;
-      ancak toplam ödenen faiz genellikle yükselir.
+      Mevcut kira, artış oranıyla çarpılıp 100'e bölünerek
+      kira artış miktarı bulunabilir.
     </p>
 
+
     <h3>
-      Toplam geri ödeme
+      Yeni kira nasıl hesaplanır?
     </h3>
 
     <p>
-      Aylık taksit tutarının toplam vade ayıyla çarpılmasıyla
-      tahmini toplam geri ödeme bulunur.
-    </p>
-
-    <h3>
-      Toplam faiz
-    </h3>
-
-    <p>
-      Toplam geri ödeme tutarından kullanılan kredi tutarı
-      çıkarıldığında tahmini toplam faiz maliyeti elde edilir.
+      Mevcut kira ile hesaplanan artış miktarı toplandığında
+      yeni aylık kira tutarı elde edilir.
     </p>
 
 
@@ -509,9 +515,9 @@
       <strong>Örnek:</strong>
 
       <p>
-        100.000 TL kredi, 24 ay vade ve aylık %3 faiz oranı
-        girildiğinde sistem aylık taksiti, toplam geri ödemeyi
-        ve tahmini toplam faiz tutarını hesaplar.
+        15.000 TL kira için %25 artış hesaplandığında
+        artış miktarı 3.750 TL olur. Matematiksel olarak
+        yeni kira 18.750 TL olur.
       </p>
 
     </div>
@@ -522,18 +528,20 @@
   <section class="seo-section">
 
     <h2>
-      Kredi Vadesi Uzadıkça Ne Olur?
+      Kira Zammı Hesaplarken Nelere Dikkat Edilmeli?
     </h2>
 
     <p>
-      Kredi vadesinin uzaması aylık taksit tutarının daha düşük
-      olmasını sağlayabilir. Ancak kredi daha uzun süre
-      kullanıldığı için toplam faiz maliyeti artabilir.
+      Kira artışı hesaplanırken yalnızca matematiksel sonucu
+      bilmek yeterli olmayabilir. Kira sözleşmesi, yürürlükteki
+      mevzuat ve ilgili dönemde geçerli olan yasal düzenlemeler
+      ayrıca değerlendirilmelidir.
     </p>
 
     <p>
-      Bu nedenle kredi karşılaştırırken yalnızca aylık taksite
-      değil, toplam geri ödeme tutarına da bakmak önemlidir.
+      MaaşKanka'nın hesaplama sonucu, girilen artış oranının
+      doğrudan kira bedeline uygulanmasıyla oluşan matematiksel
+      sonuçtur. Yasal kira artış oranı anlamına gelmez.
     </p>
 
   </section>
@@ -542,24 +550,17 @@
   <section class="seo-section">
 
     <h2>
-      Kredi Hesaplama Sonucu Kesin Midir?
+      Yıllık Kira Tutarı Nasıl Hesaplanır?
     </h2>
 
     <p>
-      Hayır. MaaşKanka kredi hesaplama aracı yalnızca girilen
-      kredi tutarı, vade ve faiz oranına göre matematiksel
-      tahmin yapar.
+      Yeni aylık kira tutarı 12 ile çarpılarak bir yıllık
+      toplam kira bedeli yaklaşık olarak hesaplanabilir.
     </p>
 
     <p>
-      Bankaların uyguladığı sigorta, vergi, tahsis ücreti,
-      dosya masrafı veya diğer maliyetler hesaplama sonucunu
-      değiştirebilir.
-    </p>
-
-    <p>
-      Gerçek kredi maliyetini öğrenmek için ilgili bankanın
-      güncel teklifinin ayrıca kontrol edilmesi gerekir.
+      Örneğin aylık yeni kira 18.750 TL ise 12 aylık toplam
+      kira tutarı 225.000 TL olur.
     </p>
 
   </section>
@@ -573,42 +574,42 @@
 
 
     <h3>
-      Kredi hesaplama ücretsiz mi?
+      Kira artış hesaplama ücretsiz mi?
     </h3>
 
     <p>
-      Evet. MaaşKanka kredi hesaplama aracı ücretsiz olarak
-      kullanılabilir.
+      Evet. MaaşKanka kira artış hesaplama aracı ücretsizdir.
     </p>
 
 
     <h3>
-      Kredi hesaplama banka teklifi midir?
+      Kira hesaplama sonucu yasal kira bedeli midir?
     </h3>
 
     <p>
-      Hayır. Sonuç matematiksel tahmindir. Bankanın güncel
-      faiz oranı ve ek masrafları farklı olabilir.
+      Hayır. Araç yalnızca girdiğin artış oranına göre
+      matematiksel sonuç verir. Güncel yasal düzenlemeler
+      ayrıca kontrol edilmelidir.
     </p>
 
 
     <h3>
-      Faiz oranı sıfır olursa ne olur?
+      Kira artış miktarı nasıl hesaplanır?
     </h3>
 
     <p>
-      Faiz oranı %0 olduğunda kredi tutarı vade ayına
-      bölünerek aylık taksit hesaplanır.
+      Mevcut kira bedeli, artış yüzdesinin 100'e bölünmüş
+      haliyle çarpılarak artış miktarı bulunur.
     </p>
 
 
     <h3>
-      Vade uzarsa toplam faiz artar mı?
+      Yeni kira nasıl bulunur?
     </h3>
 
     <p>
-      Aynı faiz oranı ve diğer koşullar altında vadenin
-      uzaması genellikle toplam faiz maliyetini artırır.
+      Mevcut kira ile hesaplanan artış miktarı toplanarak
+      yeni aylık kira tutarı bulunur.
     </p>
 
   </section>
@@ -655,35 +656,28 @@ function tl(value) {
 }
 
 
-function calculateLoan() {
+function calculateRent() {
 
-  const amount =
+  const oldRent =
     Number(
-      document.getElementById('loanAmount').value
-    );
-
-  const months =
-    Number(
-      document.getElementById('loanMonths').value
+      document.getElementById('oldRent').value
     );
 
   const rate =
     Number(
-      document.getElementById('loanRate').value
+      document.getElementById('rentRate').value
     );
 
 
   if (
-    amount <= 0 ||
-    months <= 0 ||
+    oldRent <= 0 ||
     rate < 0 ||
-    !Number.isFinite(amount) ||
-    !Number.isFinite(months) ||
+    !Number.isFinite(oldRent) ||
     !Number.isFinite(rate)
   ) {
 
     alert(
-      'Kanka kredi tutarı, vade ve faiz oranını düzgün gir 😄'
+      'Kanka kira ve artış oranını düzgün gir 😄'
     );
 
     return;
@@ -691,72 +685,44 @@ function calculateLoan() {
   }
 
 
-  const monthlyRate =
-    rate / 100;
+  const increase =
+    oldRent * (rate / 100);
 
 
-  let monthlyPayment;
+  const newRent =
+    oldRent + increase;
 
 
-  if (monthlyRate === 0) {
-
-    monthlyPayment =
-      amount / months;
-
-  } else {
-
-    monthlyPayment =
-      amount *
-      monthlyRate *
-      Math.pow(
-        1 + monthlyRate,
-        months
-      )
-      /
-      (
-        Math.pow(
-          1 + monthlyRate,
-          months
-        ) - 1
-      );
-
-  }
-
-
-  const totalPayment =
-    monthlyPayment * months;
-
-
-  const totalInterest =
-    totalPayment - amount;
+  const yearlyRent =
+    newRent * 12;
 
 
   document.getElementById(
-    'monthlyPayment'
+    'oldRentResult'
   ).textContent =
-    tl(monthlyPayment);
+    tl(oldRent);
 
 
   document.getElementById(
-    'totalPayment'
+    'rentIncrease'
   ).textContent =
-    tl(totalPayment);
+    tl(increase);
 
 
   document.getElementById(
-    'totalInterest'
+    'newRent'
   ).textContent =
-    tl(totalInterest);
+    tl(newRent);
 
 
   document.getElementById(
-    'loanTerm'
+    'yearlyRent'
   ).textContent =
-    months + ' ay';
+    tl(yearlyRent);
 
 
   document.getElementById(
-    'loanResults'
+    'rentResults'
   ).style.display =
     'grid';
 
@@ -772,7 +738,7 @@ document
       function(event) {
 
         if (event.key === 'Enter') {
-          calculateLoan();
+          calculateRent();
         }
 
       }
