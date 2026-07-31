@@ -2,15 +2,128 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Maaş, Kredi, Kira, Yakıt, Yüzde ve KDV Hesaplama | MaaşKanka</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
-  <meta name="description" content="Ücretsiz maaş, kredi, kira artış, yakıt, yüzde ve KDV hesaplama araçları. Maaşını, kredi taksitini, kira artışını, yakıt maliyetini, yüzdeleri ve KDV tutarını kolayca hesapla.">
+  <title>
+    Maaş, Kredi, Kira, Yakıt, Yüzde ve KDV Hesaplama | MaaşKanka
+  </title>
 
-  <meta name="robots" content="index, follow">
+  <meta
+    name="description"
+    content="MaaşKanka ile maaş, kredi, kira artış, yakıt, yüzde ve KDV hesaplamalarını ücretsiz ve kolayca yap. Maaşını, kredi taksitini, yeni kirayı, yakıt maliyetini ve KDV tutarını hesapla."
+  >
 
-  <link rel="canonical" href="https://xelta019.github.io/Maaskanka/">
+  <meta
+    name="keywords"
+    content="maaş hesaplama, kredi hesaplama, kira artış hesaplama, yakıt hesaplama, yüzde hesaplama, KDV hesaplama, maaş hesaplayıcı, kredi taksit hesaplama, kira hesaplama, yakıt maliyeti hesaplama"
+  >
+
+  <meta
+    name="author"
+    content="MaaşKanka"
+  >
+
+  <meta
+    name="robots"
+    content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+  >
+
+  <meta
+    name="googlebot"
+    content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+  >
+
+  <link
+    rel="canonical"
+    href="https://xelta019.github.io/Maaskanka/"
+  >
+
+  <meta
+    name="theme-color"
+    content="#5267ff"
+  >
+
+  <!-- Open Graph / Facebook -->
+
+  <meta
+    property="og:type"
+    content="website"
+  >
+
+  <meta
+    property="og:locale"
+    content="tr_TR"
+  >
+
+  <meta
+    property="og:title"
+    content="Maaş, Kredi, Kira, Yakıt, Yüzde ve KDV Hesaplama | MaaşKanka"
+  >
+
+  <meta
+    property="og:description"
+    content="MaaşKanka ile maaş, kredi, kira artış, yakıt, yüzde ve KDV hesaplamalarını ücretsiz ve kolayca yap."
+  >
+
+  <meta
+    property="og:url"
+    content="https://xelta019.github.io/Maaskanka/"
+  >
+
+  <meta
+    property="og:site_name"
+    content="MaaşKanka"
+  >
+
+  <!-- Twitter / X -->
+
+  <meta
+    name="twitter:card"
+    content="summary"
+  >
+
+  <meta
+    name="twitter:title"
+    content="Maaş, Kredi, Kira, Yakıt, Yüzde ve KDV Hesaplama | MaaşKanka"
+  >
+
+  <meta
+    name="twitter:description"
+    content="Ücretsiz maaş, kredi, kira, yakıt, yüzde ve KDV hesaplama araçları."
+  >
+
+  <!-- Yapılandırılmış Veri / JSON-LD -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "MaaşKanka",
+    "url": "https://xelta019.github.io/Maaskanka/",
+    "description": "Maaş, kredi, kira artış, yakıt, yüzde ve KDV hesaplama araçları.",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Web",
+    "inLanguage": "tr-TR",
+    "isAccessibleForFree": true,
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "TRY"
+    },
+    "featureList": [
+      "Maaş hesaplama",
+      "Kredi hesaplama",
+      "Kira artış hesaplama",
+      "Yakıt maliyeti hesaplama",
+      "Yüzde hesaplama",
+      "KDV hesaplama"
+    ]
+  }
+  </script>
 
   <style>
     * {
@@ -166,6 +279,16 @@
       margin-top: 25px;
     }
 
+    .footer a {
+      color: #5267ff;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
     @media (max-width: 900px) {
       .menu {
         grid-template-columns: repeat(3, 1fr);
@@ -196,88 +319,118 @@
 
 <main class="wrap">
 
-  <div class="brand">💸 MaaşKanka</div>
+  <header>
+    <div class="brand">💸 MaaşKanka</div>
 
-  <div class="sub">
-    Maaş, kredi, kira, yakıt, yüzde ve KDV hesaplamalarını hızlı ve kolay şekilde yap.
-  </div>
+    <div class="sub">
+      Maaş, kredi, kira, yakıt, yüzde ve KDV hesaplamalarını
+      hızlı ve kolay şekilde yap.
+    </div>
+  </header>
 
 
   <!-- MENÜ -->
 
-  <div class="menu">
+  <nav
+    class="menu"
+    aria-label="Hesaplama araçları"
+  >
 
     <button
       id="salaryMenu"
       class="active"
-      onclick="showTool('salary')">
+      onclick="showTool('salary')"
+      type="button"
+    >
       💸 Maaş
     </button>
 
     <button
       id="loanMenu"
-      onclick="showTool('loan')">
+      onclick="showTool('loan')"
+      type="button"
+    >
       🏦 Kredi
     </button>
 
     <button
       id="rentMenu"
-      onclick="showTool('rent')">
+      onclick="showTool('rent')"
+      type="button"
+    >
       🏠 Kira
     </button>
 
     <button
       id="fuelMenu"
-      onclick="showTool('fuel')">
+      onclick="showTool('fuel')"
+      type="button"
+    >
       ⛽ Yakıt
     </button>
 
     <button
       id="percentMenu"
-      onclick="showTool('percent')">
+      onclick="showTool('percent')"
+      type="button"
+    >
       📊 Yüzde
     </button>
 
     <button
       id="vatMenu"
-      onclick="showTool('vat')">
+      onclick="showTool('vat')"
+      type="button"
+    >
       🧾 KDV
     </button>
 
-  </div>
+  </nav>
 
 
   <!-- ==================== -->
   <!-- MAAŞ -->
   <!-- ==================== -->
 
-  <section id="salaryTool" class="card">
+  <section
+    id="salaryTool"
+    class="card"
+    aria-labelledby="salaryTitle"
+  >
 
-    <h2>💸 Maaş Hesaplama</h2>
+    <h2 id="salaryTitle">💸 Maaş Hesaplama</h2>
 
     <div class="card-description">
       Aylık maaşını günlük, haftalık, saatlik ve yıllık kazanca çevir.
     </div>
 
-    <label for="salary">Aylık maaşın (TL)</label>
+    <label for="salary">
+      Aylık maaşın (TL)
+    </label>
 
     <input
       id="salary"
       type="number"
       min="0"
       step="0.01"
-      placeholder="Örn. 30000">
+      placeholder="Örn. 30000"
+    >
 
-    <label for="days">Ayda kaç gün çalışıyorsun?</label>
+    <label for="days">
+      Ayda kaç gün çalışıyorsun?
+    </label>
 
     <input
       id="days"
       type="number"
       min="1"
       max="31"
-      value="22">
+      value="22"
+    >
 
-    <label for="hours">Günde kaç saat çalışıyorsun?</label>
+    <label for="hours">
+      Günde kaç saat çalışıyorsun?
+    </label>
 
     <input
       id="hours"
@@ -285,18 +438,22 @@
       min="1"
       max="24"
       step="0.5"
-      value="8">
+      value="8"
+    >
 
     <button
       class="main-button"
-      onclick="calculateSalary()">
+      onclick="calculateSalary()"
+      type="button"
+    >
       Maaşımı Hesapla 🚀
     </button>
 
     <div
       id="salaryResults"
       class="results"
-      style="display:none;">
+      style="display:none;"
+    >
 
       <div class="result">
         <small>Günlük kazanç</small>
@@ -332,52 +489,68 @@
   <!-- KREDİ -->
   <!-- ==================== -->
 
-  <section id="loanTool" class="card hidden">
+  <section
+    id="loanTool"
+    class="card hidden"
+    aria-labelledby="loanTitle"
+  >
 
-    <h2>🏦 Kredi Hesaplama</h2>
+    <h2 id="loanTitle">🏦 Kredi Hesaplama</h2>
 
     <div class="card-description">
       Kredi tutarı, vade ve aylık faiz oranını girerek
       tahmini aylık taksitini ve toplam geri ödemeyi hesapla.
     </div>
 
-    <label for="loanAmount">Kredi tutarı (TL)</label>
+    <label for="loanAmount">
+      Kredi tutarı (TL)
+    </label>
 
     <input
       id="loanAmount"
       type="number"
       min="0"
       step="100"
-      placeholder="Örn. 100000">
+      placeholder="Örn. 100000"
+    >
 
-    <label for="loanMonths">Vade (ay)</label>
+    <label for="loanMonths">
+      Vade (ay)
+    </label>
 
     <input
       id="loanMonths"
       type="number"
       min="1"
       max="600"
-      value="24">
+      value="24"
+    >
 
-    <label for="loanRate">Aylık faiz oranı (%)</label>
+    <label for="loanRate">
+      Aylık faiz oranı (%)
+    </label>
 
     <input
       id="loanRate"
       type="number"
       min="0"
       step="0.01"
-      placeholder="Örn. 3.50">
+      placeholder="Örn. 3.50"
+    >
 
     <button
       class="main-button"
-      onclick="calculateLoan()">
+      onclick="calculateLoan()"
+      type="button"
+    >
       Krediyi Hesapla 🚀
     </button>
 
     <div
       id="loanResults"
       class="results"
-      style="display:none;">
+      style="display:none;"
+    >
 
       <div class="result">
         <small>Aylık taksit</small>
@@ -413,42 +586,56 @@
   <!-- KİRA -->
   <!-- ==================== -->
 
-  <section id="rentTool" class="card hidden">
+  <section
+    id="rentTool"
+    class="card hidden"
+    aria-labelledby="rentTitle"
+  >
 
-    <h2>🏠 Kira Artış Hesaplama</h2>
+    <h2 id="rentTitle">🏠 Kira Artış Hesaplama</h2>
 
     <div class="card-description">
-      Mevcut kira tutarını ve artış oranını girerek yeni kira tutarını hesapla.
+      Mevcut kira tutarını ve artış oranını girerek
+      yeni kira tutarını hesapla.
     </div>
 
-    <label for="oldRent">Mevcut kira (TL)</label>
+    <label for="oldRent">
+      Mevcut kira (TL)
+    </label>
 
     <input
       id="oldRent"
       type="number"
       min="0"
       step="0.01"
-      placeholder="Örn. 15000">
+      placeholder="Örn. 15000"
+    >
 
-    <label for="rentRate">Artış oranı (%)</label>
+    <label for="rentRate">
+      Artış oranı (%)
+    </label>
 
     <input
       id="rentRate"
       type="number"
       min="0"
       step="0.01"
-      placeholder="Örn. 25">
+      placeholder="Örn. 25"
+    >
 
     <button
       class="main-button"
-      onclick="calculateRent()">
+      onclick="calculateRent()"
+      type="button"
+    >
       Kira Artışını Hesapla 🚀
     </button>
 
     <div
       id="rentResults"
       class="results"
-      style="display:none;">
+      style="display:none;"
+    >
 
       <div class="result">
         <small>Eski kira</small>
@@ -484,52 +671,68 @@
   <!-- YAKIT -->
   <!-- ==================== -->
 
-  <section id="fuelTool" class="card hidden">
+  <section
+    id="fuelTool"
+    class="card hidden"
+    aria-labelledby="fuelTitle"
+  >
 
-    <h2>⛽ Yakıt Maliyeti Hesaplama</h2>
+    <h2 id="fuelTitle">⛽ Yakıt Maliyeti Hesaplama</h2>
 
     <div class="card-description">
       Mesafe, aracının ortalama yakıt tüketimi ve yakıt fiyatını
       girerek yolculuğunun tahmini maliyetini hesapla.
     </div>
 
-    <label for="distance">Gidilecek mesafe (km)</label>
+    <label for="distance">
+      Gidilecek mesafe (km)
+    </label>
 
     <input
       id="distance"
       type="number"
       min="0"
       step="0.1"
-      placeholder="Örn. 500">
+      placeholder="Örn. 500"
+    >
 
-    <label for="consumption">Araç tüketimi (L / 100 km)</label>
+    <label for="consumption">
+      Araç tüketimi (L / 100 km)
+    </label>
 
     <input
       id="consumption"
       type="number"
       min="0"
       step="0.1"
-      placeholder="Örn. 6.5">
+      placeholder="Örn. 6.5"
+    >
 
-    <label for="fuelPrice">Yakıt fiyatı (TL / litre)</label>
+    <label for="fuelPrice">
+      Yakıt fiyatı (TL / litre)
+    </label>
 
     <input
       id="fuelPrice"
       type="number"
       min="0"
       step="0.01"
-      placeholder="Örn. 55">
+      placeholder="Örn. 55"
+    >
 
     <button
       class="main-button"
-      onclick="calculateFuel()">
+      onclick="calculateFuel()"
+      type="button"
+    >
       Yakıt Maliyetini Hesapla 🚗
     </button>
 
     <div
       id="fuelResults"
       class="results"
-      style="display:none;">
+      style="display:none;"
+    >
 
       <div class="result">
         <small>Harcanacak yakıt</small>
@@ -565,40 +768,54 @@
   <!-- YÜZDE -->
   <!-- ==================== -->
 
-  <section id="percentTool" class="card hidden">
+  <section
+    id="percentTool"
+    class="card hidden"
+    aria-labelledby="percentTitle"
+  >
 
-    <h2>📊 Yüzde Hesaplama</h2>
+    <h2 id="percentTitle">📊 Yüzde Hesaplama</h2>
 
     <div class="card-description">
-      Bir sayının yüzdesini, yüzde artışını ve yüzde azalışını kolayca hesapla.
+      Bir sayının yüzdesini, yüzde artışını ve yüzde azalışını
+      kolayca hesapla.
     </div>
 
-    <label for="percentNumber">Sayı</label>
+    <label for="percentNumber">
+      Sayı
+    </label>
 
     <input
       id="percentNumber"
       type="number"
       step="0.01"
-      placeholder="Örn. 1000">
+      placeholder="Örn. 1000"
+    >
 
-    <label for="percentRate">Yüzde (%)</label>
+    <label for="percentRate">
+      Yüzde (%)
+    </label>
 
     <input
       id="percentRate"
       type="number"
       step="0.01"
-      placeholder="Örn. 20">
+      placeholder="Örn. 20"
+    >
 
     <button
       class="main-button"
-      onclick="calculatePercent()">
+      onclick="calculatePercent()"
+      type="button"
+    >
       Yüzdeyi Hesapla 🚀
     </button>
 
     <div
       id="percentResults"
       class="results"
-      style="display:none;">
+      style="display:none;"
+    >
 
       <div class="result">
         <small>Yüzde miktarı</small>
@@ -634,48 +851,81 @@
   <!-- KDV -->
   <!-- ==================== -->
 
-  <section id="vatTool" class="card hidden">
+  <section
+    id="vatTool"
+    class="card hidden"
+    aria-labelledby="vatTitle"
+  >
 
-    <h2>🧾 KDV Hesaplama</h2>
+    <h2 id="vatTitle">🧾 KDV Hesaplama</h2>
 
     <div class="card-description">
-      KDV hariç veya KDV dahil tutarı girerek KDV tutarını ve toplam fiyatı kolayca hesapla.
+      KDV hariç veya KDV dahil tutarı girerek KDV tutarını
+      ve toplam fiyatı kolayca hesapla.
     </div>
 
-    <label for="vatType">Hesaplama türü</label>
+    <label for="vatType">
+      Hesaplama türü
+    </label>
 
     <select id="vatType">
-      <option value="add">KDV Hariç → KDV Dahil</option>
-      <option value="remove">KDV Dahil → KDV Hariç</option>
+      <option value="add">
+        KDV Hariç → KDV Dahil
+      </option>
+
+      <option value="remove">
+        KDV Dahil → KDV Hariç
+      </option>
     </select>
 
-    <label for="vatAmount">Tutar (TL)</label>
+    <label for="vatAmount">
+      Tutar (TL)
+    </label>
 
     <input
       id="vatAmount"
       type="number"
       min="0"
       step="0.01"
-      placeholder="Örn. 1000">
+      placeholder="Örn. 1000"
+    >
 
-    <label for="vatRate">KDV oranı (%)</label>
+    <label for="vatRate">
+      KDV oranı (%)
+    </label>
 
     <select id="vatRate">
-      <option value="1">%1</option>
-      <option value="10">%10</option>
-      <option value="20" selected>%20</option>
+
+      <option value="1">
+        %1
+      </option>
+
+      <option value="10">
+        %10
+      </option>
+
+      <option
+        value="20"
+        selected
+      >
+        %20
+      </option>
+
     </select>
 
     <button
       class="main-button"
-      onclick="calculateVAT()">
+      onclick="calculateVAT()"
+      type="button"
+    >
       KDV'yi Hesapla 🚀
     </button>
 
     <div
       id="vatResults"
       class="results"
-      style="display:none;">
+      style="display:none;"
+    >
 
       <div class="result">
         <small>KDV hariç tutar</small>
@@ -710,22 +960,19 @@
   <!-- FOOTER -->
   <!-- ==================== -->
 
-  <div class="footer">
+  <footer class="footer">
 
     <div style="margin-bottom:10px;">
 
-      <a href="hakkimizda.html"
-         style="color:#5267ff; text-decoration:none; margin:0 8px;">
+      <a href="hakkimizda.html">
         Hakkımızda
       </a>
 
-      <a href="gizlilik-politikasi.html"
-         style="color:#5267ff; text-decoration:none; margin:0 8px;">
+      <a href="gizlilik-politikasi.html">
         Gizlilik Politikası
       </a>
 
-      <a href="iletisim.html"
-         style="color:#5267ff; text-decoration:none; margin:0 8px;">
+      <a href="iletisim.html">
         İletişim
       </a>
 
@@ -733,12 +980,16 @@
 
     © 2026 MaaşKanka — Ücretsiz hesaplama araçları
 
-  </div>
+  </footer>
 
 </main>
 
 
 <script>
+
+/* ==================== */
+/* PARA FORMATLAMA */
+/* ==================== */
 
 function tl(value) {
 
@@ -799,13 +1050,19 @@ function showTool(tool) {
 function calculateSalary() {
 
   const salary =
-    Number(document.getElementById('salary').value);
+    Number(
+      document.getElementById('salary').value
+    );
 
   const days =
-    Number(document.getElementById('days').value);
+    Number(
+      document.getElementById('days').value
+    );
 
   const hours =
-    Number(document.getElementById('hours').value);
+    Number(
+      document.getElementById('hours').value
+    );
 
   if (
     salary <= 0 ||
@@ -816,15 +1073,25 @@ function calculateSalary() {
     !Number.isFinite(hours)
   ) {
 
-    alert('Kanka maaş, gün ve saat bilgilerini düzgün gir 😄');
+    alert(
+      'Kanka maaş, gün ve saat bilgilerini düzgün gir 😄'
+    );
+
     return;
 
   }
 
-  const daily = salary / days;
-  const hourly = daily / hours;
-  const weekly = daily * 5;
-  const yearly = salary * 12;
+  const daily =
+    salary / days;
+
+  const hourly =
+    daily / hours;
+
+  const weekly =
+    daily * 5;
+
+  const yearly =
+    salary * 12;
 
   document.getElementById('daily').textContent =
     tl(daily);
@@ -851,13 +1118,19 @@ function calculateSalary() {
 function calculateLoan() {
 
   const amount =
-    Number(document.getElementById('loanAmount').value);
+    Number(
+      document.getElementById('loanAmount').value
+    );
 
   const months =
-    Number(document.getElementById('loanMonths').value);
+    Number(
+      document.getElementById('loanMonths').value
+    );
 
   const rate =
-    Number(document.getElementById('loanRate').value);
+    Number(
+      document.getElementById('loanRate').value
+    );
 
   if (
     amount <= 0 ||
@@ -868,12 +1141,16 @@ function calculateLoan() {
     !Number.isFinite(rate)
   ) {
 
-    alert('Kanka kredi bilgilerini düzgün gir 😄');
+    alert(
+      'Kanka kredi bilgilerini düzgün gir 😄'
+    );
+
     return;
 
   }
 
-  const monthlyRate = rate / 100;
+  const monthlyRate =
+    rate / 100;
 
   let monthlyPayment;
 
@@ -887,10 +1164,16 @@ function calculateLoan() {
     monthlyPayment =
       amount *
       monthlyRate *
-      Math.pow(1 + monthlyRate, months)
+      Math.pow(
+        1 + monthlyRate,
+        months
+      )
       /
       (
-        Math.pow(1 + monthlyRate, months) - 1
+        Math.pow(
+          1 + monthlyRate,
+          months
+        ) - 1
       );
 
   }
@@ -901,19 +1184,29 @@ function calculateLoan() {
   const totalInterest =
     totalPayment - amount;
 
-  document.getElementById('monthlyPayment').textContent =
+  document.getElementById(
+    'monthlyPayment'
+  ).textContent =
     tl(monthlyPayment);
 
-  document.getElementById('totalPayment').textContent =
+  document.getElementById(
+    'totalPayment'
+  ).textContent =
     tl(totalPayment);
 
-  document.getElementById('totalInterest').textContent =
+  document.getElementById(
+    'totalInterest'
+  ).textContent =
     tl(totalInterest);
 
-  document.getElementById('loanTerm').textContent =
+  document.getElementById(
+    'loanTerm'
+  ).textContent =
     months + ' ay';
 
-  document.getElementById('loanResults').style.display =
+  document.getElementById(
+    'loanResults'
+  ).style.display =
     'grid';
 
 }
@@ -926,10 +1219,14 @@ function calculateLoan() {
 function calculateRent() {
 
   const oldRent =
-    Number(document.getElementById('oldRent').value);
+    Number(
+      document.getElementById('oldRent').value
+    );
 
   const rate =
-    Number(document.getElementById('rentRate').value);
+    Number(
+      document.getElementById('rentRate').value
+    );
 
   if (
     oldRent <= 0 ||
@@ -938,7 +1235,10 @@ function calculateRent() {
     !Number.isFinite(rate)
   ) {
 
-    alert('Kanka kira ve artış oranını düzgün gir 😄');
+    alert(
+      'Kanka kira ve artış oranını düzgün gir 😄'
+    );
+
     return;
 
   }
@@ -952,19 +1252,29 @@ function calculateRent() {
   const yearlyRent =
     newRent * 12;
 
-  document.getElementById('oldRentResult').textContent =
+  document.getElementById(
+    'oldRentResult'
+  ).textContent =
     tl(oldRent);
 
-  document.getElementById('rentIncrease').textContent =
+  document.getElementById(
+    'rentIncrease'
+  ).textContent =
     tl(increase);
 
-  document.getElementById('newRent').textContent =
+  document.getElementById(
+    'newRent'
+  ).textContent =
     tl(newRent);
 
-  document.getElementById('yearlyRent').textContent =
+  document.getElementById(
+    'yearlyRent'
+  ).textContent =
     tl(yearlyRent);
 
-  document.getElementById('rentResults').style.display =
+  document.getElementById(
+    'rentResults'
+  ).style.display =
     'grid';
 
 }
@@ -977,13 +1287,19 @@ function calculateRent() {
 function calculateFuel() {
 
   const distance =
-    Number(document.getElementById('distance').value);
+    Number(
+      document.getElementById('distance').value
+    );
 
   const consumption =
-    Number(document.getElementById('consumption').value);
+    Number(
+      document.getElementById('consumption').value
+    );
 
   const fuelPrice =
-    Number(document.getElementById('fuelPrice').value);
+    Number(
+      document.getElementById('fuelPrice').value
+    );
 
   if (
     distance <= 0 ||
@@ -994,7 +1310,10 @@ function calculateFuel() {
     !Number.isFinite(fuelPrice)
   ) {
 
-    alert('Kanka mesafe, tüketim ve yakıt fiyatını düzgün gir 😄');
+    alert(
+      'Kanka mesafe, tüketim ve yakıt fiyatını düzgün gir 😄'
+    );
+
     return;
 
   }
@@ -1008,19 +1327,36 @@ function calculateFuel() {
   const cost100 =
     consumption * fuelPrice;
 
-  document.getElementById('fuelUsed').textContent =
-    fuelUsed.toFixed(2) + ' L';
+  document.getElementById(
+    'fuelUsed'
+  ).textContent =
+    fuelUsed.toLocaleString(
+      'tr-TR',
+      {
+        maximumFractionDigits: 2
+      }
+    ) + ' L';
 
-  document.getElementById('fuelCost').textContent =
+  document.getElementById(
+    'fuelCost'
+  ).textContent =
     tl(totalCost);
 
-  document.getElementById('fuelCost100').textContent =
+  document.getElementById(
+    'fuelCost100'
+  ).textContent =
     tl(cost100);
 
-  document.getElementById('fuelDistance').textContent =
-    distance.toLocaleString('tr-TR') + ' km';
+  document.getElementById(
+    'fuelDistance'
+  ).textContent =
+    distance.toLocaleString(
+      'tr-TR'
+    ) + ' km';
 
-  document.getElementById('fuelResults').style.display =
+  document.getElementById(
+    'fuelResults'
+  ).style.display =
     'grid';
 
 }
@@ -1033,17 +1369,24 @@ function calculateFuel() {
 function calculatePercent() {
 
   const number =
-    Number(document.getElementById('percentNumber').value);
+    Number(
+      document.getElementById('percentNumber').value
+    );
 
   const rate =
-    Number(document.getElementById('percentRate').value);
+    Number(
+      document.getElementById('percentRate').value
+    );
 
   if (
     !Number.isFinite(number) ||
     !Number.isFinite(rate)
   ) {
 
-    alert('Kanka sayı ve yüzde oranını düzgün gir 😄');
+    alert(
+      'Kanka sayı ve yüzde oranını düzgün gir 😄'
+    );
+
     return;
 
   }
@@ -1057,25 +1400,44 @@ function calculatePercent() {
   const subtracted =
     number - percentValue;
 
-  document.getElementById('percentValue').textContent =
-    percentValue.toLocaleString('tr-TR', {
-      maximumFractionDigits: 2
-    });
+  document.getElementById(
+    'percentValue'
+  ).textContent =
+    percentValue.toLocaleString(
+      'tr-TR',
+      {
+        maximumFractionDigits: 2
+      }
+    );
 
-  document.getElementById('percentAdded').textContent =
-    added.toLocaleString('tr-TR', {
-      maximumFractionDigits: 2
-    });
+  document.getElementById(
+    'percentAdded'
+  ).textContent =
+    added.toLocaleString(
+      'tr-TR',
+      {
+        maximumFractionDigits: 2
+      }
+    );
 
-  document.getElementById('percentSubtracted').textContent =
-    subtracted.toLocaleString('tr-TR', {
-      maximumFractionDigits: 2
-    });
+  document.getElementById(
+    'percentSubtracted'
+  ).textContent =
+    subtracted.toLocaleString(
+      'tr-TR',
+      {
+        maximumFractionDigits: 2
+      }
+    );
 
-  document.getElementById('percentRateResult').textContent =
+  document.getElementById(
+    'percentRateResult'
+  ).textContent =
     '%' + rate;
 
-  document.getElementById('percentResults').style.display =
+  document.getElementById(
+    'percentResults'
+  ).style.display =
     'grid';
 
 }
@@ -1088,10 +1450,14 @@ function calculatePercent() {
 function calculateVAT() {
 
   const amount =
-    Number(document.getElementById('vatAmount').value);
+    Number(
+      document.getElementById('vatAmount').value
+    );
 
   const rate =
-    Number(document.getElementById('vatRate').value);
+    Number(
+      document.getElementById('vatRate').value
+    );
 
   const type =
     document.getElementById('vatType').value;
@@ -1103,7 +1469,10 @@ function calculateVAT() {
     !Number.isFinite(rate)
   ) {
 
-    alert('Kanka tutar ve KDV oranını düzgün gir 😄');
+    alert(
+      'Kanka tutar ve KDV oranını düzgün gir 😄'
+    );
+
     return;
 
   }
@@ -1117,7 +1486,8 @@ function calculateVAT() {
 
   if (type === 'add') {
 
-    excluded = amount;
+    excluded =
+      amount;
 
     vat =
       amount * vatRateDecimal;
@@ -1127,7 +1497,8 @@ function calculateVAT() {
 
   } else {
 
-    included = amount;
+    included =
+      amount;
 
     excluded =
       amount / (1 + vatRateDecimal);
@@ -1137,19 +1508,29 @@ function calculateVAT() {
 
   }
 
-  document.getElementById('vatExcluded').textContent =
+  document.getElementById(
+    'vatExcluded'
+  ).textContent =
     tl(excluded);
 
-  document.getElementById('vatValue').textContent =
+  document.getElementById(
+    'vatValue'
+  ).textContent =
     tl(vat);
 
-  document.getElementById('vatIncluded').textContent =
+  document.getElementById(
+    'vatIncluded'
+  ).textContent =
     tl(included);
 
-  document.getElementById('vatRateResult').textContent =
+  document.getElementById(
+    'vatRateResult'
+  ).textContent =
     '%' + rate;
 
-  document.getElementById('vatResults').style.display =
+  document.getElementById(
+    'vatResults'
+  ).style.display =
     'grid';
 
 }
@@ -1159,80 +1540,82 @@ function calculateVAT() {
 /* ENTER TUŞU */
 /* ==================== */
 
-document.querySelectorAll('input, select').forEach(
-  function(input) {
+document
+  .querySelectorAll('input, select')
+  .forEach(
+    function(input) {
 
-    input.addEventListener(
-      'keydown',
-      function(event) {
+      input.addEventListener(
+        'keydown',
+        function(event) {
 
-        if (event.key !== 'Enter') {
-          return;
+          if (event.key !== 'Enter') {
+            return;
+          }
+
+          if (
+            input.id === 'salary' ||
+            input.id === 'days' ||
+            input.id === 'hours'
+          ) {
+
+            calculateSalary();
+
+          }
+
+          if (
+            input.id === 'loanAmount' ||
+            input.id === 'loanMonths' ||
+            input.id === 'loanRate'
+          ) {
+
+            calculateLoan();
+
+          }
+
+          if (
+            input.id === 'oldRent' ||
+            input.id === 'rentRate'
+          ) {
+
+            calculateRent();
+
+          }
+
+          if (
+            input.id === 'distance' ||
+            input.id === 'consumption' ||
+            input.id === 'fuelPrice'
+          ) {
+
+            calculateFuel();
+
+          }
+
+          if (
+            input.id === 'percentNumber' ||
+            input.id === 'percentRate'
+          ) {
+
+            calculatePercent();
+
+          }
+
+          if (
+            input.id === 'vatAmount' ||
+            input.id === 'vatRate' ||
+            input.id === 'vatType'
+          ) {
+
+            calculateVAT();
+
+          }
+
         }
+      );
 
-        if (
-          input.id === 'salary' ||
-          input.id === 'days' ||
-          input.id === 'hours'
-        ) {
-
-          calculateSalary();
-
-        }
-
-        if (
-          input.id === 'loanAmount' ||
-          input.id === 'loanMonths' ||
-          input.id === 'loanRate'
-        ) {
-
-          calculateLoan();
-
-        }
-
-        if (
-          input.id === 'oldRent' ||
-          input.id === 'rentRate'
-        ) {
-
-          calculateRent();
-
-        }
-
-        if (
-          input.id === 'distance' ||
-          input.id === 'consumption' ||
-          input.id === 'fuelPrice'
-        ) {
-
-          calculateFuel();
-
-        }
-
-        if (
-          input.id === 'percentNumber' ||
-          input.id === 'percentRate'
-        ) {
-
-          calculatePercent();
-
-        }
-
-        if (
-          input.id === 'vatAmount' ||
-          input.id === 'vatRate' ||
-          input.id === 'vatType'
-        ) {
-
-          calculateVAT();
-
-        }
-
-      }
-    );
-
-  }
-);
+    }
+  );
 
 </script>
 
