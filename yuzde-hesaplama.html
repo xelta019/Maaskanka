@@ -1,7 +1,7 @@
+```html
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-
   <meta charset="UTF-8">
 
   <meta
@@ -9,9 +9,7 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>
-    Yüzde Hesaplama | MaaşKanka
-  </title>
+  <title>Yüzde Hesaplama | MaaşKanka</title>
 
   <meta
     name="description"
@@ -25,13 +23,10 @@
 
   <meta
     name="keywords"
-    content="yüzde hesaplama, yüzde hesaplama aracı, yüzde hesaplama nasıl yapılır, zam hesaplama, indirim hesaplama"
+    content="yüzde hesaplama, yüzde hesaplama aracı, zam hesaplama, indirim hesaplama, yüzde artış hesaplama"
   >
 
-  <meta
-    name="author"
-    content="MaaşKanka"
-  >
+  <meta name="author" content="MaaşKanka">
 
   <link
     rel="canonical"
@@ -48,31 +43,20 @@
     content="Bir sayının yüzdesini, yüzde artışını ve yüzde azalışını kolayca hesapla."
   >
 
-  <meta
-    property="og:type"
-    content="website"
-  >
+  <meta property="og:type" content="website">
 
   <meta
     property="og:url"
     content="https://xelta019.github.io/Maaskanka/yuzde-hesaplama.html"
   >
 
-  <meta
-    property="og:site_name"
-    content="MaaşKanka"
-  >
-
-  <meta
-    property="og:locale"
-    content="tr_TR"
-  >
+  <meta property="og:site_name" content="MaaşKanka">
+  <meta property="og:locale" content="tr_TR">
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
-
       {
         "@type": "WebSite",
         "@id": "https://xelta019.github.io/Maaskanka/#website",
@@ -80,7 +64,6 @@
         "name": "MaaşKanka",
         "inLanguage": "tr-TR"
       },
-
       {
         "@type": "WebPage",
         "@id": "https://xelta019.github.io/Maaskanka/yuzde-hesaplama.html#webpage",
@@ -92,21 +75,19 @@
         },
         "inLanguage": "tr-TR"
       },
-
       {
         "@type": "WebApplication",
-        "name": "Yüzde Hesaplama Aracı",
+        "name": "MaaşKanka Yüzde Hesaplama",
         "url": "https://xelta019.github.io/Maaskanka/yuzde-hesaplama.html",
         "applicationCategory": "Calculator",
         "operatingSystem": "All",
+        "browserRequirements": "JavaScript destekleyen modern web tarayıcısı",
         "isAccessibleForFree": true,
         "inLanguage": "tr-TR"
       },
-
       {
         "@type": "FAQPage",
         "mainEntity": [
-
           {
             "@type": "Question",
             "name": "Yüzde nasıl hesaplanır?",
@@ -115,7 +96,6 @@
               "text": "Bir sayının belirli bir yüzdesini bulmak için sayı yüzde oranıyla çarpılır ve 100'e bölünür."
             }
           },
-
           {
             "@type": "Question",
             "name": "1000'in yüzde 20'si kaçtır?",
@@ -124,7 +104,6 @@
               "text": "1000'in yüzde 20'si 200'dür."
             }
           },
-
           {
             "@type": "Question",
             "name": "Yüzde artış nasıl hesaplanır?",
@@ -133,7 +112,6 @@
               "text": "Önce başlangıç değerinin yüzde artış miktarı bulunur ve başlangıç değerine eklenir."
             }
           },
-
           {
             "@type": "Question",
             "name": "Yüzde indirim nasıl hesaplanır?",
@@ -142,16 +120,13 @@
               "text": "Başlangıç değerinin indirim yüzdesi bulunur ve başlangıç değerinden çıkarılır."
             }
           }
-
         ]
       }
-
     ]
   }
   </script>
 
   <style>
-
     * {
       box-sizing: border-box;
     }
@@ -185,10 +160,18 @@
       margin-bottom: 24px;
     }
 
+    .back {
+      display: inline-block;
+      text-decoration: none;
+      color: #5267ff;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
     .intro,
     .card,
     .seo-section {
-      background: white;
+      background: #fff;
       border-radius: 20px;
       padding: 24px;
       margin-bottom: 18px;
@@ -243,7 +226,7 @@
       padding: 15px;
       margin-top: 20px;
       background: #5267ff;
-      color: white;
+      color: #fff;
       font-size: 17px;
       font-weight: 800;
       cursor: pointer;
@@ -307,14 +290,6 @@
       margin: 0;
     }
 
-    .back {
-      display: inline-block;
-      text-decoration: none;
-      color: #5267ff;
-      font-weight: 700;
-      margin-bottom: 18px;
-    }
-
     .footer {
       text-align: center;
       color: #8a93a5;
@@ -329,7 +304,6 @@
     }
 
     @media (max-width: 520px) {
-
       .results {
         grid-template-columns: 1fr;
       }
@@ -347,11 +321,8 @@
       .intro h1 {
         font-size: 23px;
       }
-
     }
-
   </style>
-
 </head>
 
 <body>
@@ -359,7 +330,6 @@
 <main class="wrap">
 
   <header>
-
     <div class="brand">
       📊 MaaşKanka
     </div>
@@ -367,17 +337,11 @@
     <div class="sub">
       Günlük hayattaki hesaplamaları kolaylaştıran ücretsiz araçlar.
     </div>
-
   </header>
 
-
-  <a
-    class="back"
-    href="index.html"
-  >
+  <a class="back" href="index.html">
     ← Ana sayfaya dön
   </a>
-
 
   <section class="intro">
 
@@ -397,7 +361,6 @@
     </p>
 
   </section>
-
 
   <section class="card">
 
@@ -438,7 +401,6 @@
       Yüzdeyi Hesapla 🚀
     </button>
 
-
     <div
       id="results"
       class="results"
@@ -446,71 +408,35 @@
     >
 
       <div class="result">
-
-        <small>
-          Yüzde miktarı
-        </small>
-
-        <strong id="percentValue">
-          -
-        </strong>
-
+        <small>Yüzde miktarı</small>
+        <strong id="percentValue">-</strong>
       </div>
 
-
       <div class="result">
-
-        <small>
-          Yüzde eklenmiş
-        </small>
-
-        <strong id="percentAdded">
-          -
-        </strong>
-
+        <small>Yüzde eklenmiş</small>
+        <strong id="percentAdded">-</strong>
       </div>
 
-
       <div class="result">
-
-        <small>
-          Yüzde çıkarılmış
-        </small>
-
-        <strong id="percentSubtracted">
-          -
-        </strong>
-
+        <small>Yüzde çıkarılmış</small>
+        <strong id="percentSubtracted">-</strong>
       </div>
 
-
       <div class="result">
-
-        <small>
-          Yüzde oranı
-        </small>
-
-        <strong id="percentRate">
-          -
-        </strong>
-
+        <small>Yüzde oranı</small>
+        <strong id="percentRate">-</strong>
       </div>
 
     </div>
 
-
     <div class="example">
-
       <strong>Örnek:</strong>
-
       1000'in %20'si 200'dür.
       %20 eklenmiş hali 1200,
       %20 çıkarılmış hali ise 800 olur.
-
     </div>
 
   </section>
-
 
   <section class="seo-section">
 
@@ -529,8 +455,7 @@
 
     <p>
       Örneğin 500 sayısının %20'sini bulmak için
-      500 × 20 ÷ 100 işlemi yapılır.
-      Sonuç 100 olur.
+      500 × 20 ÷ 100 işlemi yapılır. Sonuç 100 olur.
     </p>
 
     <h3>
@@ -554,7 +479,6 @@
 
   </section>
 
-
   <section class="seo-section">
 
     <h2>
@@ -569,42 +493,21 @@
     </p>
 
     <ul>
-
-      <li>
-        İndirim hesaplama
-      </li>
-
-      <li>
-        Zam oranı hesaplama
-      </li>
-
-      <li>
-        Maaş artışı hesaplama
-      </li>
-
-      <li>
-        Fiyat artışı hesaplama
-      </li>
-
-      <li>
-        Yüzde azalış hesaplama
-      </li>
-
-      <li>
-        Yüzde miktarı hesaplama
-      </li>
-
+      <li>İndirim hesaplama</li>
+      <li>Zam oranı hesaplama</li>
+      <li>Maaş artışı hesaplama</li>
+      <li>Fiyat artışı hesaplama</li>
+      <li>Yüzde azalış hesaplama</li>
+      <li>Yüzde miktarı hesaplama</li>
     </ul>
 
   </section>
-
 
   <section class="seo-section">
 
     <h2>
       Sık Sorulan Sorular
     </h2>
-
 
     <div class="faq-item">
 
@@ -618,7 +521,6 @@
 
     </div>
 
-
     <div class="faq-item">
 
       <h3>
@@ -630,7 +532,6 @@
       </p>
 
     </div>
-
 
     <div class="faq-item">
 
@@ -645,7 +546,6 @@
 
     </div>
 
-
     <div class="faq-item">
 
       <h3>
@@ -658,7 +558,6 @@
       </p>
 
     </div>
-
 
     <div class="faq-item">
 
@@ -674,7 +573,6 @@
     </div>
 
   </section>
-
 
   <footer class="footer">
 
@@ -700,20 +598,16 @@
 
 </main>
 
-
 <script>
 
 function formatNumber(value) {
-
   return value.toLocaleString(
     'tr-TR',
     {
       maximumFractionDigits: 2
     }
   );
-
 }
-
 
 function calculatePercent() {
 
@@ -727,7 +621,6 @@ function calculatePercent() {
       document.getElementById('rate').value
     );
 
-
   if (
     !Number.isFinite(number) ||
     !Number.isFinite(rate)
@@ -738,9 +631,7 @@ function calculatePercent() {
     );
 
     return;
-
   }
-
 
   const percentValue =
     number * (rate / 100);
@@ -751,38 +642,31 @@ function calculatePercent() {
   const subtracted =
     number - percentValue;
 
-
   document.getElementById(
     'percentValue'
   ).textContent =
     formatNumber(percentValue);
-
 
   document.getElementById(
     'percentAdded'
   ).textContent =
     formatNumber(added);
 
-
   document.getElementById(
     'percentSubtracted'
   ).textContent =
     formatNumber(subtracted);
-
 
   document.getElementById(
     'percentRate'
   ).textContent =
     '%' + formatNumber(rate);
 
-
   document.getElementById(
     'results'
   ).style.display =
     'grid';
-
 }
-
 
 document
   .querySelectorAll('input')
@@ -793,9 +677,7 @@ document
       function(event) {
 
         if (event.key === 'Enter') {
-
           calculatePercent();
-
         }
 
       }
@@ -804,149 +686,7 @@ document
   });
 
 </script>
-<section class="seo-content">
 
-  <h2>Yüzde Hesaplama</h2>
-
-  <p>
-    Yüzde hesaplama aracı ile bir sayının belirli bir yüzdesini,
-    yüzde eklenmiş değerini ve yüzde çıkarılmış değerini
-    kolayca hesaplayabilirsiniz. Maaş artışı, zam, indirim,
-    fiyat değişimi ve günlük hesaplamalarda kullanılabilir.
-  </p>
-
-  <h2>Yüzde Nasıl Hesaplanır?</h2>
-
-  <p>
-    Bir sayının belirli bir yüzdesini bulmak için sayı,
-    yüzde oranıyla çarpılır ve sonuç 100'e bölünür.
-  </p>
-
-  <p>
-    Örneğin 1.000 TL'nin %20'sini hesaplamak için
-    1.000 × 20 ÷ 100 işlemi yapılır. Sonuç 200 TL'dir.
-  </p>
-
-  <h2>Yüzde Artış Hesaplama</h2>
-
-  <p>
-    Bir sayıya yüzde artış uygulamak için önce artış miktarı
-    hesaplanır. Daha sonra bu miktar başlangıç değerine eklenir.
-  </p>
-
-  <p>
-    Örneğin 10.000 TL'ye %25 artış uygulandığında artış miktarı
-    2.500 TL olur. Yeni değer 12.500 TL olarak hesaplanır.
-  </p>
-
-  <h2>Yüzde İndirim Hesaplama</h2>
-
-  <p>
-    Bir fiyata yüzde indirim uygulamak için indirim miktarı
-    hesaplanır ve başlangıç fiyatından çıkarılır.
-  </p>
-
-  <p>
-    Örneğin 2.000 TL'lik bir ürünün %10 indirimi 200 TL'dir.
-    İndirimli fiyat 1.800 TL olur.
-  </p>
-
-  <h2>Maaş Zammı Yüzde Hesaplama</h2>
-
-  <p>
-    Maaş zammını hesaplamak için mevcut maaş ve zam oranı
-    kullanılabilir. Mevcut maaşın belirlenen yüzde kadarı
-    zam miktarını verir. Bu miktar mevcut maaşa eklendiğinde
-    zamlı maaş bulunur.
-  </p>
-
-  <h2>Fiyat Artışı Yüzde Hesaplama</h2>
-
-  <p>
-    Ürün veya hizmet fiyatındaki yüzde değişimi hesaplamak
-    için eski fiyat ve uygulanacak artış oranı kullanılabilir.
-    Böylece yeni fiyat ve artış miktarı kolayca bulunabilir.
-  </p>
-
-  <h2>Yüzde Hesaplama Sonucu Kesin midir?</h2>
-
-  <p>
-    MaaşKanka yüzde hesaplama aracı matematiksel işlem yapar.
-    Sonuç, girdiğiniz sayı ve yüzde oranına göre hesaplanır.
-    Vergi, komisyon veya başka ek maliyetler hesaplamaya
-    dahil edilmez.
-  </p>
-
-  <h2>Sık Sorulan Sorular</h2>
-
-  <h3>Yüzde hesaplama ücretsiz mi?</h3>
-
-  <p>
-    Evet. MaaşKanka yüzde hesaplama aracı ücretsiz olarak
-    kullanılabilir.
-  </p>
-
-  <h3>1.000'in %20'si kaçtır?</h3>
-
-  <p>
-    1.000'in %20'si 200'dür.
-  </p>
-
-  <h3>10.000 TL'ye %25 zam gelirse kaç TL olur?</h3>
-
-  <p>
-    %25 zam miktarı 2.500 TL'dir. Zamlı tutar 12.500 TL olur.
-  </p>
-
-  <h3>2.000 TL'nin %10 indirimli fiyatı kaç TL olur?</h3>
-
-  <p>
-    %10 indirim 200 TL'dir. İndirimli fiyat 1.800 TL olur.
-  </p>
-
-</section>
-
-<style>
-  .seo-content {
-    background: #ffffff;
-    border-radius: 20px;
-    padding: 26px;
-    margin: 20px 0;
-    box-shadow: 0 8px 30px rgba(20, 30, 50, .06);
-  }
-
-  .seo-content h2 {
-    margin-top: 0;
-    margin-bottom: 12px;
-    font-size: 23px;
-    line-height: 1.35;
-  }
-
-  .seo-content h2:not(:first-child) {
-    margin-top: 30px;
-  }
-
-  .seo-content h3 {
-    margin-top: 22px;
-    margin-bottom: 8px;
-    font-size: 18px;
-  }
-
-  .seo-content p {
-    color: #4f596b;
-    line-height: 1.7;
-    margin: 8px 0;
-  }
-
-  @media (max-width: 520px) {
-    .seo-content {
-      padding: 18px;
-    }
-
-    .seo-content h2 {
-      font-size: 21px;
-    }
-  }
-</style>
 </body>
 </html>
+```
