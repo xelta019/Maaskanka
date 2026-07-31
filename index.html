@@ -505,7 +505,29 @@
       }
 
     }
+.menu-link {
+  display: block;
+  text-align: center;
+  padding: 14px 10px;
+  background: white;
+  color: #172033;
+  border: 2px solid #e2e6f0;
+  border-radius: 12px;
+  box-shadow: none;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 800;
+}
 
+.menu-link:hover {
+  opacity: .92;
+}
+
+.menu-link.active {
+  background: #5267ff;
+  color: white;
+  border-color: #5267ff;
+}
   </style>
 
 </head>
@@ -565,54 +587,53 @@
   <!-- ========================= -->
 
   <nav
-    class="menu"
-    aria-label="Hesaplama araçları"
+  class="menu"
+  aria-label="Hesaplama araçları"
+>
+
+  <a
+    class="menu-link active"
+    href="maas-hesaplama.html"
   >
+    💸 Maaş
+  </a>
 
-    <button
-      id="salaryMenu"
-      class="active"
-      onclick="showTool('salary')"
-    >
-      💸 Maaş
-    </button>
+  <a
+    class="menu-link"
+    href="kredi-hesaplama.html"
+  >
+    🏦 Kredi
+  </a>
 
-    <button
-      id="loanMenu"
-      onclick="showTool('loan')"
-    >
-      🏦 Kredi
-    </button>
+  <a
+    class="menu-link"
+    href="kira-hesaplama.html"
+  >
+    🏠 Kira
+  </a>
 
-    <button
-      id="rentMenu"
-      onclick="showTool('rent')"
-    >
-      🏠 Kira
-    </button>
+  <a
+    class="menu-link"
+    href="yakit-hesaplama.html"
+  >
+    ⛽ Yakıt
+  </a>
 
-    <button
-      id="fuelMenu"
-      onclick="showTool('fuel')"
-    >
-      ⛽ Yakıt
-    </button>
+  <a
+    class="menu-link"
+    href="yuzde-hesaplama.html"
+  >
+    📊 Yüzde
+  </a>
 
-    <button
-      id="percentMenu"
-      onclick="showTool('percent')"
-    >
-      📊 Yüzde
-    </button>
+  <a
+    class="menu-link"
+    href="kdv-hesaplama.html"
+  >
+    🧾 KDV
+  </a>
 
-    <button
-      id="vatMenu"
-      onclick="showTool('vat')"
-    >
-      🧾 KDV
-    </button>
-
-  </nav>
+</nav>
 
 
   <!-- ========================= -->
