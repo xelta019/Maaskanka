@@ -1,7 +1,7 @@
+```html
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-
   <meta charset="UTF-8">
 
   <meta
@@ -9,11 +9,11 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>Kira Artış Hesaplama | MaaşKanka</title>
+  <title>Kira Artış Hesaplama | Yeni Kira ve Yıllık Kira Hesapla | MaaşKanka</title>
 
   <meta
     name="description"
-    content="Mevcut kira ve artış oranını girerek yeni kira tutarını, artış miktarını ve yıllık kira bedelini kolayca hesapla."
+    content="Mevcut kira ve artış oranını girerek kira artış miktarını, yeni aylık kirayı, eski ve yeni yıllık kira toplamını kolayca hesapla."
   >
 
   <meta
@@ -23,7 +23,7 @@
 
   <meta
     name="keywords"
-    content="kira artış hesaplama, kira zam hesaplama, kira hesaplama, yeni kira hesaplama, kira zammı hesaplama"
+    content="kira artış hesaplama, kira zam hesaplama, kira hesaplama, yeni kira hesaplama, kira zammı hesaplama, yıllık kira hesaplama"
   >
 
   <meta
@@ -36,14 +36,16 @@
     href="https://xelta019.github.io/Maaskanka/kira-hesaplama.html"
   >
 
+  <!-- OPEN GRAPH -->
+
   <meta
     property="og:title"
-    content="Kira Artış Hesaplama | MaaşKanka"
+    content="Kira Artış Hesaplama | Yeni Kira Hesapla - MaaşKanka"
   >
 
   <meta
     property="og:description"
-    content="Mevcut kira ve artış oranını girerek yeni kira tutarını kolayca hesapla."
+    content="Mevcut kira ve artış oranını girerek yeni kira, artış miktarı ve yıllık kira toplamını hesapla."
   >
 
   <meta
@@ -66,6 +68,8 @@
     content="tr_TR"
   >
 
+  <!-- SCHEMA -->
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -76,6 +80,7 @@
         "@id": "https://xelta019.github.io/Maaskanka/#website",
         "url": "https://xelta019.github.io/Maaskanka/",
         "name": "MaaşKanka",
+        "description": "Ücretsiz online hesaplama araçları.",
         "inLanguage": "tr-TR"
       },
 
@@ -84,7 +89,7 @@
         "@id": "https://xelta019.github.io/Maaskanka/kira-hesaplama.html#webpage",
         "url": "https://xelta019.github.io/Maaskanka/kira-hesaplama.html",
         "name": "Kira Artış Hesaplama",
-        "description": "Mevcut kira ve artış oranına göre yeni kira hesaplama aracı.",
+        "description": "Mevcut kira ve artış oranına göre yeni kira, artış miktarı ve yıllık kira hesaplama aracı.",
         "isPartOf": {
           "@id": "https://xelta019.github.io/Maaskanka/#website"
         },
@@ -93,8 +98,10 @@
 
       {
         "@type": "WebApplication",
+        "@id": "https://xelta019.github.io/Maaskanka/kira-hesaplama.html#application",
         "name": "MaaşKanka Kira Artış Hesaplama",
         "url": "https://xelta019.github.io/Maaskanka/kira-hesaplama.html",
+        "description": "Kira artış miktarı, yeni aylık kira ve yıllık kira toplamını hesaplayan ücretsiz araç.",
         "applicationCategory": "FinanceApplication",
         "operatingSystem": "All",
         "browserRequirements": "JavaScript destekleyen modern web tarayıcısı",
@@ -104,6 +111,7 @@
 
       {
         "@type": "BreadcrumbList",
+        "@id": "https://xelta019.github.io/Maaskanka/kira-hesaplama.html#breadcrumb",
         "itemListElement": [
           {
             "@type": "ListItem",
@@ -117,6 +125,59 @@
             "name": "Kira Artış Hesaplama",
             "item": "https://xelta019.github.io/Maaskanka/kira-hesaplama.html"
           }
+        ]
+      },
+
+      {
+        "@type": "FAQPage",
+        "@id": "https://xelta019.github.io/Maaskanka/kira-hesaplama.html#faq",
+        "mainEntity": [
+
+          {
+            "@type": "Question",
+            "name": "Kira artış hesaplama nasıl yapılır?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Mevcut kira bedeli artış oranıyla çarpılarak artış miktarı bulunur. Artış miktarı mevcut kiraya eklenerek yeni aylık kira hesaplanır."
+            }
+          },
+
+          {
+            "@type": "Question",
+            "name": "Kira artış hesaplama sonucu yasal kira bedeli midir?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Hayır. Araç yalnızca girilen artış oranına göre matematiksel hesaplama yapar. Güncel yasal düzenlemeler ve sözleşme şartları ayrıca değerlendirilmelidir."
+            }
+          },
+
+          {
+            "@type": "Question",
+            "name": "Yeni kira nasıl hesaplanır?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yeni kira, mevcut kira ile hesaplanan kira artış miktarının toplanmasıyla bulunur."
+            }
+          },
+
+          {
+            "@type": "Question",
+            "name": "Yıllık kira nasıl hesaplanır?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Aylık kira tutarı 12 ile çarpılarak yıllık kira toplamı hesaplanabilir."
+            }
+          },
+
+          {
+            "@type": "Question",
+            "name": "Kira artış hesaplama ücretsiz mi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Evet. MaaşKanka kira artış hesaplama aracı ücretsiz olarak kullanılabilir."
+            }
+          }
+
         ]
       }
 
@@ -156,7 +217,7 @@
 
     .sub {
       color: #697386;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
     }
 
     .back {
@@ -202,7 +263,7 @@
     label {
       display: block;
       font-weight: 700;
-      margin: 14px 0 8px;
+      margin: 15px 0 8px;
     }
 
     input {
@@ -258,10 +319,22 @@
       font-size: 20px;
     }
 
+    .result.highlight {
+      background: #eef1ff;
+    }
+
     .note {
       color: #697386;
       font-size: 13px;
       margin-top: 18px;
+    }
+
+    .formula {
+      background: #f5f7ff;
+      border-radius: 12px;
+      padding: 15px;
+      margin: 15px 0;
+      font-weight: 700;
     }
 
     .example {
@@ -274,6 +347,42 @@
     .seo-section h3 {
       font-size: 18px;
       margin-top: 24px;
+      margin-bottom: 8px;
+    }
+
+    .faq {
+      border-top: 1px solid #e7eaf1;
+      padding: 18px 0;
+    }
+
+    .faq:first-child {
+      border-top: 0;
+    }
+
+    .faq h3 {
+      margin: 0 0 8px;
+      font-size: 17px;
+    }
+
+    .faq p {
+      margin: 0;
+    }
+
+    .links {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .links a {
+      display: block;
+      padding: 13px;
+      border-radius: 12px;
+      background: #f5f7ff;
+      color: #5267ff;
+      text-decoration: none;
+      font-weight: 700;
     }
 
     .footer {
@@ -309,7 +418,8 @@
         padding: 18px;
       }
 
-      .results {
+      .results,
+      .links {
         grid-template-columns: 1fr;
       }
 
@@ -343,6 +453,8 @@
   </header>
 
 
+  <!-- GİRİŞ -->
+
   <section class="intro">
 
     <h1>
@@ -351,25 +463,29 @@
 
     <p>
       Mevcut kira tutarını ve artış oranını girerek
-      yeni kira bedelini birkaç saniyede hesapla.
+      kira artış miktarını, yeni aylık kirayı ve
+      yıllık kira toplamını kolayca hesapla.
     </p>
 
     <p>
-      Artış miktarını, yeni aylık kirayı ve yıllık toplam
-      kira tutarını birlikte görebilirsin.
+      Eski ve yeni kira arasındaki farkı da aynı ekranda
+      görebilirsin.
     </p>
 
   </section>
 
 
+  <!-- HESAPLAMA ARACI -->
+
   <section class="card">
 
     <h2>
-      Yeni Kira Tutarını Hesapla
+      Kira Artışını Hesapla
     </h2>
 
     <div class="card-description">
-      Mevcut kira ve uygulanacak artış oranını gir.
+      Mevcut kira bedelini ve hesaplamak istediğin
+      artış oranını gir.
     </div>
 
 
@@ -394,6 +510,7 @@
       id="rentRate"
       type="number"
       min="0"
+      max="1000"
       step="0.01"
       placeholder="Örn. 25"
     >
@@ -407,6 +524,8 @@
     </button>
 
 
+    <!-- SONUÇLAR -->
+
     <div
       id="rentResults"
       class="results"
@@ -416,7 +535,7 @@
       <div class="result">
 
         <small>
-          Eski kira
+          Mevcut aylık kira
         </small>
 
         <strong id="oldRentResult">
@@ -439,7 +558,7 @@
       </div>
 
 
-      <div class="result">
+      <div class="result highlight">
 
         <small>
           Yeni aylık kira
@@ -452,7 +571,7 @@
       </div>
 
 
-      <div class="result">
+      <div class="result highlight">
 
         <small>
           Yıllık yeni kira
@@ -464,17 +583,45 @@
 
       </div>
 
+
+      <div class="result">
+
+        <small>
+          Eski yıllık kira
+        </small>
+
+        <strong id="oldYearlyRent">
+          -
+        </strong>
+
+      </div>
+
+
+      <div class="result">
+
+        <small>
+          Yıllık kira farkı
+        </small>
+
+        <strong id="yearlyDifference">
+          -
+        </strong>
+
+      </div>
+
     </div>
 
 
     <div class="note">
-      Bu araç yalnızca girdiğin yüzdeye göre matematiksel
-      hesaplama yapar. Güncel yasal kira artış kuralları
-      ayrıca kontrol edilmelidir.
+      Bu araç girdiğin artış oranına göre matematiksel
+      hesaplama yapar. Yasal kira artış oranı anlamına gelmez.
+      Güncel mevzuat ve sözleşme şartları ayrıca kontrol edilmelidir.
     </div>
 
   </section>
 
+
+  <!-- SEO -->
 
   <section class="seo-section">
 
@@ -483,20 +630,24 @@
     </h2>
 
     <p>
-      Kira artış hesaplamasında mevcut kira bedeli ile
-      uygulanacak artış oranı kullanılır. Önce artış miktarı
-      bulunur, ardından bu miktar mevcut kiraya eklenerek
-      yeni kira tutarı hesaplanır.
+      Kira artış hesaplama işleminde mevcut kira bedeli
+      ve uygulanacak artış oranı kullanılır. Önce kira
+      artış miktarı hesaplanır. Daha sonra bu miktar
+      mevcut kira bedeline eklenerek yeni aylık kira bulunur.
     </p>
 
 
     <h3>
-      Kira artış miktarı nasıl bulunur?
+      Kira artış miktarı nasıl hesaplanır?
     </h3>
 
+    <div class="formula">
+      Kira artış miktarı = Mevcut kira × Artış oranı ÷ 100
+    </div>
+
     <p>
-      Mevcut kira, artış oranıyla çarpılıp 100'e bölünerek
-      kira artış miktarı bulunabilir.
+      Örneğin 15.000 TL kira için %25 artış hesaplandığında
+      artış miktarı 3.750 TL olur.
     </p>
 
 
@@ -504,20 +655,40 @@
       Yeni kira nasıl hesaplanır?
     </h3>
 
+    <div class="formula">
+      Yeni kira = Mevcut kira + Artış miktarı
+    </div>
+
     <p>
-      Mevcut kira ile hesaplanan artış miktarı toplandığında
-      yeni aylık kira tutarı elde edilir.
+      15.000 TL mevcut kira ve %25 artış örneğinde
+      matematiksel olarak yeni aylık kira 18.750 TL olur.
     </p>
 
+  </section>
+
+
+  <section class="seo-section">
+
+    <h2>
+      Yıllık Kira Hesaplama
+    </h2>
+
+    <p>
+      Aylık kira tutarını 12 ile çarparak yıllık toplam
+      kira bedelini yaklaşık olarak hesaplayabilirsin.
+    </p>
+
+    <div class="formula">
+      Yıllık kira = Aylık kira × 12
+    </div>
 
     <div class="example">
 
       <strong>Örnek:</strong>
 
       <p>
-        15.000 TL kira için %25 artış hesaplandığında
-        artış miktarı 3.750 TL olur. Matematiksel olarak
-        yeni kira 18.750 TL olur.
+        Aylık yeni kira 18.750 TL ise 12 aylık toplam
+        kira 225.000 TL olur.
       </p>
 
     </div>
@@ -528,20 +699,23 @@
   <section class="seo-section">
 
     <h2>
-      Kira Zammı Hesaplarken Nelere Dikkat Edilmeli?
+      Eski ve Yeni Yıllık Kira Karşılaştırması
     </h2>
 
     <p>
-      Kira artışı hesaplanırken yalnızca matematiksel sonucu
-      bilmek yeterli olmayabilir. Kira sözleşmesi, yürürlükteki
-      mevzuat ve ilgili dönemde geçerli olan yasal düzenlemeler
-      ayrıca değerlendirilmelidir.
+      Kira artışından sonra yalnızca yeni aylık kira değil,
+      yıllık toplam kira farkı da önemlidir.
     </p>
 
     <p>
-      MaaşKanka'nın hesaplama sonucu, girilen artış oranının
-      doğrudan kira bedeline uygulanmasıyla oluşan matematiksel
-      sonuçtur. Yasal kira artış oranı anlamına gelmez.
+      Örneğin mevcut kira 15.000 TL ise eski yıllık kira
+      180.000 TL olur. %25 artış sonrası yeni aylık kira
+      18.750 TL ve yeni yıllık kira 225.000 TL olur.
+    </p>
+
+    <p>
+      Bu durumda yıllık matematiksel kira farkı
+      45.000 TL'dir.
     </p>
 
   </section>
@@ -550,70 +724,155 @@
   <section class="seo-section">
 
     <h2>
-      Yıllık Kira Tutarı Nasıl Hesaplanır?
+      Kira Artışı Hesaplarken Nelere Dikkat Edilmeli?
     </h2>
 
     <p>
-      Yeni aylık kira tutarı 12 ile çarpılarak bir yıllık
-      toplam kira bedeli yaklaşık olarak hesaplanabilir.
+      Matematiksel kira artış hesabı ile yasal olarak
+      uygulanabilecek kira artış oranı aynı şey değildir.
+      Kira sözleşmesi, yürürlükteki mevzuat ve ilgili
+      dönemde geçerli resmi düzenlemeler ayrıca
+      değerlendirilmelidir.
     </p>
 
     <p>
-      Örneğin aylık yeni kira 18.750 TL ise 12 aylık toplam
-      kira tutarı 225.000 TL olur.
+      MaaşKanka bu sayfada yalnızca kullanıcının girdiği
+      oran üzerinden matematiksel sonuç üretir.
+      Sonuç resmi veya hukuki bir kira bedeli belirleme
+      aracı değildir.
     </p>
 
   </section>
 
+
+  <!-- SSS -->
 
   <section class="seo-section">
 
     <h2>
-      Sık Sorulan Sorular
+      Kira Artış Hesaplama Sık Sorulan Sorular
     </h2>
 
 
-    <h3>
-      Kira artış hesaplama ücretsiz mi?
-    </h3>
+    <div class="faq">
 
-    <p>
-      Evet. MaaşKanka kira artış hesaplama aracı ücretsizdir.
-    </p>
+      <h3>
+        Kira artış hesaplama ücretsiz mi?
+      </h3>
 
+      <p>
+        Evet. MaaşKanka kira artış hesaplama aracı
+        ücretsiz olarak kullanılabilir.
+      </p>
 
-    <h3>
-      Kira hesaplama sonucu yasal kira bedeli midir?
-    </h3>
-
-    <p>
-      Hayır. Araç yalnızca girdiğin artış oranına göre
-      matematiksel sonuç verir. Güncel yasal düzenlemeler
-      ayrıca kontrol edilmelidir.
-    </p>
+    </div>
 
 
-    <h3>
-      Kira artış miktarı nasıl hesaplanır?
-    </h3>
+    <div class="faq">
 
-    <p>
-      Mevcut kira bedeli, artış yüzdesinin 100'e bölünmüş
-      haliyle çarpılarak artış miktarı bulunur.
-    </p>
+      <h3>
+        Kira zammı nasıl hesaplanır?
+      </h3>
+
+      <p>
+        Mevcut kira bedeli artış oranıyla çarpılır ve
+        100'e bölünür. Böylece artış miktarı bulunur.
+        Bu miktar mevcut kiraya eklenerek yeni kira hesaplanır.
+      </p>
+
+    </div>
 
 
-    <h3>
-      Yeni kira nasıl bulunur?
-    </h3>
+    <div class="faq">
 
-    <p>
-      Mevcut kira ile hesaplanan artış miktarı toplanarak
-      yeni aylık kira tutarı bulunur.
-    </p>
+      <h3>
+        20.000 TL kiranın %25 zamlı hali kaç TL olur?
+      </h3>
+
+      <p>
+        %25 artış miktarı 5.000 TL'dir.
+        Matematiksel olarak yeni aylık kira 25.000 TL olur.
+      </p>
+
+    </div>
+
+
+    <div class="faq">
+
+      <h3>
+        Yeni kira yasal kira bedeli midir?
+      </h3>
+
+      <p>
+        Hayır. Bu araç yalnızca girilen oran üzerinden
+        matematiksel hesaplama yapar. Güncel yasal
+        düzenlemeler ayrıca kontrol edilmelidir.
+      </p>
+
+    </div>
+
+
+    <div class="faq">
+
+      <h3>
+        Yıllık kira nasıl hesaplanır?
+      </h3>
+
+      <p>
+        Aylık kira tutarı 12 ile çarpılarak yıllık
+        toplam kira hesaplanabilir.
+      </p>
+
+    </div>
 
   </section>
 
+
+  <!-- DİĞER ARAÇLAR -->
+
+  <section class="seo-section">
+
+    <h2>
+      MaaşKanka Hesaplama Araçları
+    </h2>
+
+    <p>
+      MaaşKanka'da günlük hayatta kullanabileceğin
+      farklı ücretsiz hesaplama araçlarını da bulabilirsin.
+    </p>
+
+    <div class="links">
+
+      <a href="maas-hesaplama.html">
+        💸 Maaş Hesaplama
+      </a>
+
+      <a href="kredi-hesaplama.html">
+        🏦 Kredi Hesaplama
+      </a>
+
+      <a href="yakit-hesaplama.html">
+        ⛽ Yakıt Hesaplama
+      </a>
+
+      <a href="yuzde-hesaplama.html">
+        📊 Yüzde Hesaplama
+      </a>
+
+      <a href="kdv-hesaplama.html">
+        🧾 KDV Hesaplama
+      </a>
+
+      <a href="index.html">
+        🏠 Tüm Araçlar
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
 
   <footer class="footer">
 
@@ -677,7 +936,7 @@ function calculateRent() {
   ) {
 
     alert(
-      'Kanka kira ve artış oranını düzgün gir 😄'
+      'Kanka mevcut kira ve artış oranını düzgün gir 😄'
     );
 
     return;
@@ -693,8 +952,16 @@ function calculateRent() {
     oldRent + increase;
 
 
+  const oldYearlyRent =
+    oldRent * 12;
+
+
   const yearlyRent =
     newRent * 12;
+
+
+  const yearlyDifference =
+    yearlyRent - oldYearlyRent;
 
 
   document.getElementById(
@@ -722,12 +989,26 @@ function calculateRent() {
 
 
   document.getElementById(
+    'oldYearlyRent'
+  ).textContent =
+    tl(oldYearlyRent);
+
+
+  document.getElementById(
+    'yearlyDifference'
+  ).textContent =
+    tl(yearlyDifference);
+
+
+  document.getElementById(
     'rentResults'
   ).style.display =
     'grid';
 
 }
 
+
+/* ENTER TUŞU */
 
 document
   .querySelectorAll('input')
@@ -747,149 +1028,7 @@ document
   });
 
 </script>
-<section class="seo-content">
 
-  <h2>Kira Artış Hesaplama</h2>
-
-  <p>
-    Kira artış hesaplama aracı ile mevcut kira bedelini ve
-    uygulanacak artış oranını girerek yeni kira tutarını
-    kolayca hesaplayabilirsiniz. Artış miktarını ve yıllık
-    yeni kira toplamını da görebilirsiniz.
-  </p>
-
-  <h2>Kira Artışı Nasıl Hesaplanır?</h2>
-
-  <p>
-    Kira artışını hesaplamak için mevcut kira bedeli ile
-    artış oranı kullanılır. Mevcut kira, artış oranının
-    yüzde karşılığı ile çarpılarak artış miktarı bulunur.
-    Daha sonra artış miktarı mevcut kiraya eklenir.
-  </p>
-
-  <p>
-    Örneğin 15.000 TL kira için %20 artış hesaplandığında,
-    artış miktarı 3.000 TL olur ve matematiksel olarak yeni
-    kira 18.000 TL olarak bulunur.
-  </p>
-
-  <h2>Kira Zam Hesaplama</h2>
-
-  <p>
-    Kira zam hesaplama aracı, belirli bir yüzde üzerinden
-    yeni kira tutarını hızlıca bulmanıza yardımcı olur.
-    Mevcut kira bedelini ve artış oranını girerek sonucu
-    birkaç saniye içinde hesaplayabilirsiniz.
-  </p>
-
-  <h2>Yeni Kira Nasıl Hesaplanır?</h2>
-
-  <p>
-    Yeni kira tutarını hesaplamak için mevcut kira bedeline
-    hesaplanan artış miktarı eklenir. Örneğin mevcut kira
-    20.000 TL ve artış oranı %25 ise artış miktarı 5.000 TL,
-    matematiksel olarak yeni kira ise 25.000 TL olur.
-  </p>
-
-  <h2>Yıllık Kira Hesaplama</h2>
-
-  <p>
-    Aylık yeni kira tutarı 12 ile çarpılarak bir yıllık
-    toplam kira bedeli hesaplanabilir. Bu sonuç yalnızca
-    girilen kira tutarı üzerinden yapılan matematiksel
-    bir hesaplamadır.
-  </p>
-
-  <h2>Kira Artış Hesaplama Yasal Oranı Gösterir mi?</h2>
-
-  <p>
-    Hayır. MaaşKanka kira hesaplama aracı yalnızca sizin
-    girdiğiniz artış oranı üzerinden matematiksel hesaplama
-    yapar. Gerçek bir kira sözleşmesinde uygulanabilecek
-    artış oranı ve yasal sınırlar ayrıca kontrol edilmelidir.
-  </p>
-
-  <p>
-    Özellikle kira yenileme dönemlerinde güncel mevzuat,
-    sözleşme şartları ve ilgili resmi düzenlemeler dikkate
-    alınmalıdır.
-  </p>
-
-  <h2>Sık Sorulan Sorular</h2>
-
-  <h3>Kira artış hesaplama ücretsiz mi?</h3>
-
-  <p>
-    Evet. MaaşKanka kira artış hesaplama aracı ücretsiz
-    olarak kullanılabilir.
-  </p>
-
-  <h3>Kira zammı nasıl hesaplanır?</h3>
-
-  <p>
-    Mevcut kira bedeli, belirlenen artış oranı ile çarpılarak
-    artış miktarı bulunur. Artış miktarı mevcut kiraya
-    eklendiğinde yeni kira tutarı hesaplanır.
-  </p>
-
-  <h3>20.000 TL kiranın %25 zamlı hali kaç TL olur?</h3>
-
-  <p>
-    %25 artış miktarı 5.000 TL'dir. Matematiksel olarak
-    yeni kira tutarı 25.000 TL olur.
-  </p>
-
-  <h3>Kira hesaplama sonucu yasal kira bedeli midir?</h3>
-
-  <p>
-    Hayır. Hesaplama sonucu yalnızca girilen oran üzerinden
-    yapılan matematiksel sonucu gösterir. Güncel yasal
-    düzenlemeler ayrıca kontrol edilmelidir.
-  </p>
-
-</section>
-
-<style>
-  .seo-content {
-    background: #ffffff;
-    border-radius: 20px;
-    padding: 26px;
-    margin: 20px 0;
-    box-shadow: 0 8px 30px rgba(20, 30, 50, .06);
-  }
-
-  .seo-content h2 {
-    margin-top: 0;
-    margin-bottom: 12px;
-    font-size: 23px;
-    line-height: 1.35;
-  }
-
-  .seo-content h2:not(:first-child) {
-    margin-top: 30px;
-  }
-
-  .seo-content h3 {
-    margin-top: 22px;
-    margin-bottom: 8px;
-    font-size: 18px;
-  }
-
-  .seo-content p {
-    color: #4f596b;
-    line-height: 1.7;
-    margin: 8px 0;
-  }
-
-  @media (max-width: 520px) {
-    .seo-content {
-      padding: 18px;
-    }
-
-    .seo-content h2 {
-      font-size: 21px;
-    }
-  }
-</style>
 </body>
 </html>
+```
