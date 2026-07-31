@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
+
   <meta charset="UTF-8">
 
   <meta
@@ -8,16 +9,23 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>Maaş Hesaplama | Günlük, Saatlik ve Yıllık Maaş Hesaplama</title>
+  <title>
+    Maaş Hesaplama | Günlük, Saatlik, Haftalık ve Yıllık Maaş | MaaşKanka
+  </title>
 
   <meta
     name="description"
-    content="Maaş hesaplama aracı ile aylık maaşını günlük, haftalık, saatlik ve yıllık olarak hesapla. Ücretsiz online maaş hesaplama."
+    content="Maaş hesaplama aracı ile aylık maaşını günlük, haftalık, saatlik ve yıllık kazanca çevir. Çalışma gününü ve günlük çalışma saatini gir, maaşını kolayca hesapla."
   >
 
   <meta
     name="robots"
     content="index, follow, max-image-preview:large"
+  >
+
+  <meta
+    name="author"
+    content="MaaşKanka"
   >
 
   <link
@@ -27,12 +35,12 @@
 
   <meta
     property="og:title"
-    content="Maaş Hesaplama | MaaşKanka"
+    content="Maaş Hesaplama | Günlük ve Saatlik Maaş Hesaplama"
   >
 
   <meta
     property="og:description"
-    content="Aylık maaşını günlük, haftalık, saatlik ve yıllık olarak kolayca hesapla."
+    content="Aylık maaşını günlük, haftalık, saatlik ve yıllık kazanca kolayca çevir."
   >
 
   <meta
@@ -46,14 +54,40 @@
   >
 
   <meta
+    property="og:site_name"
+    content="MaaşKanka"
+  >
+
+  <meta
     property="og:locale"
     content="tr_TR"
   >
+
+  <meta
+    name="twitter:card"
+    content="summary"
+  >
+
+  <meta
+    name="twitter:title"
+    content="Maaş Hesaplama | MaaşKanka"
+  >
+
+  <meta
+    name="twitter:description"
+    content="Aylık maaşını günlük, haftalık, saatlik ve yıllık kazanca çevir."
+  >
+
+
+  <!-- ================================================= -->
+  <!-- SCHEMA -->
+  <!-- ================================================= -->
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
+
       {
         "@type": "WebSite",
         "@id": "https://xelta019.github.io/Maaskanka/#website",
@@ -61,6 +95,7 @@
         "name": "MaaşKanka",
         "inLanguage": "tr-TR"
       },
+
       {
         "@type": "WebPage",
         "@id": "https://xelta019.github.io/Maaskanka/maas-hesaplama.html#webpage",
@@ -72,64 +107,90 @@
         },
         "inLanguage": "tr-TR"
       },
+
       {
         "@type": "WebApplication",
-        "name": "Maaş Hesaplama",
+        "@id": "https://xelta019.github.io/Maaskanka/maas-hesaplama.html#application",
+        "name": "Maaş Hesaplama Aracı",
         "url": "https://xelta019.github.io/Maaskanka/maas-hesaplama.html",
+        "description": "Aylık maaşı günlük, haftalık, saatlik ve yıllık kazanca dönüştüren ücretsiz online maaş hesaplama aracı.",
         "applicationCategory": "FinanceApplication",
         "operatingSystem": "All",
-        "isAccessibleForFree": true,
-        "inLanguage": "tr-TR"
+        "browserRequirements": "JavaScript destekleyen modern web tarayıcısı",
+        "inLanguage": "tr-TR",
+        "isAccessibleForFree": true
       },
+
       {
         "@type": "BreadcrumbList",
+        "@id": "https://xelta019.github.io/Maaskanka/maas-hesaplama.html#breadcrumb",
         "itemListElement": [
+
           {
             "@type": "ListItem",
             "position": 1,
-            "name": "MaaşKanka",
+            "name": "Ana Sayfa",
             "item": "https://xelta019.github.io/Maaskanka/"
           },
+
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Maaş Hesaplama",
             "item": "https://xelta019.github.io/Maaskanka/maas-hesaplama.html"
           }
+
         ]
       },
+
       {
         "@type": "FAQPage",
+        "@id": "https://xelta019.github.io/Maaskanka/maas-hesaplama.html#faq",
         "mainEntity": [
+
           {
             "@type": "Question",
             "name": "Maaş hesaplama nasıl yapılır?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Aylık maaş, çalışılan gün sayısına bölünerek yaklaşık günlük kazanç bulunabilir. Günlük kazanç çalışma saatine bölündüğünde yaklaşık saatlik kazanç hesaplanabilir."
+              "text": "Aylık maaş, ay içinde çalışılan gün sayısına bölünerek yaklaşık günlük kazanç bulunabilir. Günlük kazanç günlük çalışma saatine bölündüğünde yaklaşık saatlik kazanç hesaplanabilir."
             }
           },
+
           {
             "@type": "Question",
-            "name": "30.000 TL maaşın günlük karşılığı ne kadar?",
+            "name": "Saatlik maaş nasıl hesaplanır?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Çalışılan gün sayısına göre değişir. Örneğin 22 çalışma günü üzerinden hesaplandığında 30.000 TL maaş yaklaşık 1.363,64 TL günlük kazanca denk gelir."
+              "text": "Aylık maaş önce çalışılan gün sayısına bölünerek günlük kazanca çevrilir. Günlük kazanç da günlük çalışma saatine bölünerek yaklaşık saatlik kazanç bulunur."
             }
           },
+
           {
             "@type": "Question",
-            "name": "Maaş hesaplama sonucu net maaş mıdır?",
+            "name": "Günlük maaş nasıl hesaplanır?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Hayır. Bu araç maaşı farklı zaman birimlerine dönüştüren basit bir hesaplama yapar. Vergi, SGK, prim ve diğer bordro kesintilerini hesaplamaz."
+              "text": "Günlük maaşı yaklaşık olarak bulmak için aylık maaş çalışılan gün sayısına bölünür."
+            }
+          },
+
+          {
+            "@type": "Question",
+            "name": "Maaş hesaplama sonucu bordro sonucu mudur?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Hayır. MaaşKanka hesaplama aracı basit matematiksel dönüşüm yapar. Vergi, SGK, prim, fazla mesai ve diğer bordro kalemlerini hesaplamaz."
             }
           }
+
         ]
       }
+
     ]
   }
   </script>
+
 
   <style>
 
@@ -150,68 +211,70 @@
     }
 
     .wrap {
-      max-width: 760px;
+      max-width: 780px;
       margin: 0 auto;
-      padding: 28px 18px 60px;
+      padding: 24px 18px 60px;
+    }
+
+    .top {
+      margin-bottom: 20px;
     }
 
     .brand {
       font-size: 29px;
       font-weight: 800;
-      margin-bottom: 6px;
+      margin-bottom: 5px;
     }
 
     .brand a {
-      color: #172033;
+      color: inherit;
       text-decoration: none;
     }
 
-    .sub {
-      color: #697386;
-      margin-bottom: 22px;
+    .breadcrumb {
+      font-size: 13px;
+      color: #7b8495;
+      margin-top: 8px;
     }
 
-    .back {
-      display: inline-block;
-      margin-bottom: 16px;
+    .breadcrumb a {
       color: #5267ff;
       text-decoration: none;
-      font-weight: 700;
     }
 
-    .intro,
-    .card,
-    .seo-section {
+    .hero {
       background: white;
       border-radius: 20px;
-      padding: 24px;
+      padding: 26px;
       margin-bottom: 18px;
       box-shadow: 0 8px 30px rgba(20, 30, 50, .07);
     }
 
-    .intro h1,
-    .card h2,
-    .seo-section h2 {
-      margin-top: 0;
-      line-height: 1.3;
+    .hero h1 {
+      margin: 0 0 12px;
+      font-size: 30px;
+      line-height: 1.25;
     }
 
-    .intro h1 {
-      font-size: 27px;
-      margin-bottom: 12px;
+    .hero p {
+      color: #5e6879;
+      margin: 8px 0;
     }
 
-    .intro p,
-    .seo-section p {
-      color: #4f596b;
+    .calculator {
+      background: white;
+      border-radius: 20px;
+      padding: 26px;
+      margin-bottom: 18px;
+      box-shadow: 0 8px 30px rgba(20, 30, 50, .09);
     }
 
-    .card h2 {
+    .calculator h2 {
+      margin: 0 0 8px;
       font-size: 24px;
-      margin-bottom: 8px;
     }
 
-    .description {
+    .calculator-description {
       color: #697386;
       margin-bottom: 20px;
     }
@@ -229,6 +292,7 @@
       border-radius: 12px;
       font-size: 16px;
       outline: none;
+      background: white;
     }
 
     input:focus {
@@ -253,7 +317,7 @@
     }
 
     .results {
-      display: none;
+      display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 12px;
       margin-top: 20px;
@@ -262,7 +326,7 @@
     .result {
       background: #f5f7ff;
       border-radius: 14px;
-      padding: 16px;
+      padding: 17px;
     }
 
     .result small {
@@ -275,68 +339,86 @@
       font-size: 20px;
     }
 
-    .highlight {
-      background: #eef1ff;
-      border-radius: 14px;
-      padding: 15px;
-      margin-top: 15px;
-      color: #303b70;
-      font-weight: 700;
-    }
-
     .note {
       color: #697386;
       font-size: 13px;
       margin-top: 18px;
     }
 
-    .seo-section h2 {
-      font-size: 23px;
+    .content {
+      background: white;
+      border-radius: 20px;
+      padding: 26px;
+      margin-bottom: 18px;
+      box-shadow: 0 8px 30px rgba(20, 30, 50, .06);
     }
 
-    .seo-section h3 {
+    .content h2 {
+      margin-top: 0;
+      font-size: 24px;
+      line-height: 1.3;
+    }
+
+    .content h3 {
       font-size: 18px;
-      margin-top: 24px;
-      margin-bottom: 7px;
+      margin-top: 25px;
+      margin-bottom: 8px;
     }
 
-    .seo-section ul {
+    .content p {
+      color: #4f596b;
+      margin: 9px 0;
+    }
+
+    .content ul {
       color: #4f596b;
       padding-left: 22px;
     }
 
+    .example {
+      background: #f5f7ff;
+      border-radius: 14px;
+      padding: 18px;
+      margin-top: 16px;
+    }
+
+    .example strong {
+      color: #172033;
+    }
+
     .related {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 10px;
-      margin-top: 15px;
+      margin-top: 16px;
     }
 
     .related a {
       display: block;
-      padding: 13px;
-      background: #f5f7ff;
+      padding: 14px;
       border-radius: 12px;
+      background: #f5f7ff;
       color: #5267ff;
       text-decoration: none;
       font-weight: 700;
+      text-align: center;
     }
 
-    .faq {
+    .faq-item {
       border-top: 1px solid #e7eaf1;
-      padding: 17px 0;
+      padding: 18px 0;
     }
 
-    .faq:first-child {
+    .faq-item:first-child {
       border-top: 0;
     }
 
-    .faq h3 {
-      margin: 0 0 7px;
+    .faq-item h3 {
+      margin: 0 0 8px;
       font-size: 17px;
     }
 
-    .faq p {
+    .faq-item p {
       margin: 0;
     }
 
@@ -344,7 +426,7 @@
       text-align: center;
       color: #8a93a5;
       font-size: 13px;
-      margin-top: 25px;
+      margin-top: 24px;
     }
 
     .footer a {
@@ -353,25 +435,28 @@
       margin: 0 7px;
     }
 
-    @media (max-width: 520px) {
+    @media (max-width: 560px) {
 
-      .results,
-      .related {
+      .wrap {
+        padding: 18px 14px 50px;
+      }
+
+      .hero,
+      .calculator,
+      .content {
+        padding: 19px;
+      }
+
+      .hero h1 {
+        font-size: 25px;
+      }
+
+      .results {
         grid-template-columns: 1fr;
       }
 
-      .intro,
-      .card,
-      .seo-section {
-        padding: 18px;
-      }
-
-      .brand {
-        font-size: 26px;
-      }
-
-      .intro h1 {
-        font-size: 23px;
+      .related {
+        grid-template-columns: 1fr;
       }
 
     }
@@ -380,61 +465,73 @@
 
 </head>
 
+
 <body>
 
 <main class="wrap">
 
-  <header>
+
+  <!-- ========================= -->
+  <!-- ÜST -->
+  <!-- ========================= -->
+
+  <header class="top">
 
     <div class="brand">
-      <a href="index.html">💸 MaaşKanka</a>
+      <a href="index.html">
+        💸 MaaşKanka
+      </a>
     </div>
 
-    <div class="sub">
-      Ücretsiz ve kolay online hesaplama araçları.
+    <div class="breadcrumb">
+      <a href="index.html">Ana Sayfa</a>
+      →
+      Maaş Hesaplama
     </div>
-
-    <a
-      class="back"
-      href="index.html"
-    >
-      ← Tüm hesaplama araçlarına dön
-    </a>
 
   </header>
 
 
-  <section class="intro">
+  <!-- ========================= -->
+  <!-- HERO -->
+  <!-- ========================= -->
+
+  <section class="hero">
 
     <h1>
       Maaş Hesaplama
     </h1>
 
     <p>
-      Maaş hesaplama aracı ile aylık maaşını günlük,
-      haftalık, saatlik ve yıllık kazanca kolayca
-      dönüştürebilirsin.
+      Aylık maaşını günlük, haftalık, saatlik ve yıllık
+      kazanca çevirmek için aşağıdaki ücretsiz maaş hesaplama
+      aracını kullanabilirsin.
     </p>
 
     <p>
-      Aylık maaşını, ayda kaç gün çalıştığını ve günlük
-      çalışma süreni gir. MaaşKanka sonucu birkaç saniye
-      içinde hesaplasın.
+      Aylık maaşını, ayda kaç gün çalıştığını ve günde kaç saat
+      çalıştığını gir. Hesaplama sonucunda farklı zaman
+      birimlerindeki yaklaşık kazancını hemen gör.
     </p>
 
   </section>
 
 
-  <section class="card">
+  <!-- ========================= -->
+  <!-- HESAP MAKİNESİ -->
+  <!-- ========================= -->
+
+  <section class="calculator">
 
     <h2>
       💸 Maaşını Hesapla
     </h2>
 
-    <div class="description">
-      Aşağıdaki bilgileri girerek maaşının farklı zaman
-      birimlerindeki karşılığını öğren.
+    <div class="calculator-description">
+      Bilgilerini gir ve maaşının günlük, haftalık, saatlik
+      ve yıllık karşılığını saniyeler içinde öğren.
     </div>
+
 
     <label for="salary">
       Aylık maaşın (TL)
@@ -445,9 +542,10 @@
       type="number"
       min="0"
       step="0.01"
-      inputmode="decimal"
       placeholder="Örn. 30000"
+      inputmode="decimal"
     >
+
 
     <label for="days">
       Ayda kaç gün çalışıyorsun?
@@ -458,10 +556,10 @@
       type="number"
       min="1"
       max="31"
-      step="1"
       value="22"
       inputmode="numeric"
     >
+
 
     <label for="hours">
       Günde kaç saat çalışıyorsun?
@@ -470,12 +568,13 @@
     <input
       id="hours"
       type="number"
-      min="1"
+      min="0.1"
       max="24"
       step="0.5"
       value="8"
       inputmode="decimal"
     >
+
 
     <button
       class="main-button"
@@ -484,49 +583,81 @@
       Maaşımı Hesapla 🚀
     </button>
 
+
     <div
-      id="results"
+      id="salaryResults"
       class="results"
+      style="display:none;"
     >
 
       <div class="result">
-        <small>Günlük kazanç</small>
-        <strong id="daily">-</strong>
+
+        <small>
+          Günlük kazanç
+        </small>
+
+        <strong id="daily">
+          -
+        </strong>
+
       </div>
 
-      <div class="result">
-        <small>Haftalık kazanç</small>
-        <strong id="weekly">-</strong>
-      </div>
 
       <div class="result">
-        <small>Saatlik kazanç</small>
-        <strong id="hourly">-</strong>
+
+        <small>
+          Haftalık kazanç
+        </small>
+
+        <strong id="weekly">
+          -
+        </strong>
+
       </div>
 
+
       <div class="result">
-        <small>Yıllık kazanç</small>
-        <strong id="yearly">-</strong>
+
+        <small>
+          Saatlik kazanç
+        </small>
+
+        <strong id="hourly">
+          -
+        </strong>
+
+      </div>
+
+
+      <div class="result">
+
+        <small>
+          Yıllık kazanç
+        </small>
+
+        <strong id="yearly">
+          -
+        </strong>
+
       </div>
 
     </div>
 
-    <div
-      id="summary"
-      class="highlight"
-      style="display:none;"
-    ></div>
 
     <div class="note">
       Bu araç basit bir maaş dönüştürme hesabıdır.
-      Vergi, SGK, prim, fazla mesai, yemek, yol ve diğer
-      bordro kalemlerini hesaplamaz.
+      Vergi, SGK, prim, fazla mesai ve diğer bordro
+      kesintilerini hesaba katmaz.
     </div>
 
   </section>
 
 
-  <section class="seo-section">
+  <!-- ========================= -->
+  <!-- MAAŞ HESAPLAMA BİLGİSİ -->
+  <!-- ========================= -->
+
+  <section class="content">
 
     <h2>
       Maaş Hesaplama Nasıl Yapılır?
@@ -535,8 +666,9 @@
     <p>
       Maaş hesaplama, aylık kazancın farklı zaman
       birimlerine dönüştürülmesi için kullanılabilir.
-      MaaşKanka'daki hesaplama aracı aylık maaş,
-      çalışma günü ve günlük çalışma süresini kullanır.
+      MaaşKanka üzerindeki hesaplama aracı aylık maaşı,
+      girilen çalışma gününe ve günlük çalışma saatine
+      göre yaklaşık günlük ve saatlik kazanca dönüştürür.
     </p>
 
     <h3>
@@ -548,119 +680,111 @@
       ay içinde çalışılan gün sayısına bölünür.
     </p>
 
-    <p>
-      Örneğin 30.000 TL aylık maaş ve 22 çalışma günü
-      üzerinden hesaplama yapıldığında yaklaşık günlük
-      kazanç 1.363,64 TL olur.
-    </p>
+    <div class="example">
+
+      <strong>
+        Örnek:
+      </strong>
+
+      <p>
+        Aylık maaşın 30.000 TL ve ayda 22 gün çalışıyorsan:
+      </p>
+
+      <p>
+        30.000 ÷ 22 = yaklaşık 1.363,64 TL günlük kazanç.
+      </p>
+
+    </div>
+
 
     <h3>
       Saatlik maaş hesaplama
     </h3>
 
     <p>
-      Saatlik kazanç için günlük kazanç, günlük çalışma
-      saatine bölünür. Örneğin 8 saatlik çalışma süresinde
-      günlük kazanç üzerinden yaklaşık saatlik ücret bulunabilir.
+      Saatlik kazancı hesaplamak için günlük kazanç,
+      günlük çalışma saatine bölünür.
     </p>
+
+    <div class="example">
+
+      <strong>
+        Örnek:
+      </strong>
+
+      <p>
+        Günlük kazancın yaklaşık 1.363,64 TL ve günlük
+        çalışma süren 8 saat ise:
+      </p>
+
+      <p>
+        1.363,64 ÷ 8 = yaklaşık 170,45 TL saatlik kazanç.
+      </p>
+
+    </div>
+
 
     <h3>
       Haftalık maaş hesaplama
     </h3>
 
     <p>
-      Bu araçta haftalık kazanç, yaklaşık beş çalışma günü
-      üzerinden hesaplanır. Bu nedenle vardiya sistemi,
-      hafta sonu çalışma veya farklı çalışma düzenlerinde
-      sonuç değişebilir.
+      Bu araçta haftalık kazanç, günlük kazancın 5 iş günü
+      ile çarpılmasıyla yaklaşık olarak hesaplanır.
+      Bu nedenle sonuç, haftada 5 gün çalışma varsayımına
+      dayanır.
     </p>
+
 
     <h3>
       Yıllık maaş hesaplama
     </h3>
 
     <p>
-      Yıllık kazanç, aylık maaşın 12 ile çarpılmasıyla
-      yaklaşık olarak hesaplanır. Prim, ikramiye, zam ve
-      diğer ek ödemeler bu hesaplamaya dahil değildir.
+      Yıllık kazanç, aylık maaşın 12 ay ile çarpılmasıyla
+      hesaplanır. Bu değer vergi, prim, ikramiye veya diğer
+      ek ödemeleri dikkate alan bir bordro hesabı değildir.
     </p>
 
   </section>
 
 
-  <section class="seo-section">
+  <!-- ========================= -->
+  <!-- HANGİ DURUMLARDA KULLANILIR -->
+  <!-- ========================= -->
+
+  <section class="content">
 
     <h2>
-      Maaş Hesaplama Örnekleri
-    </h2>
-
-    <h3>
-      30.000 TL maaş hesaplama
-    </h3>
-
-    <p>
-      Aylık 30.000 TL maaş alan ve ayda 22 gün,
-      günde 8 saat çalışan bir kişinin yaklaşık günlük
-      kazancı 1.363,64 TL, saatlik kazancı ise 170,45 TL'dir.
-    </p>
-
-    <h3>
-      40.000 TL maaş hesaplama
-    </h3>
-
-    <p>
-      Aylık 40.000 TL maaş, 22 çalışma günü üzerinden
-      hesaplandığında yaklaşık 1.818,18 TL günlük kazanca
-      karşılık gelir. Günde 8 saat çalışma kabul edildiğinde
-      saatlik kazanç yaklaşık 227,27 TL olur.
-    </p>
-
-    <h3>
-      50.000 TL maaş hesaplama
-    </h3>
-
-    <p>
-      Aylık 50.000 TL maaşın 22 çalışma günü üzerinden
-      yaklaşık günlük karşılığı 2.272,73 TL'dir.
-      Günde 8 saat çalışma üzerinden saatlik karşılığı
-      yaklaşık 284,09 TL olur.
-    </p>
-
-  </section>
-
-
-  <section class="seo-section">
-
-    <h2>
-      Maaş Hesaplarken Nelere Dikkat Edilmeli?
+      Maaş Hesaplama Aracı Ne İşe Yarar?
     </h2>
 
     <p>
-      Maaşın günlük veya saatlik karşılığını hesaplarken
-      çalışma günlerinin ve günlük çalışma süresinin doğru
-      girilmesi önemlidir.
+      Maaş hesaplama aracı, aylık gelirinin farklı çalışma
+      sürelerindeki yaklaşık karşılığını görmek istediğinde
+      pratik bir yöntem sunar.
     </p>
 
     <ul>
 
       <li>
-        Aylık maaş tutarını doğru gir.
+        Günlük kazancını yaklaşık olarak görebilirsin.
       </li>
 
       <li>
-        Ay içinde fiilen çalışılan gün sayısını dikkate al.
+        Saatlik kazancını hesaplayabilirsin.
       </li>
 
       <li>
-        Günlük çalışma süresini doğru belirt.
+        Haftalık kazancını yaklaşık olarak bulabilirsin.
       </li>
 
       <li>
-        Fazla mesai ve ek ödemeleri ayrıca değerlendir.
+        Aylık maaşının yıllık karşılığını görebilirsin.
       </li>
 
       <li>
-        Net maaş ile brüt maaşın farklı kavramlar olduğunu unutma.
+        Farklı maaşları çalışma süresine göre karşılaştırabilirsin.
       </li>
 
     </ul>
@@ -668,15 +792,98 @@
   </section>
 
 
-  <section class="seo-section">
+  <!-- ========================= -->
+  <!-- NET MAAŞ / BORDRO -->
+  <!-- ========================= -->
+
+  <section class="content">
 
     <h2>
-      MaaşKanka Diğer Hesaplama Araçları
+      Maaş Hesaplama ile Net Maaş Aynı Şey mi?
     </h2>
 
     <p>
-      Maaş hesaplamanın yanında diğer pratik hesaplama
-      araçlarını da kullanabilirsin.
+      Hayır. Bu sayfadaki hesaplama aracı, aylık maaşı çalışma
+      günleri ve saatleri üzerinden farklı zaman birimlerine
+      dönüştürür.
+    </p>
+
+    <p>
+      Gerçek net maaş hesabında gelir vergisi, damga vergisi,
+      SGK primi, işsizlik sigortası primi, vergi dilimi,
+      asgari ücret istisnaları ve diğer bordro kalemleri gibi
+      farklı unsurlar bulunabilir.
+    </p>
+
+    <p>
+      Bu nedenle MaaşKanka'daki sonuçları resmi bordro sonucu
+      olarak değerlendirmemek gerekir.
+    </p>
+
+  </section>
+
+
+  <!-- ========================= -->
+  <!-- HESAPLAMA FORMÜLLERİ -->
+  <!-- ========================= -->
+
+  <section class="content">
+
+    <h2>
+      Maaş Hesaplama Formülleri
+    </h2>
+
+    <p>
+      Basit maaş dönüşümünde kullanılan temel formüller
+      aşağıdaki gibidir:
+    </p>
+
+    <div class="example">
+
+      <p>
+        <strong>Günlük kazanç:</strong>
+        Aylık maaş ÷ aylık çalışma günü
+      </p>
+
+      <p>
+        <strong>Saatlik kazanç:</strong>
+        Günlük kazanç ÷ günlük çalışma saati
+      </p>
+
+      <p>
+        <strong>Haftalık kazanç:</strong>
+        Günlük kazanç × 5
+      </p>
+
+      <p>
+        <strong>Yıllık kazanç:</strong>
+        Aylık maaş × 12
+      </p>
+
+    </div>
+
+    <p>
+      Bu formüller basitleştirilmiş matematiksel dönüşümlerdir.
+      Resmi bordro veya ücret hesaplamalarında kullanılan tüm
+      yasal ve vergisel unsurları kapsamaz.
+    </p>
+
+  </section>
+
+
+  <!-- ========================= -->
+  <!-- İLGİLİ ARAÇLAR -->
+  <!-- ========================= -->
+
+  <section class="content">
+
+    <h2>
+      Diğer Hesaplama Araçları
+    </h2>
+
+    <p>
+      Maaş hesabının yanında günlük hayatta kullanabileceğin
+      diğer MaaşKanka hesaplama araçlarına da göz atabilirsin.
     </p>
 
     <div class="related">
@@ -686,104 +893,124 @@
       </a>
 
       <a href="index.html#rentTool">
-        🏠 Kira Artış Hesaplama
+        🏠 Kira Hesaplama
       </a>
 
       <a href="index.html#fuelTool">
         ⛽ Yakıt Hesaplama
       </a>
 
-      <a href="index.html#percentTool">
-        📊 Yüzde Hesaplama
-      </a>
-
-      <a href="index.html#vatTool">
-        🧾 KDV Hesaplama
-      </a>
-
     </div>
 
   </section>
 
 
-  <section class="seo-section">
+  <!-- ========================= -->
+  <!-- SSS -->
+  <!-- ========================= -->
+
+  <section class="content">
 
     <h2>
       Sık Sorulan Sorular
     </h2>
 
-    <div class="faq">
+
+    <div class="faq-item">
 
       <h3>
         Maaş hesaplama nasıl yapılır?
       </h3>
 
       <p>
-        Aylık maaş, çalışılan gün sayısına bölünerek
-        yaklaşık günlük kazanç bulunabilir. Günlük kazanç
-        çalışma saatine bölündüğünde yaklaşık saatlik
+        Aylık maaş, ay içinde çalışılan gün sayısına bölünerek
+        yaklaşık günlük kazanç bulunabilir. Günlük kazanç da
+        günlük çalışma saatine bölünerek yaklaşık saatlik
         kazanç hesaplanabilir.
       </p>
 
     </div>
 
-    <div class="faq">
 
-      <h3>
-        Maaş hesaplama sonucu kesin net maaş mıdır?
-      </h3>
-
-      <p>
-        Hayır. Bu araç maaşı farklı zaman birimlerine
-        dönüştüren basit bir hesaplama yapar. Vergi,
-        SGK, prim ve diğer bordro kesintilerini hesaplamaz.
-      </p>
-
-    </div>
-
-    <div class="faq">
+    <div class="faq-item">
 
       <h3>
         Saatlik maaş nasıl hesaplanır?
       </h3>
 
       <p>
-        Önce aylık maaş çalışma günlerine bölünerek
-        yaklaşık günlük kazanç bulunur. Daha sonra günlük
-        kazanç, günlük çalışma saatine bölünür.
+        Önce aylık maaş çalışılan gün sayısına bölünerek
+        günlük kazanç bulunur. Daha sonra günlük kazanç,
+        günlük çalışma saatine bölünerek yaklaşık saatlik
+        kazanç hesaplanır.
       </p>
 
     </div>
 
-    <div class="faq">
+
+    <div class="faq-item">
 
       <h3>
-        30.000 TL maaşın günlük karşılığı ne kadar?
+        Günlük maaş nasıl hesaplanır?
       </h3>
 
       <p>
-        22 çalışma günü kabul edildiğinde yaklaşık
-        1.363,64 TL günlük kazanca denk gelir.
-        Çalışılan gün sayısı değişirse sonuç da değişir.
+        Yaklaşık günlük maaşı bulmak için aylık maaş,
+        ay içinde çalışılan gün sayısına bölünür.
       </p>
 
     </div>
 
-    <div class="faq">
+
+    <div class="faq-item">
 
       <h3>
-        Maaş hesaplama ücretsiz mi?
+        Haftalık maaş nasıl hesaplanır?
       </h3>
 
       <p>
-        Evet. MaaşKanka maaş hesaplama aracı ücretsiz
-        olarak kullanılabilir.
+        Bu araçta haftalık kazanç, günlük kazancın 5 iş günü
+        ile çarpılmasıyla yaklaşık olarak hesaplanır.
+      </p>
+
+    </div>
+
+
+    <div class="faq-item">
+
+      <h3>
+        Yıllık maaş nasıl hesaplanır?
+      </h3>
+
+      <p>
+        Basit yıllık maaş hesabında aylık maaş 12 ile çarpılır.
+        Bu hesaplama ek ödemeler, primler veya kesintileri
+        dikkate almaz.
+      </p>
+
+    </div>
+
+
+    <div class="faq-item">
+
+      <h3>
+        Maaş hesaplama sonucu kesin bordro sonucu mudur?
+      </h3>
+
+      <p>
+        Hayır. MaaşKanka aracı basit matematiksel dönüşüm yapar.
+        Vergi, SGK, prim, fazla mesai ve diğer bordro kalemlerini
+        hesaplamaz.
       </p>
 
     </div>
 
   </section>
 
+
+  <!-- ========================= -->
+  <!-- FOOTER -->
+  <!-- ========================= -->
 
   <footer class="footer">
 
@@ -811,125 +1038,142 @@
 
   </footer>
 
+
 </main>
 
 
 <script>
 
-function tl(value) {
+  /* ========================= */
+  /* TL FORMAT */
+  /* ========================= */
 
-  return new Intl.NumberFormat(
-    'tr-TR',
-    {
-      style: 'currency',
-      currency: 'TRY',
-      maximumFractionDigits: 2
-    }
-  ).format(value);
+  function tl(value) {
 
-}
-
-
-function calculateSalary() {
-
-  const salary =
-    Number(
-      document.getElementById('salary').value
-    );
-
-  const days =
-    Number(
-      document.getElementById('days').value
-    );
-
-  const hours =
-    Number(
-      document.getElementById('hours').value
-    );
-
-
-  if (
-    salary <= 0 ||
-    days <= 0 ||
-    hours <= 0 ||
-    !Number.isFinite(salary) ||
-    !Number.isFinite(days) ||
-    !Number.isFinite(hours)
-  ) {
-
-    alert(
-      'Kanka maaş, çalışma günü ve çalışma saatini düzgün gir 😄'
-    );
-
-    return;
+    return new Intl.NumberFormat(
+      'tr-TR',
+      {
+        style: 'currency',
+        currency: 'TRY',
+        maximumFractionDigits: 2
+      }
+    ).format(value);
 
   }
 
 
-  const daily =
-    salary / days;
+  /* ========================= */
+  /* MAAŞ HESAPLAMA */
+  /* ========================= */
 
-  const hourly =
-    daily / hours;
+  function calculateSalary() {
 
-  const weekly =
-    daily * 5;
+    const salary =
+      Number(
+        document.getElementById('salary').value
+      );
 
-  const yearly =
-    salary * 12;
+    const days =
+      Number(
+        document.getElementById('days').value
+      );
 
-
-  document.getElementById('daily').textContent =
-    tl(daily);
-
-  document.getElementById('weekly').textContent =
-    tl(weekly);
-
-  document.getElementById('hourly').textContent =
-    tl(hourly);
-
-  document.getElementById('yearly').textContent =
-    tl(yearly);
+    const hours =
+      Number(
+        document.getElementById('hours').value
+      );
 
 
-  document.getElementById('results').style.display =
-    'grid';
+    if (
+      !Number.isFinite(salary) ||
+      !Number.isFinite(days) ||
+      !Number.isFinite(hours) ||
+      salary <= 0 ||
+      days <= 0 ||
+      hours <= 0
+    ) {
+
+      alert(
+        'Kanka maaş, gün ve çalışma saati bilgilerini düzgün gir 😄'
+      );
+
+      return;
+
+    }
 
 
-  document.getElementById('summary').textContent =
-    'Aylık ' +
-    tl(salary) +
-    ' maaş için yaklaşık saatlik kazancın ' +
-    tl(hourly) +
-    ', günlük kazancın ise ' +
-    tl(daily) +
-    '.';
+    const daily =
+      salary / days;
 
 
-  document.getElementById('summary').style.display =
-    'block';
-
-}
+    const hourly =
+      daily / hours;
 
 
-document
-  .querySelectorAll('input')
-  .forEach(function(input) {
+    const weekly =
+      daily * 5;
 
-    input.addEventListener(
-      'keydown',
-      function(event) {
 
-        if (event.key === 'Enter') {
+    const yearly =
+      salary * 12;
 
-          calculateSalary();
 
-        }
+    document.getElementById(
+      'daily'
+    ).textContent =
+      tl(daily);
+
+
+    document.getElementById(
+      'weekly'
+    ).textContent =
+      tl(weekly);
+
+
+    document.getElementById(
+      'hourly'
+    ).textContent =
+      tl(hourly);
+
+
+    document.getElementById(
+      'yearly'
+    ).textContent =
+      tl(yearly);
+
+
+    document.getElementById(
+      'salaryResults'
+    ).style.display =
+      'grid';
+
+  }
+
+
+  /* ========================= */
+  /* ENTER TUŞU */
+  /* ========================= */
+
+  document
+    .querySelectorAll('input')
+    .forEach(
+      function(input) {
+
+        input.addEventListener(
+          'keydown',
+          function(event) {
+
+            if (event.key === 'Enter') {
+
+              calculateSalary();
+
+            }
+
+          }
+        );
 
       }
     );
-
-  });
 
 </script>
 
