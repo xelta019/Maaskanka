@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    Yakıt Hesaplama | Yakıt Maliyeti Hesaplama - MaaşKanka
+  </title>
+
+  <meta
+    name="description"
+    content="Yakıt hesaplama aracı ile mesafe, araç tüketimi ve yakıt fiyatına göre toplam yakıt maliyetini, harcanacak yakıtı ve 100 km maliyetini kolayca hesapla."
+  >
+
+  <meta
+    name="robots"
+    content="index, follow, max-image-preview:large"
+  >
+
+  <meta
+    name="keywords"
+    content="yakıt hesaplama, yakıt maliyeti hesaplama, benzin hesaplama, mazot hesaplama, araç yakıt hesaplama, km yakıt hesaplama, 100 km yakıt maliyeti"
+  >
+
+  <meta
+    name="author"
+    content="MaaşKanka"
+  >
+
+  <link
+    rel="canonical"
+    href="https://xelta019.github.io/Maaskanka/yakit-hesaplama.html"
+  >
+
+  <!-- OPEN GRAPH -->
+
+  <meta
+    property="og:title"
+    content="Yakıt Hesaplama | Yakıt Maliyeti Hesaplama - MaaşKanka"
+  >
+
+  <meta
+    property="og:description"
+    content="Mesafe, araç tüketimi ve yakıt fiyatını girerek yolculuk yakıt maliyetini hesapla."
+  >
+
+  <meta
+    property="og:type"
+    content="website"
+  >
+
+  <meta
+    property="og:url"
+    content="https://xelta019.github.io/Maaskanka/yakit-hesaplama.html"
+  >
+
+  <meta
+    property="og:site_name"
+    content="MaaşKanka"
+  >
+
+  <meta
+    property="og:locale"
+    content="tr_TR"
+  >
+
+  <!-- TWITTER / X -->
+
+  <meta
+    name="twitter:card"
+    content="summary"
+  >
+
+  <meta
+    name="twitter:title"
+    content="Yakıt Hesaplama - MaaşKanka"
+  >
+
+  <meta
+    name="twitter:description"
+    content="Araç yakıt tüketimi ve yolculuk maliyetini kolayca hesapla."
+  >
+
+  <!-- SCHEMA -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+
+      {
+        "@type": "WebSite",
+        "@id": "https://xelta019.github.io/Maaskanka/#website",
+        "url": "https://xelta019.github.io/Maaskanka/",
+        "name": "MaaşKanka",
+        "inLanguage": "tr-TR"
+      },
+
+      {
+        "@type": "WebPage",
+        "@id": "https://xelta019.github.io/Maaskanka/yakit-hesaplama.html#webpage",
+        "url": "https://xelta019.github.io/Maaskanka/yakit-hesaplama.html",
+        "name": "Yakıt Hesaplama",
+        "description": "Araç yakıt tüketimi ve yolculuk maliyeti hesaplama aracı.",
+        "isPartOf": {
+          "@id": "https://xelta019.github.io/Maaskanka/#website"
+        },
+        "inLanguage": "tr-TR"
+      },
+
+      {
+        "@type": "WebApplication",
+        "@id": "https://xelta019.github.io/Maaskanka/yakit-hesaplama.html#application",
+        "name": "MaaşKanka Yakıt Hesaplama",
+        "url": "https://xelta019.github.io/Maaskanka/yakit-hesaplama.html",
+        "description": "Mesafe, yakıt tüketimi ve yakıt fiyatına göre tahmini yakıt maliyeti hesaplama aracı.",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "All",
+        "browserRequirements": "JavaScript destekleyen modern web tarayıcısı",
+        "inLanguage": "tr-TR",
+        "isAccessibleForFree": true
+      },
+
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://xelta019.github.io/Maaskanka/yakit-hesaplama.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Ana Sayfa",
+            "item": "https://xelta019.github.io/Maaskanka/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Yakıt Hesaplama",
+            "item": "https://xelta019.github.io/Maaskanka/yakit-hesaplama.html"
+          }
+        ]
+      }
+
+    ]
+  }
+  </script>
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f7fb;
+      color: #172033;
+      line-height: 1.6;
+    }
+
+    .wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 30px 18px 60px;
+    }
+
+    .brand {
+      font-size: 30px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .brand a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .sub {
+      color: #697386;
+      margin-bottom: 24px;
+    }
+
+    .intro {
+      background: white;
+      border-radius: 18px;
+      padding: 22px;
+      margin-bottom: 20px;
+      box-shadow: 0 8px 30px rgba(20, 30, 50, .06);
+    }
+
+    .intro h1 {
+      font-size: 26px;
+      line-height: 1.3;
+      margin: 0 0 12px;
+    }
+
+    .intro p {
+      color: #697386;
+      margin: 0 0 10px;
+    }
+
+    .back {
+      display: inline-block;
+      margin-bottom: 18px;
+      color: #5267ff;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 8px 30px rgba(20, 30, 50, .08);
+      margin-bottom: 18px;
+    }
+
+    .card h2 {
+      margin-top: 0;
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+
+    .card-description {
+      color: #697386;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: 700;
+      margin: 14px 0 8px;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #d9deea;
+      border-radius: 12px;
+      font-size: 16px;
+      outline: none;
+      background: white;
+    }
+
+    input:focus,
+    select:focus {
+      border-color: #5267ff;
+    }
+
+    .main-button {
+      width: 100%;
+      margin-top: 20px;
+      background: #5267ff;
+      color: white;
+      border: 0;
+      border-radius: 12px;
+      padding: 15px;
+      font-size: 17px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .main-button:hover {
+      opacity: .92;
+    }
+
+    .results {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .result {
+      background: #f5f7ff;
+      border-radius: 14px;
+      padding: 16px;
+    }
+
+    .result small {
+      color: #697386;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .result strong {
+      font-size: 20px;
+    }
+
+    .note {
+      color: #697386;
+      font-size: 13px;
+      line-height: 1.5;
+      margin-top: 18px;
+    }
+
+    .seo-section {
+      background: white;
+      border-radius: 20px;
+      padding: 24px;
+      margin-bottom: 18px;
+      box-shadow: 0 8px 30px rgba(20, 30, 50, .06);
+    }
+
+    .seo-section h2 {
+      margin-top: 0;
+      font-size: 23px;
+      line-height: 1.3;
+    }
+
+    .seo-section h3 {
+      font-size: 18px;
+      margin-top: 24px;
+      margin-bottom: 8px;
+    }
+
+    .seo-section p {
+      color: #4f596b;
+      margin: 8px 0;
+    }
+
+    .formula {
+      background: #f5f7ff;
+      padding: 15px;
+      border-radius: 12px;
+      margin: 15px 0;
+      font-weight: 700;
+      color: #172033;
+    }
+
+    .tool-links {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .tool-link {
+      display: block;
+      padding: 14px;
+      background: #f5f7ff;
+      border-radius: 12px;
+      color: #5267ff;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .tool-link:hover {
+      background: #edf0ff;
+    }
+
+    .faq-item {
+      border-top: 1px solid #e7eaf1;
+      padding: 18px 0;
+    }
+
+    .faq-item:first-child {
+      border-top: 0;
+    }
+
+    .faq-item h3 {
+      margin: 0 0 8px;
+      font-size: 17px;
+    }
+
+    .faq-item p {
+      margin: 0;
+    }
+
+    .footer {
+      text-align: center;
+      color: #8a93a5;
+      font-size: 13px;
+      margin-top: 25px;
+    }
+
+    .footer a {
+      color: #5267ff;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+
+    @media (max-width: 520px) {
+
+      .results {
+        grid-template-columns: 1fr;
+      }
+
+      .tool-links {
+        grid-template-columns: 1fr;
+      }
+
+      .card,
+      .seo-section,
+      .intro {
+        padding: 18px;
+      }
+
+      .brand {
+        font-size: 26px;
+      }
+
+      .intro h1 {
+        font-size: 23px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<main class="wrap">
+
+  <header>
+
+    <div class="brand">
+      <a href="index.html">
+        ⛽ MaaşKanka
+      </a>
+    </div>
+
+    <div class="sub">
+      Yakıt tüketimini ve yolculuk maliyetini hızlıca hesapla.
+    </div>
+
+  </header>
+
+
+  <a
+    class="back"
+    href="index.html"
+  >
+    ← MaaşKanka Ana Sayfa
+  </a>
+
+
+  <section class="intro">
+
+    <h1>
+      ⛽ Yakıt Hesaplama
+    </h1>
+
+    <p>
+      Gidilecek mesafeyi, aracının 100 kilometredeki
+      ortalama yakıt tüketimini ve güncel yakıt fiyatını
+      girerek tahmini yolculuk maliyetini hesapla.
+    </p>
+
+    <p>
+      Sonuç olarak ne kadar yakıt harcayacağını,
+      toplam yolculuk maliyetini ve 100 kilometrelik
+      yakıt maliyetini görebilirsin.
+    </p>
+
+  </section>
+
+
+  <section class="card">
+
+    <h2>
+      Yakıt Maliyeti Hesaplama
+    </h2>
+
+    <div class="card-description">
+      Bilgileri gir, hesapla butonuna bas; sonucu saniyeler
+      içinde gör.
+    </div>
+
+
+    <label for="distance">
+      Gidilecek mesafe (km)
+    </label>
+
+    <input
+      id="distance"
+      type="number"
+      min="0"
+      step="0.1"
+      placeholder="Örn. 500"
+    >
+
+
+    <label for="consumption">
+      Araç tüketimi (L / 100 km)
+    </label>
+
+    <input
+      id="consumption"
+      type="number"
+      min="0"
+      step="0.1"
+      placeholder="Örn. 6.5"
+    >
+
+
+    <label for="fuelPrice">
+      Yakıt fiyatı (TL / litre)
+    </label>
+
+    <input
+      id="fuelPrice"
+      type="number"
+      min="0"
+      step="0.01"
+      placeholder="Örn. 55"
+    >
+
+
+    <button
+      class="main-button"
+      onclick="calculateFuel()"
+    >
+      Yakıt Maliyetini Hesapla 🚗
+    </button>
+
+
+    <div
+      id="fuelResults"
+      class="results"
+      style="display:none;"
+    >
+
+      <div class="result">
+        <small>Harcanacak yakıt</small>
+        <strong id="fuelUsed">-</strong>
+      </div>
+
+      <div class="result">
+        <small>Toplam maliyet</small>
+        <strong id="fuelCost">-</strong>
+      </div>
+
+      <div class="result">
+        <small>100 km maliyeti</small>
+        <strong id="fuelCost100">-</strong>
+      </div>
+
+      <div class="result">
+        <small>Mesafe</small>
+        <strong id="fuelDistance">-</strong>
+      </div>
+
+    </div>
+
+
+    <div class="note">
+      Bu araç tahmini yakıt maliyeti hesaplar.
+      Trafik, hız, hava koşulları, araç yükü ve sürüş
+      tarzı gerçek yakıt tüketimini değiştirebilir.
+    </div>
+
+  </section>
+
+
+  <section class="seo-section">
+
+    <h2>
+      Yakıt Maliyeti Nasıl Hesaplanır?
+    </h2>
+
+    <p>
+      Araç yakıt maliyetini hesaplamak için üç temel bilgi
+      gerekir: gidilecek mesafe, aracın 100 kilometrede
+      tükettiği yakıt miktarı ve litre başına yakıt fiyatı.
+    </p>
+
+    <div class="formula">
+      Harcanan yakıt = Mesafe × Tüketim ÷ 100
+    </div>
+
+    <div class="formula">
+      Yakıt maliyeti = Harcanan yakıt × Litre fiyatı
+    </div>
+
+    <p>
+      Örneğin bir araç 100 kilometrede 6 litre yakıt
+      tüketiyorsa, 500 kilometrelik bir yolculukta
+      yaklaşık 30 litre yakıt tüketir.
+    </p>
+
+    <h3>
+      100 km yakıt maliyeti
+    </h3>
+
+    <p>
+      Aracın 100 kilometrede tükettiği litre miktarı,
+      yakıtın litre fiyatıyla çarpılarak 100 kilometrelik
+      tahmini yakıt maliyeti bulunabilir.
+    </p>
+
+    <h3>
+      Gerçek yakıt tüketimi neden değişir?
+    </h3>
+
+    <p>
+      Hesaplama sonucunun tahmini olduğunu unutmamak gerekir.
+      Şehir içi trafik, uzun yol kullanımı, yüksek hız,
+      klima kullanımı, hava sıcaklığı, yol eğimi, araç yükü
+      ve lastik basıncı gibi faktörler gerçek tüketimi
+      değiştirebilir.
+    </p>
+
+  </section>
+
+
+  <section class="seo-section">
+
+    <h2>
+      MaaşKanka Diğer Hesaplama Araçları
+    </h2>
+
+    <p>
+      MaaşKanka üzerinde günlük hayatta kullanabileceğin
+      farklı ücretsiz hesaplama araçlarına da ulaşabilirsin.
+    </p>
+
+    <div class="tool-links">
+
+      <a
+        class="tool-link"
+        href="maas-hesaplama.html"
+      >
+        💸 Maaş Hesaplama
+      </a>
+
+      <a
+        class="tool-link"
+        href="kredi-hesaplama.html"
+      >
+        🏦 Kredi Hesaplama
+      </a>
+
+      <a
+        class="tool-link"
+        href="kira-hesaplama.html"
+      >
+        🏠 Kira Artış Hesaplama
+      </a>
+
+      <a
+        class="tool-link"
+        href="yakit-hesaplama.html"
+      >
+        ⛽ Yakıt Hesaplama
+      </a>
+
+      <a
+        class="tool-link"
+        href="yuzde-hesaplama.html"
+      >
+        📊 Yüzde Hesaplama
+      </a>
+
+      <a
+        class="tool-link"
+        href="kdv-hesaplama.html"
+      >
+        🧾 KDV Hesaplama
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <section class="seo-section">
+
+    <h2>
+      Sık Sorulan Sorular
+    </h2>
+
+
+    <div class="faq-item">
+
+      <h3>
+        Yakıt hesaplama nasıl yapılır?
+      </h3>
+
+      <p>
+        Gidilecek mesafe, aracın 100 kilometredeki yakıt
+        tüketimi ve litre yakıt fiyatı kullanılarak
+        tahmini yakıt maliyeti hesaplanır.
+      </p>
+
+    </div>
+
+
+    <div class="faq-item">
+
+      <h3>
+        100 km'de yakıt maliyeti nasıl hesaplanır?
+      </h3>
+
+      <p>
+        Aracın 100 kilometrede tükettiği yakıt miktarı,
+        litre başına yakıt fiyatıyla çarpılır.
+      </p>
+
+    </div>
+
+
+    <div class="faq-item">
+
+      <h3>
+        Yakıt hesaplama sonucu kesin midir?
+      </h3>
+
+      <p>
+        Hayır. Sonuç, girilen değerlere göre yapılan
+        matematiksel bir tahmindir. Gerçek tüketim kullanım
+        koşullarına göre değişebilir.
+      </p>
+
+    </div>
+
+
+    <div class="faq-item">
+
+      <h3>
+        Şehir içi ve şehir dışı yakıt tüketimi aynı mıdır?
+      </h3>
+
+      <p>
+        Genellikle aynı değildir. Trafik, dur-kalk, hız,
+        yol eğimi ve sürüş koşulları yakıt tüketimini
+        etkileyebilir.
+      </p>
+
+    </div>
+
+
+    <div class="faq-item">
+
+      <h3>
+        Gidiş dönüş yakıt maliyeti nasıl hesaplanır?
+      </h3>
+
+      <p>
+        Gidiş-dönüş toplam mesafesini kilometre alanına
+        girerek toplam yolculuk maliyetini hesaplayabilirsin.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <footer class="footer">
+
+    <div style="margin-bottom:10px;">
+
+      <a href="hakkimizda.html">
+        Hakkımızda
+      </a>
+
+      <a href="gizlilik-politikasi.html">
+        Gizlilik Politikası
+      </a>
+
+      <a href="iletisim.html">
+        İletişim
+      </a>
+
+    </div>
+
+    © 2026 MaaşKanka — Ücretsiz hesaplama araçları
+
+  </footer>
+
+</main>
+
+
+<script>
+
+function tl(value) {
+
+  return new Intl.NumberFormat(
+    'tr-TR',
+    {
+      style: 'currency',
+      currency: 'TRY',
+      maximumFractionDigits: 2
+    }
+  ).format(value);
+
+}
+
+
+function calculateFuel() {
+
+  const distance =
+    Number(
+      document.getElementById('distance').value
+    );
+
+  const consumption =
+    Number(
+      document.getElementById('consumption').value
+    );
+
+  const fuelPrice =
+    Number(
+      document.getElementById('fuelPrice').value
+    );
+
+
+  if (
+    distance <= 0 ||
+    consumption <= 0 ||
+    fuelPrice <= 0 ||
+    !Number.isFinite(distance) ||
+    !Number.isFinite(consumption) ||
+    !Number.isFinite(fuelPrice)
+  ) {
+
+    alert(
+      'Kanka mesafe, tüketim ve yakıt fiyatını düzgün gir 😄'
+    );
+
+    return;
+
+  }
+
+
+  const fuelUsed =
+    (distance * consumption) / 100;
+
+
+  const totalCost =
+    fuelUsed * fuelPrice;
+
+
+  const cost100 =
+    consumption * fuelPrice;
+
+
+  document.getElementById(
+    'fuelUsed'
+  ).textContent =
+    fuelUsed.toLocaleString(
+      'tr-TR',
+      {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+      }
+    ) + ' L';
+
+
+  document.getElementById(
+    'fuelCost'
+  ).textContent =
+    tl(totalCost);
+
+
+  document.getElementById(
+    'fuelCost100'
+  ).textContent =
+    tl(cost100);
+
+
+  document.getElementById(
+    'fuelDistance'
+  ).textContent =
+    distance.toLocaleString(
+      'tr-TR',
+      {
+        maximumFractionDigits: 1
+      }
+    ) + ' km';
+
+
+  document.getElementById(
+    'fuelResults'
+  ).style.display =
+    'grid';
+
+}
+
+
+document
+  .querySelectorAll('input')
+  .forEach(
+    function(input) {
+
+      input.addEventListener(
+        'keydown',
+        function(event) {
+
+          if (event.key === 'Enter') {
+
+            calculateFuel();
+
+          }
+
+        }
+      );
+
+    }
+  );
+
+</script>
+
+</body>
+</html>
