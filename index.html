@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Maaş, Kredi, Kira, Yakıt ve Yüzde Hesaplama | MaaşKanka</title>
+  <title>Maaş, Kredi, Kira, Yakıt, Yüzde ve KDV Hesaplama | MaaşKanka</title>
 
-  <meta name="description" content="Ücretsiz maaş, kredi, kira artış, yakıt ve yüzde hesaplama araçları. Maaşını, kredi taksitini, kira artışını, yakıt maliyetini ve yüzdeleri kolayca hesapla.">
+  <meta name="description" content="Ücretsiz maaş, kredi, kira artış, yakıt, yüzde ve KDV hesaplama araçları. Maaşını, kredi taksitini, kira artışını, yakıt maliyetini, yüzdeleri ve KDV tutarını kolayca hesapla.">
 
   <meta name="robots" content="index, follow">
 
@@ -44,7 +44,7 @@
 
     .menu {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(6, 1fr);
       gap: 10px;
       margin-bottom: 18px;
     }
@@ -109,16 +109,19 @@
       margin: 14px 0 8px;
     }
 
-    input {
+    input,
+    select {
       width: 100%;
       padding: 14px;
       border: 1px solid #d9deea;
       border-radius: 12px;
       font-size: 16px;
       outline: none;
+      background: white;
     }
 
-    input:focus {
+    input:focus,
+    select:focus {
       border-color: #5267ff;
     }
 
@@ -163,7 +166,7 @@
       margin-top: 25px;
     }
 
-    @media (max-width: 760px) {
+    @media (max-width: 900px) {
       .menu {
         grid-template-columns: repeat(3, 1fr);
       }
@@ -196,7 +199,7 @@
   <div class="brand">💸 MaaşKanka</div>
 
   <div class="sub">
-    Maaş, kredi, kira, yakıt ve yüzde hesaplamalarını hızlı ve kolay şekilde yap.
+    Maaş, kredi, kira, yakıt, yüzde ve KDV hesaplamalarını hızlı ve kolay şekilde yap.
   </div>
 
 
@@ -233,6 +236,12 @@
       id="percentMenu"
       onclick="showTool('percent')">
       📊 Yüzde
+    </button>
+
+    <button
+      id="vatMenu"
+      onclick="showTool('vat')">
+      🧾 KDV
     </button>
 
   </div>
@@ -621,28 +630,110 @@
   </section>
 
 
- <div class="footer">
+  <!-- ==================== -->
+  <!-- KDV -->
+  <!-- ==================== -->
 
-  <div style="margin-bottom:10px;">
-    <a href="hakkimizda.html"
-       style="color:#5267ff; text-decoration:none; margin:0 8px;">
-      Hakkımızda
-    </a>
+  <section id="vatTool" class="card hidden">
 
-    <a href="gizlilik-politikasi.html"
-       style="color:#5267ff; text-decoration:none; margin:0 8px;">
-      Gizlilik Politikası
-    </a>
+    <h2>🧾 KDV Hesaplama</h2>
 
-    <a href="iletisim.html"
-       style="color:#5267ff; text-decoration:none; margin:0 8px;">
-      İletişim
-    </a>
+    <div class="card-description">
+      KDV hariç veya KDV dahil tutarı girerek KDV tutarını ve toplam fiyatı kolayca hesapla.
+    </div>
+
+    <label for="vatType">Hesaplama türü</label>
+
+    <select id="vatType">
+      <option value="add">KDV Hariç → KDV Dahil</option>
+      <option value="remove">KDV Dahil → KDV Hariç</option>
+    </select>
+
+    <label for="vatAmount">Tutar (TL)</label>
+
+    <input
+      id="vatAmount"
+      type="number"
+      min="0"
+      step="0.01"
+      placeholder="Örn. 1000">
+
+    <label for="vatRate">KDV oranı (%)</label>
+
+    <select id="vatRate">
+      <option value="1">%1</option>
+      <option value="10">%10</option>
+      <option value="20" selected>%20</option>
+    </select>
+
+    <button
+      class="main-button"
+      onclick="calculateVAT()">
+      KDV'yi Hesapla 🚀
+    </button>
+
+    <div
+      id="vatResults"
+      class="results"
+      style="display:none;">
+
+      <div class="result">
+        <small>KDV hariç tutar</small>
+        <strong id="vatExcluded">-</strong>
+      </div>
+
+      <div class="result">
+        <small>KDV tutarı</small>
+        <strong id="vatValue">-</strong>
+      </div>
+
+      <div class="result">
+        <small>KDV dahil tutar</small>
+        <strong id="vatIncluded">-</strong>
+      </div>
+
+      <div class="result">
+        <small>KDV oranı</small>
+        <strong id="vatRateResult">-</strong>
+      </div>
+
+    </div>
+
+    <div class="note">
+      KDV hesabı seçtiğin KDV oranına göre matematiksel olarak yapılır.
+    </div>
+
+  </section>
+
+
+  <!-- ==================== -->
+  <!-- FOOTER -->
+  <!-- ==================== -->
+
+  <div class="footer">
+
+    <div style="margin-bottom:10px;">
+
+      <a href="hakkimizda.html"
+         style="color:#5267ff; text-decoration:none; margin:0 8px;">
+        Hakkımızda
+      </a>
+
+      <a href="gizlilik-politikasi.html"
+         style="color:#5267ff; text-decoration:none; margin:0 8px;">
+        Gizlilik Politikası
+      </a>
+
+      <a href="iletisim.html"
+         style="color:#5267ff; text-decoration:none; margin:0 8px;">
+        İletişim
+      </a>
+
+    </div>
+
+    © 2026 MaaşKanka — Ücretsiz hesaplama araçları
+
   </div>
-
-  © 2026 MaaşKanka — Ücretsiz hesaplama araçları
-
-</div>
 
 </main>
 
@@ -674,7 +765,8 @@ function showTool(tool) {
     'loan',
     'rent',
     'fuel',
-    'percent'
+    'percent',
+    'vat'
   ];
 
   tools.forEach(function(name) {
@@ -990,10 +1082,84 @@ function calculatePercent() {
 
 
 /* ==================== */
+/* KDV */
+/* ==================== */
+
+function calculateVAT() {
+
+  const amount =
+    Number(document.getElementById('vatAmount').value);
+
+  const rate =
+    Number(document.getElementById('vatRate').value);
+
+  const type =
+    document.getElementById('vatType').value;
+
+  if (
+    amount <= 0 ||
+    rate < 0 ||
+    !Number.isFinite(amount) ||
+    !Number.isFinite(rate)
+  ) {
+
+    alert('Kanka tutar ve KDV oranını düzgün gir 😄');
+    return;
+
+  }
+
+  const vatRateDecimal =
+    rate / 100;
+
+  let excluded;
+  let vat;
+  let included;
+
+  if (type === 'add') {
+
+    excluded = amount;
+
+    vat =
+      amount * vatRateDecimal;
+
+    included =
+      amount + vat;
+
+  } else {
+
+    included = amount;
+
+    excluded =
+      amount / (1 + vatRateDecimal);
+
+    vat =
+      amount - excluded;
+
+  }
+
+  document.getElementById('vatExcluded').textContent =
+    tl(excluded);
+
+  document.getElementById('vatValue').textContent =
+    tl(vat);
+
+  document.getElementById('vatIncluded').textContent =
+    tl(included);
+
+  document.getElementById('vatRateResult').textContent =
+    '%' + rate;
+
+  document.getElementById('vatResults').style.display =
+    'grid';
+
+}
+
+
+/* ==================== */
 /* ENTER TUŞU */
 /* ==================== */
 
-document.querySelectorAll('input').forEach(
+document.querySelectorAll('input, select').forEach(
   function(input) {
 
     input.addEventListener(
@@ -1049,6 +1215,16 @@ document.querySelectorAll('input').forEach(
         ) {
 
           calculatePercent();
+
+        }
+
+        if (
+          input.id === 'vatAmount' ||
+          input.id === 'vatRate' ||
+          input.id === 'vatType'
+        ) {
+
+          calculateVAT();
 
         }
 
