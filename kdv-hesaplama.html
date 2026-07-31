@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -9,22 +10,145 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>KDV Hesaplama | KDV Dahil ve Hariç Fiyat Hesaplama</title>
+  <title>KDV Hesaplama | KDV Dahil ve Hariç Hesaplama | MaaşKanka</title>
 
   <meta
     name="description"
-    content="KDV hesaplama aracı ile KDV dahil ve KDV hariç fiyatı, KDV tutarını ve toplam fiyatı kolayca hesapla."
+    content="KDV hesaplama aracı ile KDV dahil ve KDV hariç fiyatı, KDV tutarını ve toplam fiyatı hızlı ve ücretsiz hesapla."
   >
 
   <meta
     name="robots"
-    content="index, follow"
+    content="index, follow, max-image-preview:large"
+  >
+
+  <meta
+    name="keywords"
+    content="KDV hesaplama, KDV dahil hesaplama, KDV hariç hesaplama, KDV hesaplama aracı, yüzde 20 KDV hesaplama, yüzde 10 KDV hesaplama, yüzde 1 KDV hesaplama"
+  >
+
+  <meta
+    name="author"
+    content="MaaşKanka"
   >
 
   <link
     rel="canonical"
     href="https://xelta019.github.io/Maaskanka/kdv-hesaplama.html"
   >
+
+  <meta
+    property="og:title"
+    content="KDV Hesaplama | MaaşKanka"
+  >
+
+  <meta
+    property="og:description"
+    content="KDV dahil ve KDV hariç fiyatı, KDV tutarını ve toplam fiyatı kolayca hesapla."
+  >
+
+  <meta
+    property="og:type"
+    content="website"
+  >
+
+  <meta
+    property="og:url"
+    content="https://xelta019.github.io/Maaskanka/kdv-hesaplama.html"
+  >
+
+  <meta
+    property="og:site_name"
+    content="MaaşKanka"
+  >
+
+  <meta
+    property="og:locale"
+    content="tr_TR"
+  >
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+
+      {
+        "@type": "WebSite",
+        "@id": "https://xelta019.github.io/Maaskanka/#website",
+        "url": "https://xelta019.github.io/Maaskanka/",
+        "name": "MaaşKanka",
+        "inLanguage": "tr-TR"
+      },
+
+      {
+        "@type": "WebPage",
+        "@id": "https://xelta019.github.io/Maaskanka/kdv-hesaplama.html#webpage",
+        "url": "https://xelta019.github.io/Maaskanka/kdv-hesaplama.html",
+        "name": "KDV Hesaplama",
+        "description": "KDV dahil ve KDV hariç fiyat hesaplama aracı.",
+        "isPartOf": {
+          "@id": "https://xelta019.github.io/Maaskanka/#website"
+        },
+        "inLanguage": "tr-TR"
+      },
+
+      {
+        "@type": "WebApplication",
+        "name": "MaaşKanka KDV Hesaplama",
+        "url": "https://xelta019.github.io/Maaskanka/kdv-hesaplama.html",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "All",
+        "browserRequirements": "JavaScript destekleyen modern web tarayıcısı",
+        "inLanguage": "tr-TR",
+        "isAccessibleForFree": true
+      },
+
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+
+          {
+            "@type": "Question",
+            "name": "KDV nasıl hesaplanır?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "KDV hariç tutara KDV oranı uygulanarak KDV tutarı bulunur ve KDV dahil toplam fiyat hesaplanır."
+            }
+          },
+
+          {
+            "@type": "Question",
+            "name": "1000 TL'nin yüzde 20 KDV'si kaç TL?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "1000 TL'nin yüzde 20 KDV tutarı 200 TL'dir. KDV dahil toplam tutar 1200 TL olur."
+            }
+          },
+
+          {
+            "@type": "Question",
+            "name": "KDV dahil fiyattan KDV hariç fiyat nasıl bulunur?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "KDV dahil fiyat, 1 artı KDV oranına bölünerek KDV hariç tutar bulunabilir."
+            }
+          },
+
+          {
+            "@type": "Question",
+            "name": "KDV hesaplama ücretsiz mi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Evet. MaaşKanka KDV hesaplama aracı ücretsiz olarak kullanılabilir."
+            }
+          }
+
+        ]
+      }
+
+    ]
+  }
+  </script>
 
   <style>
 
@@ -61,26 +185,42 @@
       margin-bottom: 24px;
     }
 
-    .card {
-      background: white;
-      border-radius: 20px;
-      padding: 24px;
-      box-shadow: 0 8px 30px rgba(20, 30, 50, .08);
+    .back {
+      display: inline-block;
+      color: #5267ff;
+      text-decoration: none;
+      font-weight: 700;
       margin-bottom: 18px;
     }
 
-    h1 {
-      font-size: 27px;
-      line-height: 1.3;
-      margin-top: 0;
+    .intro,
+    .card,
+    .seo-section {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 24px;
+      margin-bottom: 18px;
+      box-shadow: 0 8px 30px rgba(20, 30, 50, .07);
     }
 
-    h2 {
+    .intro h1 {
+      margin: 0 0 12px;
+      font-size: 28px;
+      line-height: 1.3;
+    }
+
+    .intro p,
+    .seo-section p {
+      color: #4f596b;
+    }
+
+    .card h2,
+    .seo-section h2 {
       margin-top: 0;
       line-height: 1.3;
     }
 
-    .description {
+    .card-description {
       color: #697386;
       margin-bottom: 20px;
     }
@@ -88,7 +228,7 @@
     label {
       display: block;
       font-weight: 700;
-      margin: 14px 0 8px;
+      margin: 15px 0 8px;
     }
 
     input,
@@ -99,7 +239,7 @@
       border-radius: 12px;
       font-size: 16px;
       outline: none;
-      background: white;
+      background: #ffffff;
     }
 
     input:focus,
@@ -107,20 +247,20 @@
       border-color: #5267ff;
     }
 
-    button {
+    .main-button {
       width: 100%;
       border: 0;
       border-radius: 12px;
       padding: 15px;
       margin-top: 20px;
       background: #5267ff;
-      color: white;
+      color: #ffffff;
       font-size: 17px;
       font-weight: 800;
       cursor: pointer;
     }
 
-    button:hover {
+    .main-button:hover {
       opacity: .92;
     }
 
@@ -153,24 +293,35 @@
       margin-top: 18px;
     }
 
-    .info {
-      background: white;
-      border-radius: 20px;
-      padding: 24px;
-      box-shadow: 0 8px 30px rgba(20, 30, 50, .06);
-      margin-bottom: 18px;
+    .example {
+      background: #f5f7ff;
+      border-radius: 14px;
+      padding: 16px;
+      margin-top: 18px;
     }
 
-    .info p {
-      color: #4f596b;
+    .seo-section h3 {
+      font-size: 18px;
+      margin-top: 24px;
+      margin-bottom: 8px;
     }
 
-    .back {
-      display: inline-block;
-      color: #5267ff;
-      text-decoration: none;
-      font-weight: 700;
-      margin-bottom: 18px;
+    .faq-item {
+      border-top: 1px solid #e7eaf1;
+      padding: 18px 0;
+    }
+
+    .faq-item:first-child {
+      border-top: 0;
+    }
+
+    .faq-item h3 {
+      margin: 0 0 8px;
+      font-size: 17px;
+    }
+
+    .faq-item p {
+      margin: 0;
     }
 
     .footer {
@@ -180,23 +331,30 @@
       margin-top: 25px;
     }
 
+    .footer a {
+      color: #5267ff;
+      text-decoration: none;
+      margin: 0 7px;
+    }
+
     @media (max-width: 520px) {
 
       .wrap {
         padding: 22px 14px 50px;
       }
 
-      .card,
-      .info {
-        padding: 18px;
-      }
-
       .brand {
         font-size: 26px;
       }
 
-      h1 {
-        font-size: 23px;
+      .intro,
+      .card,
+      .seo-section {
+        padding: 18px;
+      }
+
+      .intro h1 {
+        font-size: 24px;
       }
 
       .results {
@@ -220,7 +378,7 @@
     </div>
 
     <div class="sub">
-      KDV hesaplamanı hızlı ve kolay şekilde yap.
+      Günlük hayatta işine yarayan ücretsiz hesaplama araçları.
     </div>
 
   </header>
@@ -234,15 +392,33 @@
   </a>
 
 
-  <section class="card">
+  <section class="intro">
 
     <h1>
       🧾 KDV Hesaplama
     </h1>
 
-    <div class="description">
-      KDV dahil veya KDV hariç fiyatı girerek KDV tutarını
-      ve toplam fiyatı kolayca hesapla.
+    <p>
+      KDV dahil veya KDV hariç fiyatı girerek KDV tutarını,
+      net fiyatı ve toplam fiyatı birkaç saniyede hesapla.
+    </p>
+
+    <p>
+      %1, %10 ve %20 KDV oranlarıyla hesaplama yapabilir,
+      KDV dahil fiyattan KDV hariç tutarı da kolayca bulabilirsin.
+    </p>
+
+  </section>
+
+
+  <section class="card">
+
+    <h2>
+      KDV Hesaplama Aracı
+    </h2>
+
+    <div class="card-description">
+      Hesaplama türünü, tutarı ve KDV oranını seç.
     </div>
 
 
@@ -297,7 +473,10 @@
     </select>
 
 
-    <button onclick="calculateVAT()">
+    <button
+      class="main-button"
+      onclick="calculateVAT()"
+    >
       KDV'yi Hesapla 🚀
     </button>
 
@@ -363,61 +542,237 @@
 
 
     <div class="note">
-      Bu araç matematiksel KDV hesabı yapar. Gerçek ticari
-      işlemlerde uygulanacak oran ve istisnalar için güncel
-      resmi bilgiler kontrol edilmelidir.
+      Bu araç seçtiğin KDV oranına göre matematiksel hesaplama
+      yapar. Gerçek ticari işlemlerde güncel mevzuat ve
+      uygulanması gereken oran ayrıca kontrol edilmelidir.
     </div>
 
   </section>
 
 
-  <section class="info">
+  <section class="seo-section">
 
     <h2>
       KDV Hesaplama Nasıl Yapılır?
     </h2>
 
     <p>
-      KDV hariç bir tutarın üzerine KDV eklemek için tutar,
-      KDV oranıyla çarpılır ve elde edilen KDV tutarı ana
-      fiyata eklenir.
+      KDV hesaplamasında öncelikle verilen tutarın KDV dahil
+      mi yoksa KDV hariç mi olduğu belirlenir. Daha sonra
+      seçilen KDV oranına göre hesaplama yapılır.
     </p>
 
-    <p>
-      Örneğin 1.000 TL KDV hariç bir ürünün KDV oranı %20 ise
-      KDV tutarı 200 TL, KDV dahil fiyatı ise 1.200 TL olur.
-    </p>
+    <h3>
+      KDV hariç fiyattan KDV dahil fiyat hesaplama
+    </h3>
 
     <p>
-      KDV dahil bir fiyatın içindeki KDV'yi bulmak için toplam
-      fiyat, 1 + KDV oranına bölünür.
+      KDV hariç tutar ile KDV oranı çarpılarak KDV tutarı
+      bulunur. Daha sonra KDV tutarı ana fiyata eklenir.
+    </p>
+
+    <h3>
+      KDV dahil fiyattan KDV hariç fiyat hesaplama
+    </h3>
+
+    <p>
+      KDV dahil fiyat, 1 artı KDV oranına bölünerek
+      KDV hariç tutar bulunabilir. KDV tutarı ise KDV dahil
+      fiyat ile KDV hariç fiyat arasındaki farktır.
+    </p>
+
+
+    <div class="example">
+
+      <strong>Örnek:</strong>
+
+      <p>
+        1.000 TL KDV hariç bir tutara %20 KDV uygulanırsa
+        KDV tutarı 200 TL, KDV dahil toplam fiyat 1.200 TL olur.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <section class="seo-section">
+
+    <h2>
+      %20 KDV Hesaplama
+    </h2>
+
+    <p>
+      1.000 TL KDV hariç tutarın %20 KDV'si 200 TL'dir.
+      KDV dahil toplam tutar 1.200 TL olur.
+    </p>
+
+
+    <h2>
+      %10 KDV Hesaplama
+    </h2>
+
+    <p>
+      1.000 TL KDV hariç tutarın %10 KDV'si 100 TL'dir.
+      KDV dahil toplam tutar 1.100 TL olur.
+    </p>
+
+
+    <h2>
+      %1 KDV Hesaplama
+    </h2>
+
+    <p>
+      1.000 TL KDV hariç tutarın %1 KDV'si 10 TL'dir.
+      KDV dahil toplam tutar 1.010 TL olur.
     </p>
 
   </section>
 
 
-  <section class="info">
+  <section class="seo-section">
 
     <h2>
-      KDV Hesaplama Örneği
+      KDV Hesaplama Nerelerde Kullanılır?
     </h2>
 
     <p>
-      5.000 TL tutarındaki bir ürün için KDV oranı %20 seçilirse:
+      KDV hesaplama; ürün fiyatlarını, hizmet bedellerini,
+      fatura tutarlarını ve alışveriş fiyatlarını anlamak
+      için kullanılabilir.
+    </p>
+
+    <ul>
+
+      <li>
+        KDV dahil fiyat hesaplama
+      </li>
+
+      <li>
+        KDV hariç fiyat hesaplama
+      </li>
+
+      <li>
+        KDV tutarı hesaplama
+      </li>
+
+      <li>
+        Fatura tutarı hesaplama
+      </li>
+
+      <li>
+        Ürün ve hizmet fiyatı hesaplama
+      </li>
+
+    </ul>
+
+  </section>
+
+
+  <section class="seo-section">
+
+    <h2>
+      KDV Hesaplama Sonucu Yasal Fiyat mıdır?
+    </h2>
+
+    <p>
+      Hayır. MaaşKanka KDV hesaplama aracı seçilen oran
+      üzerinden matematiksel sonuç verir.
     </p>
 
     <p>
-      KDV tutarı: <strong>1.000 TL</strong>
+      Gerçek ticari işlemlerde ürün veya hizmete uygulanması
+      gereken KDV oranı, istisnalar ve diğer özel durumlar
+      ayrıca değerlendirilmelidir.
     </p>
 
-    <p>
-      KDV dahil toplam fiyat: <strong>6.000 TL</strong>
-    </p>
+  </section>
+
+
+  <section class="seo-section">
+
+    <h2>
+      Sık Sorulan Sorular
+    </h2>
+
+
+    <div class="faq-item">
+
+      <h3>
+        KDV hesaplama ücretsiz mi?
+      </h3>
+
+      <p>
+        Evet. MaaşKanka KDV hesaplama aracı ücretsiz olarak
+        kullanılabilir.
+      </p>
+
+    </div>
+
+
+    <div class="faq-item">
+
+      <h3>
+        1.000 TL'nin %20 KDV'si kaç TL?
+      </h3>
+
+      <p>
+        1.000 TL'nin %20 KDV tutarı 200 TL'dir.
+        KDV dahil toplam tutar 1.200 TL olur.
+      </p>
+
+    </div>
+
+
+    <div class="faq-item">
+
+      <h3>
+        1.200 TL KDV dahil fiyatın KDV hariç tutarı kaç TL?
+      </h3>
+
+      <p>
+        KDV oranı %20 kabul edildiğinde 1.200 TL KDV dahil
+        fiyatın KDV hariç tutarı 1.000 TL, KDV tutarı ise
+        200 TL'dir.
+      </p>
+
+    </div>
+
+
+    <div class="faq-item">
+
+      <h3>
+        KDV oranı değişebilir mi?
+      </h3>
+
+      <p>
+        Evet. Ürün ve hizmetlere göre uygulanabilecek KDV
+        oranları farklı olabilir. Gerçek işlemlerde güncel
+        resmi bilgiler kontrol edilmelidir.
+      </p>
+
+    </div>
 
   </section>
 
 
   <footer class="footer">
+
+    <div style="margin-bottom:10px;">
+
+      <a href="hakkimizda.html">
+        Hakkımızda
+      </a>
+
+      <a href="gizlilik-politikasi.html">
+        Gizlilik Politikası
+      </a>
+
+      <a href="iletisim.html">
+        İletişim
+      </a>
+
+    </div>
 
     © 2026 MaaşKanka — Ücretsiz hesaplama araçları
 
@@ -465,7 +820,7 @@ function calculateVAT() {
   ) {
 
     alert(
-      'Kanka tutar bilgisini düzgün gir 😄'
+      'Kanka tutarı düzgün gir 😄'
     );
 
     return;
@@ -505,23 +860,33 @@ function calculateVAT() {
   }
 
 
-  document.getElementById('excluded').textContent =
+  document.getElementById(
+    'excluded'
+  ).textContent =
     tl(excluded);
 
 
-  document.getElementById('vat').textContent =
+  document.getElementById(
+    'vat'
+  ).textContent =
     tl(vat);
 
 
-  document.getElementById('included').textContent =
+  document.getElementById(
+    'included'
+  ).textContent =
     tl(included);
 
 
-  document.getElementById('rateResult').textContent =
+  document.getElementById(
+    'rateResult'
+  ).textContent =
     '%' + rate;
 
 
-  document.getElementById('results').style.display =
+  document.getElementById(
+    'results'
+  ).style.display =
     'grid';
 
 }
@@ -547,164 +912,7 @@ document
   });
 
 </script>
-<section class="seo-content">
 
-  <h2>KDV Hesaplama</h2>
-
-  <p>
-    KDV hesaplama aracı ile KDV hariç veya KDV dahil tutarı
-    kolayca hesaplayabilirsiniz. KDV oranını seçerek KDV
-    tutarını, KDV hariç fiyatı ve KDV dahil toplam fiyatı
-    birkaç saniye içinde bulabilirsiniz.
-  </p>
-
-  <h2>KDV Nasıl Hesaplanır?</h2>
-
-  <p>
-    KDV hesaplamasında öncelikle tutarın KDV dahil mi yoksa
-    KDV hariç mi olduğu belirlenir. Daha sonra uygulanacak
-    KDV oranına göre hesaplama yapılır.
-  </p>
-
-  <h2>KDV Hariç Fiyattan KDV Dahil Fiyat Hesaplama</h2>
-
-  <p>
-    KDV hariç tutara KDV oranı uygulanarak KDV miktarı bulunur.
-    Daha sonra KDV tutarı, KDV hariç fiyata eklenerek KDV dahil
-    toplam fiyat hesaplanır.
-  </p>
-
-  <p>
-    Örneğin 1.000 TL KDV hariç bir tutara %20 KDV uygulanırsa
-    KDV tutarı 200 TL olur. KDV dahil toplam fiyat 1.200 TL'dir.
-  </p>
-
-  <h2>KDV Dahil Fiyattan KDV Hariç Fiyat Hesaplama</h2>
-
-  <p>
-    KDV dahil bir fiyatın içindeki KDV tutarını bulmak için
-    toplam fiyat, 1 artı KDV oranına bölünür. Böylece KDV
-    hariç tutar bulunabilir.
-  </p>
-
-  <p>
-    Örneğin KDV dahil fiyat 1.200 TL ve KDV oranı %20 ise,
-    KDV hariç tutar 1.000 TL, KDV tutarı ise 200 TL'dir.
-  </p>
-
-  <h2>%20 KDV Hesaplama</h2>
-
-  <p>
-    %20 KDV oranıyla hesaplama yapmak için KDV hariç tutar
-    0,20 ile çarpılır. Ortaya çıkan değer KDV tutarıdır.
-    KDV dahil fiyatı bulmak için KDV tutarı ana fiyata eklenir.
-  </p>
-
-  <h2>%10 KDV Hesaplama</h2>
-
-  <p>
-    %10 KDV hesaplamasında KDV hariç tutarın yüzde 10'u
-    KDV tutarı olarak hesaplanır. Daha sonra bu tutar
-    ana fiyata eklenerek KDV dahil fiyat bulunabilir.
-  </p>
-
-  <h2>%1 KDV Hesaplama</h2>
-
-  <p>
-    %1 KDV hesaplamasında KDV hariç tutarın yüzde 1'i
-    KDV tutarını oluşturur. KDV dahil fiyatı bulmak için
-    hesaplanan KDV tutarı ana fiyata eklenir.
-  </p>
-
-  <h2>KDV Hesaplama Sonucu Kesin midir?</h2>
-
-  <p>
-    MaaşKanka KDV hesaplama aracı seçtiğiniz oran üzerinden
-    matematiksel hesaplama yapar. Gerçek ticari işlemlerde
-    uygulanacak KDV oranı, istisnalar ve özel durumlar farklı
-    olabilir.
-  </p>
-
-  <p>
-    Fatura veya ticari işlem gerçekleştirirken güncel resmi
-    düzenlemeler ve uygulanması gereken KDV oranı ayrıca
-    kontrol edilmelidir.
-  </p>
-
-  <h2>Sık Sorulan Sorular</h2>
-
-  <h3>KDV hesaplama ücretsiz mi?</h3>
-
-  <p>
-    Evet. MaaşKanka KDV hesaplama aracı ücretsiz olarak
-    kullanılabilir.
-  </p>
-
-  <h3>1.000 TL'nin %20 KDV'si kaç TL?</h3>
-
-  <p>
-    1.000 TL'nin %20 KDV tutarı 200 TL'dir.
-    KDV dahil toplam tutar 1.200 TL olur.
-  </p>
-
-  <h3>1.200 TL KDV dahil fiyatın KDV hariç tutarı kaç TL?</h3>
-
-  <p>
-    KDV oranı %20 kabul edildiğinde 1.200 TL KDV dahil fiyatın
-    KDV hariç tutarı 1.000 TL, içindeki KDV tutarı ise 200 TL'dir.
-  </p>
-
-  <h3>KDV oranları değişebilir mi?</h3>
-
-  <p>
-    Evet. Ürün ve hizmete göre uygulanabilecek KDV oranları
-    farklı olabilir ve mevzuat değişiklikleri yaşanabilir.
-    Gerçek işlemlerde güncel resmi bilgiler kontrol edilmelidir.
-  </p>
-
-</section>
-
-<style>
-  .seo-content {
-    background: #ffffff;
-    border-radius: 20px;
-    padding: 26px;
-    margin: 20px 0;
-    box-shadow: 0 8px 30px rgba(20, 30, 50, .06);
-  }
-
-  .seo-content h2 {
-    margin-top: 0;
-    margin-bottom: 12px;
-    font-size: 23px;
-    line-height: 1.35;
-  }
-
-  .seo-content h2:not(:first-child) {
-    margin-top: 30px;
-  }
-
-  .seo-content h3 {
-    margin-top: 22px;
-    margin-bottom: 8px;
-    font-size: 18px;
-  }
-
-  .seo-content p {
-    color: #4f596b;
-    line-height: 1.7;
-    margin: 8px 0;
-  }
-
-  @media (max-width: 520px) {
-    .seo-content {
-      padding: 18px;
-    }
-
-    .seo-content h2 {
-      font-size: 21px;
-    }
-  }
-</style>
 </body>
 </html>
+```
