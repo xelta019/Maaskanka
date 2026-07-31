@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Kredi Hesaplama | MaaşKanka</title>
+
+  <meta
+    name="description"
+    content="Kredi tutarı, vade ve aylık faiz oranını girerek tahmini aylık kredi taksitini, toplam geri ödemeyi ve toplam faiz tutarını hesapla."
+  >
+
+  <meta
+    name="robots"
+    content="index, follow, max-image-preview:large"
+  >
+
+  <meta
+    name="keywords"
+    content="kredi hesaplama, kredi taksit hesaplama, kredi faiz hesaplama, aylık kredi taksiti, toplam geri ödeme hesaplama"
+  >
+
+  <meta
+    name="author"
+    content="MaaşKanka"
+  >
+
+  <link
+    rel="canonical"
+    href="https://xelta019.github.io/Maaskanka/kredi-hesaplama.html"
+  >
+
+  <meta
+    property="og:title"
+    content="Kredi Hesaplama | MaaşKanka"
+  >
+
+  <meta
+    property="og:description"
+    content="Kredi tutarı, vade ve aylık faiz oranını girerek tahmini kredi taksitini ve toplam geri ödemeyi hesapla."
+  >
+
+  <meta
+    property="og:type"
+    content="website"
+  >
+
+  <meta
+    property="og:url"
+    content="https://xelta019.github.io/Maaskanka/kredi-hesaplama.html"
+  >
+
+  <meta
+    property="og:site_name"
+    content="MaaşKanka"
+  >
+
+  <meta
+    property="og:locale"
+    content="tr_TR"
+  >
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+
+      {
+        "@type": "WebSite",
+        "@id": "https://xelta019.github.io/Maaskanka/#website",
+        "url": "https://xelta019.github.io/Maaskanka/",
+        "name": "MaaşKanka",
+        "inLanguage": "tr-TR"
+      },
+
+      {
+        "@type": "WebPage",
+        "@id": "https://xelta019.github.io/Maaskanka/kredi-hesaplama.html#webpage",
+        "url": "https://xelta019.github.io/Maaskanka/kredi-hesaplama.html",
+        "name": "Kredi Hesaplama",
+        "description": "Kredi tutarı, vade ve aylık faiz oranıyla tahmini kredi taksiti hesaplama.",
+        "isPartOf": {
+          "@id": "https://xelta019.github.io/Maaskanka/#website"
+        },
+        "inLanguage": "tr-TR"
+      },
+
+      {
+        "@type": "WebApplication",
+        "name": "MaaşKanka Kredi Hesaplama",
+        "url": "https://xelta019.github.io/Maaskanka/kredi-hesaplama.html",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "All",
+        "browserRequirements": "JavaScript destekleyen modern web tarayıcısı",
+        "inLanguage": "tr-TR",
+        "isAccessibleForFree": true
+      },
+
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Ana Sayfa",
+            "item": "https://xelta019.github.io/Maaskanka/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Kredi Hesaplama",
+            "item": "https://xelta019.github.io/Maaskanka/kredi-hesaplama.html"
+          }
+        ]
+      }
+
+    ]
+  }
+  </script>
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f7fb;
+      color: #172033;
+      line-height: 1.6;
+    }
+
+    .wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 30px 18px 60px;
+    }
+
+    .brand {
+      font-size: 30px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .sub {
+      color: #697386;
+      margin-bottom: 24px;
+    }
+
+    .back {
+      display: inline-block;
+      margin-bottom: 18px;
+      color: #5267ff;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .intro,
+    .card,
+    .seo-section {
+      background: white;
+      border-radius: 20px;
+      padding: 24px;
+      margin-bottom: 18px;
+      box-shadow: 0 8px 30px rgba(20, 30, 50, .07);
+    }
+
+    .intro h1 {
+      font-size: 28px;
+      line-height: 1.3;
+      margin: 0 0 12px;
+    }
+
+    .intro p,
+    .seo-section p {
+      color: #4f596b;
+    }
+
+    .card h2,
+    .seo-section h2 {
+      margin-top: 0;
+      line-height: 1.3;
+    }
+
+    .card-description {
+      color: #697386;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: 700;
+      margin: 14px 0 8px;
+    }
+
+    input {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #d9deea;
+      border-radius: 12px;
+      font-size: 16px;
+      outline: none;
+    }
+
+    input:focus {
+      border-color: #5267ff;
+    }
+
+    .main-button {
+      width: 100%;
+      margin-top: 20px;
+      padding: 15px;
+      border: 0;
+      border-radius: 12px;
+      background: #5267ff;
+      color: white;
+      font-size: 17px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .main-button:hover {
+      opacity: .92;
+    }
+
+    .results {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .result {
+      background: #f5f7ff;
+      border-radius: 14px;
+      padding: 16px;
+    }
+
+    .result small {
+      display: block;
+      color: #697386;
+      margin-bottom: 6px;
+    }
+
+    .result strong {
+      font-size: 20px;
+    }
+
+    .note {
+      color: #697386;
+      font-size: 13px;
+      margin-top: 18px;
+    }
+
+    .seo-section h3 {
+      font-size: 18px;
+      margin-top: 24px;
+    }
+
+    .example {
+      background: #f5f7ff;
+      border-radius: 14px;
+      padding: 16px;
+      margin-top: 16px;
+    }
+
+    .footer {
+      text-align: center;
+      color: #8a93a5;
+      font-size: 13px;
+      margin-top: 25px;
+    }
+
+    .footer a {
+      color: #5267ff;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+
+    @media (max-width: 520px) {
+
+      .wrap {
+        padding: 22px 14px 50px;
+      }
+
+      .brand {
+        font-size: 26px;
+      }
+
+      .intro h1 {
+        font-size: 24px;
+      }
+
+      .intro,
+      .card,
+      .seo-section {
+        padding: 18px;
+      }
+
+      .results {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<main class="wrap">
+
+  <header>
+
+    <div class="brand">
+      💸 MaaşKanka
+    </div>
+
+    <div class="sub">
+      Günlük hayatta işine yarayan ücretsiz hesaplama araçları.
+    </div>
+
+    <a
+      class="back"
+      href="index.html"
+    >
+      ← Tüm hesaplama araçlarına dön
+    </a>
+
+  </header>
+
+
+  <section class="intro">
+
+    <h1>
+      🏦 Kredi Hesaplama
+    </h1>
+
+    <p>
+      Kredi tutarını, vade süresini ve aylık faiz oranını
+      girerek tahmini aylık taksitini ve toplam geri ödeme
+      tutarını kolayca hesapla.
+    </p>
+
+    <p>
+      Sonuçlar matematiksel bir hesaplamadır ve banka
+      tarafından sunulan kesin kredi teklifi değildir.
+    </p>
+
+  </section>
+
+
+  <section class="card">
+
+    <h2>
+      Kredi Taksiti Hesapla
+    </h2>
+
+    <div class="card-description">
+      Bilgileri gir, hesapla butonuna bas. Sonuçları
+      saniyeler içinde gösterelim.
+    </div>
+
+
+    <label for="loanAmount">
+      Kredi tutarı (TL)
+    </label>
+
+    <input
+      id="loanAmount"
+      type="number"
+      min="0"
+      step="100"
+      placeholder="Örn. 100000"
+    >
+
+
+    <label for="loanMonths">
+      Vade (ay)
+    </label>
+
+    <input
+      id="loanMonths"
+      type="number"
+      min="1"
+      max="600"
+      step="1"
+      value="24"
+      placeholder="Örn. 24"
+    >
+
+
+    <label for="loanRate">
+      Aylık faiz oranı (%)
+    </label>
+
+    <input
+      id="loanRate"
+      type="number"
+      min="0"
+      step="0.01"
+      placeholder="Örn. 3.50"
+    >
+
+
+    <button
+      class="main-button"
+      onclick="calculateLoan()"
+    >
+      Krediyi Hesapla 🚀
+    </button>
+
+
+    <div
+      id="loanResults"
+      class="results"
+      style="display:none;"
+    >
+
+      <div class="result">
+        <small>Aylık taksit</small>
+        <strong id="monthlyPayment">-</strong>
+      </div>
+
+      <div class="result">
+        <small>Toplam geri ödeme</small>
+        <strong id="totalPayment">-</strong>
+      </div>
+
+      <div class="result">
+        <small>Toplam faiz</small>
+        <strong id="totalInterest">-</strong>
+      </div>
+
+      <div class="result">
+        <small>Vade</small>
+        <strong id="loanTerm">-</strong>
+      </div>
+
+    </div>
+
+
+    <div class="note">
+      Bu hesaplama tahmini bir matematiksel sonuç verir.
+      Banka masrafları, sigorta, vergi, tahsis ücreti ve
+      diğer ek maliyetler hesaba dahil değildir.
+    </div>
+
+  </section>
+
+
+  <section class="seo-section">
+
+    <h2>
+      Kredi Hesaplama Nasıl Yapılır?
+    </h2>
+
+    <p>
+      Kredi taksiti hesaplanırken kredi tutarı, aylık faiz
+      oranı ve kredi vadesi kullanılır. Bu bilgiler sayesinde
+      aylık taksit ve toplam geri ödeme tutarı tahmini olarak
+      hesaplanabilir.
+    </p>
+
+    <h3>
+      Aylık kredi taksiti
+    </h3>
+
+    <p>
+      Aylık taksit tutarı kredi tutarı ve faiz oranına göre
+      belirlenir. Vade süresi arttıkça aylık taksit düşebilir;
+      ancak toplam ödenen faiz genellikle yükselir.
+    </p>
+
+    <h3>
+      Toplam geri ödeme
+    </h3>
+
+    <p>
+      Aylık taksit tutarının toplam vade ayıyla çarpılmasıyla
+      tahmini toplam geri ödeme bulunur.
+    </p>
+
+    <h3>
+      Toplam faiz
+    </h3>
+
+    <p>
+      Toplam geri ödeme tutarından kullanılan kredi tutarı
+      çıkarıldığında tahmini toplam faiz maliyeti elde edilir.
+    </p>
+
+
+    <div class="example">
+
+      <strong>Örnek:</strong>
+
+      <p>
+        100.000 TL kredi, 24 ay vade ve aylık %3 faiz oranı
+        girildiğinde sistem aylık taksiti, toplam geri ödemeyi
+        ve tahmini toplam faiz tutarını hesaplar.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <section class="seo-section">
+
+    <h2>
+      Kredi Vadesi Uzadıkça Ne Olur?
+    </h2>
+
+    <p>
+      Kredi vadesinin uzaması aylık taksit tutarının daha düşük
+      olmasını sağlayabilir. Ancak kredi daha uzun süre
+      kullanıldığı için toplam faiz maliyeti artabilir.
+    </p>
+
+    <p>
+      Bu nedenle kredi karşılaştırırken yalnızca aylık taksite
+      değil, toplam geri ödeme tutarına da bakmak önemlidir.
+    </p>
+
+  </section>
+
+
+  <section class="seo-section">
+
+    <h2>
+      Kredi Hesaplama Sonucu Kesin Midir?
+    </h2>
+
+    <p>
+      Hayır. MaaşKanka kredi hesaplama aracı yalnızca girilen
+      kredi tutarı, vade ve faiz oranına göre matematiksel
+      tahmin yapar.
+    </p>
+
+    <p>
+      Bankaların uyguladığı sigorta, vergi, tahsis ücreti,
+      dosya masrafı veya diğer maliyetler hesaplama sonucunu
+      değiştirebilir.
+    </p>
+
+    <p>
+      Gerçek kredi maliyetini öğrenmek için ilgili bankanın
+      güncel teklifinin ayrıca kontrol edilmesi gerekir.
+    </p>
+
+  </section>
+
+
+  <section class="seo-section">
+
+    <h2>
+      Sık Sorulan Sorular
+    </h2>
+
+
+    <h3>
+      Kredi hesaplama ücretsiz mi?
+    </h3>
+
+    <p>
+      Evet. MaaşKanka kredi hesaplama aracı ücretsiz olarak
+      kullanılabilir.
+    </p>
+
+
+    <h3>
+      Kredi hesaplama banka teklifi midir?
+    </h3>
+
+    <p>
+      Hayır. Sonuç matematiksel tahmindir. Bankanın güncel
+      faiz oranı ve ek masrafları farklı olabilir.
+    </p>
+
+
+    <h3>
+      Faiz oranı sıfır olursa ne olur?
+    </h3>
+
+    <p>
+      Faiz oranı %0 olduğunda kredi tutarı vade ayına
+      bölünerek aylık taksit hesaplanır.
+    </p>
+
+
+    <h3>
+      Vade uzarsa toplam faiz artar mı?
+    </h3>
+
+    <p>
+      Aynı faiz oranı ve diğer koşullar altında vadenin
+      uzaması genellikle toplam faiz maliyetini artırır.
+    </p>
+
+  </section>
+
+
+  <footer class="footer">
+
+    <div style="margin-bottom:10px;">
+
+      <a href="hakkimizda.html">
+        Hakkımızda
+      </a>
+
+      <a href="gizlilik-politikasi.html">
+        Gizlilik Politikası
+      </a>
+
+      <a href="iletisim.html">
+        İletişim
+      </a>
+
+    </div>
+
+    © 2026 MaaşKanka — Ücretsiz hesaplama araçları
+
+  </footer>
+
+</main>
+
+
+<script>
+
+function tl(value) {
+
+  return new Intl.NumberFormat(
+    'tr-TR',
+    {
+      style: 'currency',
+      currency: 'TRY',
+      maximumFractionDigits: 2
+    }
+  ).format(value);
+
+}
+
+
+function calculateLoan() {
+
+  const amount =
+    Number(
+      document.getElementById('loanAmount').value
+    );
+
+  const months =
+    Number(
+      document.getElementById('loanMonths').value
+    );
+
+  const rate =
+    Number(
+      document.getElementById('loanRate').value
+    );
+
+
+  if (
+    amount <= 0 ||
+    months <= 0 ||
+    rate < 0 ||
+    !Number.isFinite(amount) ||
+    !Number.isFinite(months) ||
+    !Number.isFinite(rate)
+  ) {
+
+    alert(
+      'Kanka kredi tutarı, vade ve faiz oranını düzgün gir 😄'
+    );
+
+    return;
+
+  }
+
+
+  const monthlyRate =
+    rate / 100;
+
+
+  let monthlyPayment;
+
+
+  if (monthlyRate === 0) {
+
+    monthlyPayment =
+      amount / months;
+
+  } else {
+
+    monthlyPayment =
+      amount *
+      monthlyRate *
+      Math.pow(
+        1 + monthlyRate,
+        months
+      )
+      /
+      (
+        Math.pow(
+          1 + monthlyRate,
+          months
+        ) - 1
+      );
+
+  }
+
+
+  const totalPayment =
+    monthlyPayment * months;
+
+
+  const totalInterest =
+    totalPayment - amount;
+
+
+  document.getElementById(
+    'monthlyPayment'
+  ).textContent =
+    tl(monthlyPayment);
+
+
+  document.getElementById(
+    'totalPayment'
+  ).textContent =
+    tl(totalPayment);
+
+
+  document.getElementById(
+    'totalInterest'
+  ).textContent =
+    tl(totalInterest);
+
+
+  document.getElementById(
+    'loanTerm'
+  ).textContent =
+    months + ' ay';
+
+
+  document.getElementById(
+    'loanResults'
+  ).style.display =
+    'grid';
+
+}
+
+
+document
+  .querySelectorAll('input')
+  .forEach(function(input) {
+
+    input.addEventListener(
+      'keydown',
+      function(event) {
+
+        if (event.key === 'Enter') {
+          calculateLoan();
+        }
+
+      }
+    );
+
+  });
+
+</script>
+
+</body>
+</html>
