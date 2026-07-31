@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Maaş, Kredi ve Kira Hesaplama | Ücretsiz Hesaplama Araçları - MaaşKanka</title>
+  <title>Maaş, Kredi, Kira ve Yakıt Hesaplama | MaaşKanka</title>
 
-  <meta name="description" content="Ücretsiz maaş hesaplama, kredi hesaplama ve kira artış hesaplama araçları. Günlük, haftalık ve saatlik maaşını; kredi taksitini ve yeni kira tutarını kolayca hesapla.">
+  <meta name="description" content="Ücretsiz maaş, kredi, kira artış ve yakıt hesaplama araçları. Maaşını, kredi taksitini, kira artışını ve yolculuk yakıt maliyetini kolayca hesapla.">
 
   <meta name="robots" content="index, follow">
 
@@ -44,7 +44,7 @@
 
     .menu {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 10px;
       margin-bottom: 18px;
     }
@@ -163,11 +163,13 @@
       margin-top: 25px;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
       .menu {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
       }
+    }
 
+    @media (max-width: 520px) {
       .results {
         grid-template-columns: 1fr;
       }
@@ -190,7 +192,7 @@
   <div class="brand">💸 MaaşKanka</div>
 
   <div class="sub">
-    Maaş, kredi ve kira hesaplamalarını hızlı ve kolay şekilde yap.
+    Maaş, kredi, kira ve yakıt hesaplamalarını hızlı ve kolay şekilde yap.
   </div>
 
 
@@ -214,15 +216,19 @@
     <button
       id="rentMenu"
       onclick="showTool('rent')">
-      🏠 Kira Artışı
+      🏠 Kira
+    </button>
+
+    <button
+      id="fuelMenu"
+      onclick="showTool('fuel')">
+      ⛽ Yakıt
     </button>
 
   </div>
 
 
-  <!-- ===================== -->
-  <!-- MAAŞ HESAPLAMA -->
-  <!-- ===================== -->
+  <!-- MAAŞ -->
 
   <section id="salaryTool" class="card">
 
@@ -232,9 +238,7 @@
       Aylık maaşını günlük, haftalık, saatlik ve yıllık kazanca çevir.
     </div>
 
-    <label for="salary">
-      Aylık maaşın (TL)
-    </label>
+    <label for="salary">Aylık maaşın (TL)</label>
 
     <input
       id="salary"
@@ -243,10 +247,7 @@
       step="0.01"
       placeholder="Örn. 30000">
 
-
-    <label for="days">
-      Ayda kaç gün çalışıyorsun?
-    </label>
+    <label for="days">Ayda kaç gün çalışıyorsun?</label>
 
     <input
       id="days"
@@ -255,10 +256,7 @@
       max="31"
       value="22">
 
-
-    <label for="hours">
-      Günde kaç saat çalışıyorsun?
-    </label>
+    <label for="hours">Günde kaç saat çalışıyorsun?</label>
 
     <input
       id="hours"
@@ -268,13 +266,11 @@
       step="0.5"
       value="8">
 
-
     <button
       class="main-button"
       onclick="calculateSalary()">
       Maaşımı Hesapla 🚀
     </button>
-
 
     <div
       id="salaryResults"
@@ -311,9 +307,7 @@
   </section>
 
 
-  <!-- ===================== -->
-  <!-- KREDİ HESAPLAMA -->
-  <!-- ===================== -->
+  <!-- KREDİ -->
 
   <section id="loanTool" class="card hidden">
 
@@ -324,9 +318,7 @@
       tahmini aylık taksitini ve toplam geri ödemeyi hesapla.
     </div>
 
-    <label for="loanAmount">
-      Kredi tutarı (TL)
-    </label>
+    <label for="loanAmount">Kredi tutarı (TL)</label>
 
     <input
       id="loanAmount"
@@ -335,10 +327,7 @@
       step="100"
       placeholder="Örn. 100000">
 
-
-    <label for="loanMonths">
-      Vade (ay)
-    </label>
+    <label for="loanMonths">Vade (ay)</label>
 
     <input
       id="loanMonths"
@@ -347,10 +336,7 @@
       max="600"
       value="24">
 
-
-    <label for="loanRate">
-      Aylık faiz oranı (%)
-    </label>
+    <label for="loanRate">Aylık faiz oranı (%)</label>
 
     <input
       id="loanRate"
@@ -359,13 +345,11 @@
       step="0.01"
       placeholder="Örn. 3.50">
 
-
     <button
       class="main-button"
       onclick="calculateLoan()">
       Krediyi Hesapla 🚀
     </button>
-
 
     <div
       id="loanResults"
@@ -396,29 +380,23 @@
 
     <div class="note">
       Bu hesaplama matematiksel bir tahmindir.
-      Vergi, sigorta, tahsis ücreti ve diğer banka masrafları dahil değildir.
+      Banka masrafları ve diğer ücretler dahil değildir.
     </div>
 
   </section>
 
 
-  <!-- ===================== -->
-  <!-- KİRA ARTIŞ HESAPLAMA -->
-  <!-- ===================== -->
+  <!-- KİRA -->
 
   <section id="rentTool" class="card hidden">
 
     <h2>🏠 Kira Artış Hesaplama</h2>
 
     <div class="card-description">
-      Mevcut kira tutarını ve uygulamak istediğin artış oranını
-      girerek yeni kira tutarını hesapla.
+      Mevcut kira tutarını ve artış oranını girerek yeni kira tutarını hesapla.
     </div>
 
-
-    <label for="oldRent">
-      Mevcut kira (TL)
-    </label>
+    <label for="oldRent">Mevcut kira (TL)</label>
 
     <input
       id="oldRent"
@@ -427,10 +405,7 @@
       step="0.01"
       placeholder="Örn. 15000">
 
-
-    <label for="rentRate">
-      Artış oranı (%)
-    </label>
+    <label for="rentRate">Artış oranı (%)</label>
 
     <input
       id="rentRate"
@@ -439,13 +414,11 @@
       step="0.01"
       placeholder="Örn. 25">
 
-
     <button
       class="main-button"
       onclick="calculateRent()">
       Kira Artışını Hesapla 🚀
     </button>
-
 
     <div
       id="rentResults"
@@ -474,10 +447,88 @@
 
     </div>
 
-
     <div class="note">
       Bu araç girilen artış oranına göre matematiksel hesaplama yapar.
       Güncel yasal kira artış sınırları ayrıca kontrol edilmelidir.
+    </div>
+
+  </section>
+
+
+  <!-- YAKIT -->
+
+  <section id="fuelTool" class="card hidden">
+
+    <h2>⛽ Yakıt Maliyeti Hesaplama</h2>
+
+    <div class="card-description">
+      Mesafe, aracının ortalama yakıt tüketimi ve yakıt fiyatını
+      girerek yolculuğunun tahmini maliyetini hesapla.
+    </div>
+
+    <label for="distance">Gidilecek mesafe (km)</label>
+
+    <input
+      id="distance"
+      type="number"
+      min="0"
+      step="0.1"
+      placeholder="Örn. 500">
+
+    <label for="consumption">Araç tüketimi (L / 100 km)</label>
+
+    <input
+      id="consumption"
+      type="number"
+      min="0"
+      step="0.1"
+      placeholder="Örn. 6.5">
+
+    <label for="fuelPrice">Yakıt fiyatı (TL / litre)</label>
+
+    <input
+      id="fuelPrice"
+      type="number"
+      min="0"
+      step="0.01"
+      placeholder="Örn. 55">
+
+    <button
+      class="main-button"
+      onclick="calculateFuel()">
+      Yakıt Maliyetini Hesapla 🚗
+    </button>
+
+    <div
+      id="fuelResults"
+      class="results"
+      style="display:none;">
+
+      <div class="result">
+        <small>Harcanacak yakıt</small>
+        <strong id="fuelUsed">-</strong>
+      </div>
+
+      <div class="result">
+        <small>Toplam maliyet</small>
+        <strong id="fuelCost">-</strong>
+      </div>
+
+      <div class="result">
+        <small>100 km maliyeti</small>
+        <strong id="fuelCost100">-</strong>
+      </div>
+
+      <div class="result">
+        <small>Mesafe</small>
+        <strong id="fuelDistance">-</strong>
+      </div>
+
+    </div>
+
+    <div class="note">
+      Hesaplama tahmini yakıt maliyetini gösterir.
+      Trafik, hız, hava koşulları ve sürüş tarzı gerçek tüketimi değiştirebilir.
     </div>
 
   </section>
@@ -492,336 +543,321 @@
 
 <script>
 
-  /* PARA FORMATLAMA */
+function tl(value) {
 
-  function tl(value) {
+  return new Intl.NumberFormat(
+    'tr-TR',
+    {
+      style: 'currency',
+      currency: 'TRY',
+      maximumFractionDigits: 2
+    }
+  ).format(value);
 
-    return new Intl.NumberFormat(
-      'tr-TR',
-      {
-        style: 'currency',
-        currency: 'TRY',
-        maximumFractionDigits: 2
-      }
-    ).format(value);
+}
+
+
+/* ARAÇ DEĞİŞTİRME */
+
+function showTool(tool) {
+
+  const tools = [
+    'salary',
+    'loan',
+    'rent',
+    'fuel'
+  ];
+
+  tools.forEach(function(name) {
+
+    document
+      .getElementById(name + 'Tool')
+      .classList.add('hidden');
+
+    document
+      .getElementById(name + 'Menu')
+      .classList.remove('active');
+
+  });
+
+
+  document
+    .getElementById(tool + 'Tool')
+    .classList.remove('hidden');
+
+  document
+    .getElementById(tool + 'Menu')
+    .classList.add('active');
+
+}
+
+
+/* MAAŞ */
+
+function calculateSalary() {
+
+  const salary =
+    Number(document.getElementById('salary').value);
+
+  const days =
+    Number(document.getElementById('days').value);
+
+  const hours =
+    Number(document.getElementById('hours').value);
+
+  if (
+    salary <= 0 ||
+    days <= 0 ||
+    hours <= 0 ||
+    !Number.isFinite(salary) ||
+    !Number.isFinite(days) ||
+    !Number.isFinite(hours)
+  ) {
+
+    alert('Kanka maaş, gün ve saat bilgilerini düzgün gir 😄');
+    return;
 
   }
 
+  const daily = salary / days;
+  const hourly = daily / hours;
+  const weekly = daily * 5;
+  const yearly = salary * 12;
 
-  /* ARAÇ DEĞİŞTİRME */
+  document.getElementById('daily').textContent = tl(daily);
+  document.getElementById('weekly').textContent = tl(weekly);
+  document.getElementById('hourly').textContent = tl(hourly);
+  document.getElementById('yearly').textContent = tl(yearly);
 
-  function showTool(tool) {
+  document.getElementById('salaryResults').style.display = 'grid';
 
-    const salaryTool =
-      document.getElementById('salaryTool');
-
-    const loanTool =
-      document.getElementById('loanTool');
-
-    const rentTool =
-      document.getElementById('rentTool');
-
-    const salaryMenu =
-      document.getElementById('salaryMenu');
-
-    const loanMenu =
-      document.getElementById('loanMenu');
-
-    const rentMenu =
-      document.getElementById('rentMenu');
+}
 
 
-    salaryTool.classList.add('hidden');
-    loanTool.classList.add('hidden');
-    rentTool.classList.add('hidden');
+/* KREDİ */
 
-    salaryMenu.classList.remove('active');
-    loanMenu.classList.remove('active');
-    rentMenu.classList.remove('active');
+function calculateLoan() {
 
+  const amount =
+    Number(document.getElementById('loanAmount').value);
 
-    if (tool === 'salary') {
+  const months =
+    Number(document.getElementById('loanMonths').value);
 
-      salaryTool.classList.remove('hidden');
-      salaryMenu.classList.add('active');
+  const rate =
+    Number(document.getElementById('loanRate').value);
 
-    }
+  if (
+    amount <= 0 ||
+    months <= 0 ||
+    rate < 0 ||
+    !Number.isFinite(amount) ||
+    !Number.isFinite(months) ||
+    !Number.isFinite(rate)
+  ) {
 
-
-    if (tool === 'loan') {
-
-      loanTool.classList.remove('hidden');
-      loanMenu.classList.add('active');
-
-    }
-
-
-    if (tool === 'rent') {
-
-      rentTool.classList.remove('hidden');
-      rentMenu.classList.add('active');
-
-    }
+    alert('Kanka kredi bilgilerini düzgün gir 😄');
+    return;
 
   }
 
+  const monthlyRate = rate / 100;
 
-  /* MAAŞ HESAPLAMA */
+  let monthlyPayment;
 
-  function calculateSalary() {
+  if (monthlyRate === 0) {
 
-    const salary =
-      Number(document.getElementById('salary').value);
+    monthlyPayment = amount / months;
 
-    const days =
-      Number(document.getElementById('days').value);
+  } else {
 
-    const hours =
-      Number(document.getElementById('hours').value);
-
-
-    if (
-      salary <= 0 ||
-      days <= 0 ||
-      hours <= 0 ||
-      !Number.isFinite(salary) ||
-      !Number.isFinite(days) ||
-      !Number.isFinite(hours)
-    ) {
-
-      alert(
-        'Kanka maaş, çalışma günü ve çalışma saatini düzgün gir 😄'
+    monthlyPayment =
+      amount *
+      monthlyRate *
+      Math.pow(1 + monthlyRate, months)
+      /
+      (
+        Math.pow(1 + monthlyRate, months) - 1
       );
 
-      return;
+  }
 
-    }
+  const totalPayment =
+    monthlyPayment * months;
+
+  const totalInterest =
+    totalPayment - amount;
+
+  document.getElementById('monthlyPayment').textContent =
+    tl(monthlyPayment);
+
+  document.getElementById('totalPayment').textContent =
+    tl(totalPayment);
+
+  document.getElementById('totalInterest').textContent =
+    tl(totalInterest);
+
+  document.getElementById('loanTerm').textContent =
+    months + ' ay';
+
+  document.getElementById('loanResults').style.display =
+    'grid';
+
+}
 
 
-    const daily =
-      salary / days;
+/* KİRA */
 
-    const hourly =
-      daily / hours;
+function calculateRent() {
 
-    const weekly =
-      daily * 5;
+  const oldRent =
+    Number(document.getElementById('oldRent').value);
 
-    const yearly =
-      salary * 12;
+  const rate =
+    Number(document.getElementById('rentRate').value);
 
+  if (
+    oldRent <= 0 ||
+    rate < 0 ||
+    !Number.isFinite(oldRent) ||
+    !Number.isFinite(rate)
+  ) {
 
-    document.getElementById('daily').textContent =
-      tl(daily);
-
-    document.getElementById('weekly').textContent =
-      tl(weekly);
-
-    document.getElementById('hourly').textContent =
-      tl(hourly);
-
-    document.getElementById('yearly').textContent =
-      tl(yearly);
-
-    document.getElementById('salaryResults').style.display =
-      'grid';
+    alert('Kanka kira ve artış oranını düzgün gir 😄');
+    return;
 
   }
 
+  const increase =
+    oldRent * (rate / 100);
 
-  /* KREDİ HESAPLAMA */
+  const newRent =
+    oldRent + increase;
 
-  function calculateLoan() {
+  const yearlyRent =
+    newRent * 12;
 
-    const amount =
-      Number(document.getElementById('loanAmount').value);
+  document.getElementById('oldRentResult').textContent =
+    tl(oldRent);
 
-    const months =
-      Number(document.getElementById('loanMonths').value);
+  document.getElementById('rentIncrease').textContent =
+    tl(increase);
 
-    const rate =
-      Number(document.getElementById('loanRate').value);
+  document.getElementById('newRent').textContent =
+    tl(newRent);
 
+  document.getElementById('yearlyRent').textContent =
+    tl(yearlyRent);
 
-    if (
-      amount <= 0 ||
-      months <= 0 ||
-      rate < 0 ||
-      !Number.isFinite(amount) ||
-      !Number.isFinite(months) ||
-      !Number.isFinite(rate)
-    ) {
+  document.getElementById('rentResults').style.display =
+    'grid';
 
-      alert(
-        'Kanka kredi tutarı, vade ve faiz oranını düzgün gir 😄'
-      );
-
-      return;
-
-    }
+}
 
 
-    const monthlyRate =
-      rate / 100;
+/* YAKIT */
 
-    let monthlyPayment;
+function calculateFuel() {
 
+  const distance =
+    Number(document.getElementById('distance').value);
 
-    if (monthlyRate === 0) {
+  const consumption =
+    Number(document.getElementById('consumption').value);
 
-      monthlyPayment =
-        amount / months;
+  const fuelPrice =
+    Number(document.getElementById('fuelPrice').value);
 
-    } else {
+  if (
+    distance <= 0 ||
+    consumption <= 0 ||
+    fuelPrice <= 0 ||
+    !Number.isFinite(distance) ||
+    !Number.isFinite(consumption) ||
+    !Number.isFinite(fuelPrice)
+  ) {
 
-      monthlyPayment =
-        amount *
-        monthlyRate *
-        Math.pow(
-          1 + monthlyRate,
-          months
-        )
-        /
-        (
-          Math.pow(
-            1 + monthlyRate,
-            months
-          ) - 1
-        );
-
-    }
-
-
-    const totalPayment =
-      monthlyPayment * months;
-
-    const totalInterest =
-      totalPayment - amount;
-
-
-    document.getElementById('monthlyPayment').textContent =
-      tl(monthlyPayment);
-
-    document.getElementById('totalPayment').textContent =
-      tl(totalPayment);
-
-    document.getElementById('totalInterest').textContent =
-      tl(totalInterest);
-
-    document.getElementById('loanTerm').textContent =
-      months + ' ay';
-
-    document.getElementById('loanResults').style.display =
-      'grid';
+    alert('Kanka mesafe, tüketim ve yakıt fiyatını düzgün gir 😄');
+    return;
 
   }
 
+  const fuelUsed =
+    (distance * consumption) / 100;
 
-  /* KİRA ARTIŞ HESAPLAMA */
+  const totalCost =
+    fuelUsed * fuelPrice;
 
-  function calculateRent() {
+  const cost100 =
+    consumption * fuelPrice;
 
-    const oldRent =
-      Number(document.getElementById('oldRent').value);
+  document.getElementById('fuelUsed').textContent =
+    fuelUsed.toFixed(2) + ' L';
 
-    const rate =
-      Number(document.getElementById('rentRate').value);
+  document.getElementById('fuelCost').textContent =
+    tl(totalCost);
 
+  document.getElementById('fuelCost100').textContent =
+    tl(cost100);
 
-    if (
-      oldRent <= 0 ||
-      rate < 0 ||
-      !Number.isFinite(oldRent) ||
-      !Number.isFinite(rate)
-    ) {
+  document.getElementById('fuelDistance').textContent =
+    distance.toLocaleString('tr-TR') + ' km';
 
-      alert(
-        'Kanka mevcut kirayı ve artış oranını düzgün gir 😄'
-      );
+  document.getElementById('fuelResults').style.display =
+    'grid';
 
-      return;
-
-    }
-
-
-    const increase =
-      oldRent * (rate / 100);
-
-    const newRent =
-      oldRent + increase;
-
-    const yearlyRent =
-      newRent * 12;
+}
 
 
-    document.getElementById('oldRentResult').textContent =
-      tl(oldRent);
+/* ENTER TUŞU */
 
-    document.getElementById('rentIncrease').textContent =
-      tl(increase);
+document.querySelectorAll('input').forEach(
+  function(input) {
 
-    document.getElementById('newRent').textContent =
-      tl(newRent);
+    input.addEventListener(
+      'keydown',
+      function(event) {
 
-    document.getElementById('yearlyRent').textContent =
-      tl(yearlyRent);
-
-    document.getElementById('rentResults').style.display =
-      'grid';
-
-  }
-
-
-  /* ENTER TUŞU */
-
-  document.querySelectorAll('input').forEach(
-    function(input) {
-
-      input.addEventListener(
-        'keydown',
-        function(event) {
-
-          if (event.key !== 'Enter') {
-            return;
-          }
-
-
-          if (
-            input.id === 'salary' ||
-            input.id === 'days' ||
-            input.id === 'hours'
-          ) {
-
-            calculateSalary();
-
-          }
-
-
-          if (
-            input.id === 'loanAmount' ||
-            input.id === 'loanMonths' ||
-            input.id === 'loanRate'
-          ) {
-
-            calculateLoan();
-
-          }
-
-
-          if (
-            input.id === 'oldRent' ||
-            input.id === 'rentRate'
-          ) {
-
-            calculateRent();
-
-          }
-
+        if (event.key !== 'Enter') {
+          return;
         }
-      );
 
-    }
-  );
+        if (
+          input.id === 'salary' ||
+          input.id === 'days' ||
+          input.id === 'hours'
+        ) {
+          calculateSalary();
+        }
+
+        if (
+          input.id === 'loanAmount' ||
+          input.id === 'loanMonths' ||
+          input.id === 'loanRate'
+        ) {
+          calculateLoan();
+        }
+
+        if (
+          input.id === 'oldRent' ||
+          input.id === 'rentRate'
+        ) {
+          calculateRent();
+        }
+
+        if (
+          input.id === 'distance' ||
+          input.id === 'consumption' ||
+          input.id === 'fuelPrice'
+        ) {
+          calculateFuel();
+        }
+
+      }
+    );
+
+  }
+);
 
 </script>
 
